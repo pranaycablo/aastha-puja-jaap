@@ -693,6 +693,19 @@ export const SadhanaSetupPage: React.FC<SadhanaSetupPageProps> = ({
         </div>
       </div>
 
+      {/* Complete Legal & Spiritual Disclaimer (Liability-Free Assurance) */}
+      <div className="bg-amber-50/80 border border-amber-300/80 rounded-2xl p-3.5 shadow-xs mb-3 space-y-1.5 text-left">
+        <div className="flex items-center gap-1.5 text-amber-900 font-bold text-xs">
+          <span>⚖️</span>
+          <span>{language === 'hi' ? 'वैधानिक एवं आध्यात्मिक अस्वीकरण (Legal Disclaimer):' : 'Legal & Spiritual Disclaimer:'}</span>
+        </div>
+        <p className="text-[10px] text-amber-900/80 leading-relaxed font-normal">
+          {language === 'hi'
+            ? 'यह ऐप सनातन धर्म, वैदिक ग्रंथों, पौराणिक मंत्रों, पराशरी ज्योतिष एवं चालडियन अंक ज्योतिष के शास्त्रीय सिद्धांतों पर आधारित एक आध्यात्मिक व सांस्कृतिक साधन है। कुण्डली, रत्न, यन्त्र व ज्योतिषीय गणनाएँ केवल श्रद्धा व आत्म-मार्गदर्शन हेतु हैं। यह किसी भी प्रकार की चिकित्सीय (Medical), वित्तीय (Financial) या कानूनी (Legal) गारंटी अथवा विशेषज्ञ सलाह का विकल्प नहीं है। ऐप विकासकर्ता किसी भी व्यक्तिगत निर्णय या परिणाम के प्रति उत्तरदायी नहीं हैं।'
+            : 'This app is a spiritual and cultural platform based on Sanatan Dharma and Vedic astrology. All astrological, numerological, yantra, and gemstone guidance is for faith, educational, and personal enrichment only. It is not a substitute for professional medical, financial, or legal advice.'}
+        </p>
+      </div>
+
       {/* Prominent Button to Begin Jaap Chanting */}
       <div className="pt-3 pb-24 sm:pb-28">
         <button

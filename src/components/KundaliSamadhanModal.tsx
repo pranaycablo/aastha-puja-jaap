@@ -1256,6 +1256,19 @@ export const KundaliSamadhanModal: React.FC<KundaliSamadhanModalProps> = ({
           )}
         </div>
 
+        {/* Shastric & Legal Disclaimer */}
+        <div className="mx-3.5 mb-2 p-3 bg-amber-50/90 border border-amber-300 rounded-2xl text-left select-none">
+          <div className="flex items-center gap-1.5 text-amber-950 font-bold text-xs mb-1">
+            <span>⚖️</span>
+            <span>{isHi ? 'शास्त्रोक्त एवं वैधानिक अस्वीकरण (Legal Disclaimer):' : 'Legal & Astrological Disclaimer:'}</span>
+          </div>
+          <p className="text-[10px] text-amber-900/80 leading-relaxed">
+            {isHi
+              ? 'यह कुण्डली व ज्योतिष समाधान महर्षि पराशर, भृगु संहिता एवं पारंपरिक वैदिक सिद्धांतों पर आधारित आस्था व शैक्षणिक मार्गदर्शन है। यह किसी भी चिकित्सीय, कानूनी या वित्तीय सलाह का विकल्प नहीं है। जीवन के अंतिम निर्णय जातक के अपने कर्म व पुरुषार्थ पर निर्भर हैं।'
+              : 'This astrological analysis is based on classical Vedic scriptures for spiritual and personal guidance only. It is not professional legal, medical, or financial advice.'}
+          </p>
+        </div>
+
         {/* FOOTER */}
         <div className="p-3 bg-white border-t border-orange-200 flex items-center justify-between">
           <span className="text-[11px] text-gray-500 font-medium">

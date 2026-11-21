@@ -10,6 +10,7 @@ export const NetworkGuard: React.FC<NetworkGuardProps> = ({ children }) => {
   const [isOnline, setIsOnline] = useState<boolean>(
     typeof navigator !== 'undefined' ? navigator.onLine : true
   );
+  const [allowOfflineSession, setAllowOfflineSession] = useState<boolean>(false);
   const [isChecking, setIsChecking] = useState<boolean>(false);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
@@ -50,6 +51,7 @@ export const NetworkGuard: React.FC<NetworkGuardProps> = ({ children }) => {
       setIsOnline(status.connected);
       if (status.connected) {
         setErrorMessage(null);
+        setAllowOfflineSession(false);
       }
     }).then((h) => {
       listenerHandle = h;
@@ -61,6 +63,7 @@ export const NetworkGuard: React.FC<NetworkGuardProps> = ({ children }) => {
     const handleOnline = () => {
       setIsOnline(true);
       setErrorMessage(null);
+      setAllowOfflineSession(false);
     };
     const handleOffline = () => setIsOnline(false);
 
@@ -94,9 +97,28 @@ export const NetworkGuard: React.FC<NetworkGuardProps> = ({ children }) => {
     }, 600);
   };
 
-  // If online, render children normally
-  if (isOnline) {
-    return <>{children}</>;
+  // If online or offline session allowed, render children
+  if (isOnline || allowOfflineSession) {
+    return (
+      <>
+        {!isOnline && allowOfflineSession && (
+          <div className="bg-amber-950 text-amber-200 text-xs px-3 py-1.5 flex items-center justify-between border-b border-amber-600/40 sticky top-0 z-[9999] shadow-md select-none">
+            <div className="flex items-center gap-1.5 font-medium">
+              <WifiOff className="w-3.5 h-3.5 text-amber-400 shrink-0" />
+              <span>ऑफ़लाइन साधना सक्रिय | जप, चालीसा व कुण्डली उपलब्ध</span>
+            </div>
+            <button
+              type="button"
+              onClick={() => setAllowOfflineSession(false)}
+              className="text-[10px] bg-amber-800 hover:bg-amber-700 active:scale-95 px-2.5 py-0.5 rounded text-amber-100 font-bold border border-amber-600/60 cursor-pointer"
+            >
+              ऑनलाइन कनेक्ट करें
+            </button>
+          </div>
+        )}
+        {children}
+      </>
+    );
   }
 
   // Strict Compulsory Devotional Network Gate
@@ -170,6 +192,15 @@ export const NetworkGuard: React.FC<NetworkGuardProps> = ({ children }) => {
         >
           <RefreshCw className={`w-4 h-4 ${isChecking ? 'animate-spin' : ''}`} />
           <span>{isChecking ? 'इंटरनेट कनेक्शन जाँचा जा रहा है...' : '🔄 इंटरनेट चालू कर लिया, पुनः प्रयास करें'}</span>
+        </button>
+
+        {/* Offline Fallback Access Button */}
+        <button
+          type="button"
+          onClick={() => setAllowOfflineSession(true)}
+          className="w-full mt-2.5 py-2.5 px-3 rounded-xl bg-white/10 hover:bg-white/15 active:scale-98 text-amber-200 text-xs font-bold border border-amber-500/30 transition-all flex items-center justify-center gap-2 cursor-pointer"
+        >
+          <span>📿 सीमित ऑफ़लाइन साधना जारी रखें (Offline Jaap & Stotra)</span>
         </button>
       </div>
 

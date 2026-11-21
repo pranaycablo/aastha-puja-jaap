@@ -1698,6 +1698,11 @@ function renderConclusionAndBlessingsPage(ctx: any): string {
       <div style="background: #FEF3C7; border: 1.5px solid #F59E0B; border-radius: 8px; padding: 10px; font-size: 11px; color: #78350F; font-weight: bold;">
         ॥ ॐ शान्तिः शान्तिः शान्तिः ॥
       </div>
+
+      <div style="background: #FFFBEB; border: 1px solid #D97706; border-radius: 8px; padding: 10px 12px; font-size: 8.5px; line-height: 1.5; color: #78350F; text-align: justify; margin-top: 4px;">
+        <strong style="color: #9A3412; font-size: 9.5px; display: block; margin-bottom: 2px;">⚖️ वैधानिक एवं आध्यात्मिक अस्वीकरण (Legal & Spiritual Disclaimer):</strong>
+        यह ५१-पृष्ठीय कुण्डली व अंक ज्योतिष विश्लेषण वैदिक ज्योतिष (बृहत्पाराशर होराशास्त्र, भृगु संहिता) एवं चालडियन अंक विद्या के शास्त्रीय सूत्रों पर आधारित आस्था व व्यक्तिगत मार्गदर्शन है। यह किसी भी प्रकार की चिकित्सीय (Medical), कानूनी (Legal) या वित्तीय (Financial) सलाह का विकल्प नहीं है। जीवन के अंतिम परिणाम जातक के अपने कर्म, पुरुषार्थ एवं स्वतंत्र इच्छा पर निर्भर हैं। 'आस्था' ऐप एवं इसके विकासकर्ता किसी भी निर्णय के प्रति कानूनी या वित्तीय रूप से उत्तरदायी नहीं होंगे।
+      </div>
     </div>
   `;
 }

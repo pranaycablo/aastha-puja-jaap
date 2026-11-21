@@ -676,6 +676,19 @@ export const AnkaGyanModal: React.FC<AnkaGyanModalProps> = ({
           )}
         </div>
 
+        {/* Shastric & Legal Disclaimer */}
+        <div className="mx-3.5 mb-2 p-3 bg-amber-50/90 border border-amber-300 rounded-2xl text-left select-none">
+          <div className="flex items-center gap-1.5 text-amber-950 font-bold text-xs mb-1">
+            <span>⚖️</span>
+            <span>{isHi ? 'शास्त्रोक्त एवं वैधानिक अस्वीकरण (Legal Disclaimer):' : 'Legal & Numerological Disclaimer:'}</span>
+          </div>
+          <p className="text-[10px] text-amber-900/80 leading-relaxed">
+            {isHi
+              ? 'यह अंक ज्योतिष विश्लेषण चालडियन एवं वैदिक अंक विद्या के प्राचीन सूत्रों पर आधारित एक व्यक्तिगत व शैक्षणिक मार्गदर्शन है। यह किसी भी वित्तीय, चिकित्सीय या कानूनी सलाह का विकल्प नहीं है।'
+              : 'This numerology analysis is based on classical Chaldean and Vedic principles for personal enrichment and spiritual guidance only.'}
+          </p>
+        </div>
+
         {/* MODAL FOOTER */}
         <div className="p-3 bg-orange-50 border-t border-orange-200 flex items-center justify-between shrink-0">
           <div className="flex items-center gap-1 text-[11px] text-orange-900 font-bold">
