@@ -1,0 +1,34 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Production build outputs
+dist/
+build/
+android/app/build/
+android/build/
+android/.gradle/
+android/.idea/
+android/captures/
+android/local.properties
+
+# Logs and environment
+*.log
+.env
+.env.local
+.env.*.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# System & IDE files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Large APK backups (keep release repo clean)
+*.apk
+*.aab
+!Aastha-Puja-Jaap-v2.6-FINAL-GOLDEN.apk

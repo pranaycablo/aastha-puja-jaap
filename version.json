@@ -1,0 +1,22 @@
+{
+  "latestVersion": "2.2.0",
+  "versionCode": 4,
+  "minSupportedVersion": "1.0.0",
+  "forceUpdate": false,
+  "title": "आस्था : पूजा जाप (Aastha : Puja Jaap) v2.2",
+  "releaseDate": "19 नवम्बर 2026",
+  "releaseNotesHi": [
+    "D1 से D10 अंक ज्योतिष महा-विश्लेषण व सटीक भविष्य संकेत",
+    "५ से ५१ पृष्ठों की प्रामाणिक वैदिक कुण्डली व हस्तरेखा रिपोर्ट (शून्य पुनरावृत्ति)",
+    "राजसी मैरून व स्वर्ण प्रो बॉटम बार एवं उच्च-कंट्रास्ट देव-पीठ स्वरूप",
+    "100% ऑफलाइन कार्यप्रणाली, रियल डेटा फलादेश व पावन शंखनाद"
+  ],
+  "releaseNotesEn": [
+    "Complete D1 to D10 Vedic Numerology analysis with future forecasts",
+    "Authentic 5 to 51-page bespoke Vedic Kundali PDF reports with zero repetition",
+    "Royal Maroon & 24K Gold pro-grade UI styling with shrine beacon",
+    "100% offline functionality with genuine Shastric calculations"
+  ],
+  "apkDownloadUrl": "https://github.com/hindu-zaap/divya-jaap/releases/latest/download/Aastha-Puja-Jaap-v2.2-RELEASE.apk",
+  "playStoreUrl": "https://play.google.com/store/apps/details?id=com.divyajaap.app"
+}

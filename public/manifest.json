@@ -1,0 +1,19 @@
+{
+  "short_name": "आस्था",
+  "name": "आस्था : पूजा जाप - वैदिक सनातन साधना एवं कुण्डली फलादेश",
+  "icons": [
+    {
+      "src": "/logo.svg",
+      "type": "image/svg+xml",
+      "sizes": "512x512 192x192 128x128 64x64",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#431407",
+  "theme_color": "#ea580c",
+  "display": "standalone",
+  "orientation": "portrait",
+  "scope": "/",
+  "description": "सात्विक हिन्दू मंत्र जाप माला, वैदिक अंक ज्योतिष, कुण्डली समाधान, ऑटो वॉइस एवं अखंड साधना।"
+}
