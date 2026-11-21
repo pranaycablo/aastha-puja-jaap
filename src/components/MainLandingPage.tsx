@@ -19,6 +19,8 @@ interface MainLandingPageProps {
   onOpenMantraSuggestion?: () => void;
   onOpenMantraMahakosh?: () => void;
   onOpenMandirDarshan?: () => void;
+  onOpenYantraMahakosh?: () => void;
+  onOpenRatnaGyan?: () => void;
   onOpenSeva?: (tab?: 'donation' | 'rating' | 'share' | 'feedback') => void;
   language?: LanguageCode;
 }
@@ -37,6 +39,8 @@ export const MainLandingPage: React.FC<MainLandingPageProps> = ({
   onOpenMantraSuggestion,
   onOpenMantraMahakosh,
   onOpenMandirDarshan,
+  onOpenYantraMahakosh,
+  onOpenRatnaGyan,
   onOpenSeva,
   language = 'hi'
 }) => {
@@ -113,6 +117,20 @@ export const MainLandingPage: React.FC<MainLandingPageProps> = ({
       name: isHi ? 'अंक ज्ञान' : 'Anka Gyan',
       logo: '🔢',
       onClick: onOpenAnkaGyan,
+      isFullWidth: false
+    },
+    {
+      id: 'yantra-mahakosh',
+      name: isHi ? 'सिद्ध यन्त्र' : 'Yantras',
+      logo: '🔯',
+      onClick: onOpenYantraMahakosh || (() => {}),
+      isFullWidth: false
+    },
+    {
+      id: 'ratna-gyan',
+      name: isHi ? 'रत्न पहचान' : 'Ratna Gyan',
+      logo: '💎',
+      onClick: onOpenRatnaGyan || (() => {}),
       isFullWidth: false
     },
     {
@@ -294,6 +312,59 @@ export const MainLandingPage: React.FC<MainLandingPageProps> = ({
           </div>
         </button>
       )}
+
+      {/* 2.7 YANTRA MAHAKOSH & RATNA SCIENCE DUAL CARDS */}
+      <div className="grid grid-cols-2 gap-2.5">
+        {onOpenYantraMahakosh && (
+          <button
+            type="button"
+            onClick={onOpenYantraMahakosh}
+            className="bg-gradient-to-br from-[#4A0A05] via-[#751509] to-[#4A0A05] text-white rounded-3xl p-3 sm:p-3.5 shadow-lg hover:shadow-xl active:scale-[0.98] transition-all text-left border-2 border-amber-400/90 flex flex-col justify-between group cursor-pointer"
+          >
+            <div className="flex items-center justify-between w-full mb-1">
+              <span className="w-9 h-9 rounded-xl bg-amber-400/20 border border-amber-300/40 text-xl flex items-center justify-center shadow-2xs group-hover:scale-110 transition-transform">
+                🔯
+              </span>
+              <span className="text-[9px] font-black uppercase px-2 py-0.5 rounded-full bg-amber-400 text-stone-950">
+                {isHi ? '३१ यन्त्र' : '31 Yantras'}
+              </span>
+            </div>
+            <div>
+              <h4 className="text-xs sm:text-sm font-black text-amber-200 line-clamp-1 mt-1">
+                {isHi ? 'सिद्ध यन्त्र महाकोश' : 'Yantra Mahakosh'}
+              </h4>
+              <p className="text-[10px] text-amber-100/80 font-medium line-clamp-1 mt-0.5">
+                {isHi ? 'कागज पर निर्माण विधि व रंग' : 'Paper Vidhi & Color'}
+              </p>
+            </div>
+          </button>
+        )}
+
+        {onOpenRatnaGyan && (
+          <button
+            type="button"
+            onClick={onOpenRatnaGyan}
+            className="bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A] text-white rounded-3xl p-3 sm:p-3.5 shadow-lg hover:shadow-xl active:scale-[0.98] transition-all text-left border-2 border-amber-400/90 flex flex-col justify-between group cursor-pointer"
+          >
+            <div className="flex items-center justify-between w-full mb-1">
+              <span className="w-9 h-9 rounded-xl bg-amber-400/20 border border-amber-300/40 text-xl flex items-center justify-center shadow-2xs group-hover:scale-110 transition-transform">
+                💎
+              </span>
+              <span className="text-[9px] font-black uppercase px-2 py-0.5 rounded-full bg-amber-400 text-stone-950">
+                {isHi ? 'असली पहचान' : 'Authenticity'}
+              </span>
+            </div>
+            <div>
+              <h4 className="text-xs sm:text-sm font-black text-amber-200 line-clamp-1 mt-1">
+                {isHi ? 'रत्न ज्ञान व पहचान' : 'Ratna Science'}
+              </h4>
+              <p className="text-[10px] text-amber-100/80 font-medium line-clamp-1 mt-0.5">
+                {isHi ? '५-सूत्रीय असली/नकली टेस्ट' : '5-Point Real/Fake Test'}
+              </p>
+            </div>
+          </button>
+        )}
+      </div>
 
       {/* 3. SANATAN ROYAL SACRED PORTALS */}
       <div className="grid grid-cols-2 gap-3 pt-1">

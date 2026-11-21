@@ -38,6 +38,8 @@ import { DivineMantraSuggestionModal } from './components/DivineMantraSuggestion
 import { SevaCommunityModal, SevaTab } from './components/SevaCommunityModal';
 import { MantraMahakoshModal } from './components/MantraMahakoshModal';
 import { MandirLiveDarshanModal } from './components/MandirLiveDarshanModal';
+import { SacredYantraMahakoshModal } from './components/SacredYantraMahakoshModal';
+import { RatnaGyanModal } from './components/RatnaGyanModal';
 import { notificationEngine } from './utils/notificationEngine';
 import { updateEngine, UpdateCheckResult } from './utils/updateEngine';
 import { calculateMantraRecommendedDuration } from './utils/ttsEngine';
@@ -142,6 +144,10 @@ export const App: React.FC = () => {
   const [showMantraSuggestionModal, setShowMantraSuggestionModal] = useState<boolean>(false);
   const [showMantraMahakoshModal, setShowMantraMahakoshModal] = useState<boolean>(false);
   const [showMandirDarshanModal, setShowMandirDarshanModal] = useState<boolean>(false);
+  const [showYantraMahakoshModal, setShowYantraMahakoshModal] = useState<boolean>(false);
+  const [showRatnaGyanModal, setShowRatnaGyanModal] = useState<boolean>(false);
+  const [selectedYantraId, setSelectedYantraId] = useState<string | undefined>(undefined);
+  const [selectedGemstoneId, setSelectedGemstoneId] = useState<string | undefined>(undefined);
   const [showSevaModal, setShowSevaModal] = useState<boolean>(false);
   const [sevaInitialTab, setSevaInitialTab] = useState<SevaTab>('donation');
 
@@ -664,6 +670,8 @@ export const App: React.FC = () => {
                 onOpenMantraSuggestion={() => setShowMantraSuggestionModal(true)}
                 onOpenMantraMahakosh={() => setShowMantraMahakoshModal(true)}
                 onOpenMandirDarshan={() => setShowMandirDarshanModal(true)}
+                onOpenYantraMahakosh={() => setShowYantraMahakoshModal(true)}
+                onOpenRatnaGyan={() => setShowRatnaGyanModal(true)}
                 onOpenSeva={handleOpenSeva}
                 onOpenProfileSetup={() => {
                   setIsEditingProfile(true);
@@ -963,6 +971,8 @@ export const App: React.FC = () => {
               setActiveTab('jaap');
             }}
             onEditProfile={() => setIsEditingProfile(true)}
+            onOpenAllYantras={() => setShowYantraMahakoshModal(true)}
+            onOpenAllRatnas={() => setShowRatnaGyanModal(true)}
           />
         )}
 
@@ -1081,6 +1091,32 @@ export const App: React.FC = () => {
             onClose={() => setShowMandirDarshanModal(false)}
             onSelectMantraAndChant={handleStartChantingCustomOrLibraryItem}
             language={userProfile.language}
+          />
+        )}
+
+        {/* 11. सम्पूर्ण सिद्ध यन्त्र महाकोश (३१ यन्त्र व दैनिक कागज विधि) */}
+        {showYantraMahakoshModal && (
+          <SacredYantraMahakoshModal
+            isOpen={showYantraMahakoshModal}
+            onClose={() => {
+              setShowYantraMahakoshModal(false);
+              setSelectedYantraId(undefined);
+            }}
+            language={userProfile.language}
+            initialYantraId={selectedYantraId}
+          />
+        )}
+
+        {/* 12. प्रामाणिक रत्न विज्ञान एवं असली-नकली पहचान */}
+        {showRatnaGyanModal && (
+          <RatnaGyanModal
+            isOpen={showRatnaGyanModal}
+            onClose={() => {
+              setShowRatnaGyanModal(false);
+              setSelectedGemstoneId(undefined);
+            }}
+            language={userProfile.language}
+            initialGemstoneId={selectedGemstoneId}
           />
         )}
 

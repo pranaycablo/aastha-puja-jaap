@@ -13,6 +13,14 @@ import { AnkaJyotishSection } from './AnkaJyotishSection';
 import { generateAndDownloadVedicReport } from '../utils/vedicReportPdfEngine';
 import { openPrintableAnkaReport } from '../utils/ankaGyanPdfGenerator';
 import {
+  getYantrasForKundali,
+  SacredYantraItem
+} from '../data/yantraMahakoshData';
+import {
+  getRecommendedGemstoneForKundali,
+  GemstoneRecommendationResult
+} from '../data/ratnaScienceData';
+import {
   X,
   Sparkles,
   ChevronDown,
@@ -35,7 +43,9 @@ import {
   Copy,
   Check,
   Loader2,
-  FileCheck
+  FileCheck,
+  ShieldAlert,
+  ExternalLink
 } from 'lucide-react';
 
 export type JyotishTabType = 'kundali' | 'hastrekha' | 'ankajyotish' | 'samadhan';
@@ -107,6 +117,8 @@ interface KundaliSamadhanModalProps {
   onEditProfile: () => void;
   language?: LanguageCode;
   initialTab?: JyotishTabType;
+  onOpenAllYantras?: () => void;
+  onOpenAllRatnas?: () => void;
 }
 
 export const KundaliSamadhanModal: React.FC<KundaliSamadhanModalProps> = ({
@@ -116,7 +128,9 @@ export const KundaliSamadhanModal: React.FC<KundaliSamadhanModalProps> = ({
   onSelectMantraAndStartJaap,
   onEditProfile,
   language = 'hi',
-  initialTab = 'kundali'
+  initialTab = 'kundali',
+  onOpenAllYantras,
+  onOpenAllRatnas
 }) => {
   const isHi = language === 'hi';
   const [activeTab, setActiveTab] = useState<JyotishTabType>(initialTab);
@@ -171,6 +185,26 @@ export const KundaliSamadhanModal: React.FC<KundaliSamadhanModalProps> = ({
       userProfile.birthPlace || userProfile.address || (isHi ? 'वाराणसी (काशी)' : 'Varanasi')
     );
   }, [userProfile.name, userProfile.dob, userProfile.birthTime, userProfile.birthPlace, userProfile.address, isHi]);
+
+  // Specific tailored Yantras matching Kundali Lagna, Moon Sign & Doshas
+  const recommendedYantras = useMemo<SacredYantraItem[]>(() => {
+    if (!kundali) return [];
+    const doshas: string[] = [];
+    if (kundali.doshAnalysis.manglikStatus.includes('मांगलिक')) doshas.push('मांगलिक दोष');
+    if (!kundali.doshAnalysis.kaalSarpType.includes('नहीं')) doshas.push('कालसर्प योग');
+    if (kundali.doshAnalysis.sadeSatiStatus.includes('साढ़ेसाती') || kundali.doshAnalysis.sadeSatiStatus.includes('ढैय्या')) {
+      doshas.push('शनि साढ़ेसाती');
+    }
+    return getYantrasForKundali(kundali.lagnaSign, kundali.moonSign, doshas);
+  }, [kundali]);
+
+  // Specific tailored Gemstone (Bhagya Ratna) recommendation
+  const gemstoneRecommendation = useMemo<GemstoneRecommendationResult | null>(() => {
+    if (!kundali) return null;
+    const doshas: string[] = [];
+    if (kundali.doshAnalysis.manglikStatus.includes('मांगलिक')) doshas.push('मांगलिक');
+    return getRecommendedGemstoneForKundali(kundali.lagnaSign, kundali.moonSign, doshas);
+  }, [kundali]);
 
   // Filter Samasya Samadhan Items
   const filteredSamadhanList = useMemo(() => {
@@ -758,6 +792,268 @@ export const KundaliSamadhanModal: React.FC<KundaliSamadhanModalProps> = ({
                   </div>
                 ))}
               </div>
+
+              {/* ======================================================== */}
+              {/* 🔯 TAILORED YANTRA SECTION: KUNDALI-BASED YANTRA & DAILY PAPER DRAWING */}
+              {/* ======================================================== */}
+              {recommendedYantras.length > 0 && (
+                <div className="space-y-3 pt-1">
+                  <div className="flex items-center justify-between">
+                    <h3 className="text-xs font-black text-amber-950 flex items-center gap-1.5">
+                      <span className="text-sm">🔯</span>
+                      <span>
+                        {isHi ? 'आपकी कुण्डली अनुसार सिद्ध यन्त्र व दैनिक कागज पर निर्माण विधि' : 'Tailored Yantras for Your Kundali'}
+                      </span>
+                    </h3>
+                    {onOpenAllYantras && (
+                      <button
+                        type="button"
+                        onClick={onOpenAllYantras}
+                        className="text-[10px] font-black text-amber-900 bg-amber-200/80 hover:bg-amber-300 px-2 py-0.5 rounded-full border border-amber-300 transition-all flex items-center gap-0.5"
+                      >
+                        <span>सभी यन्त्र देखें ❯</span>
+                      </button>
+                    )}
+                  </div>
+
+                  {recommendedYantras.map((yantra) => (
+                    <div
+                      key={yantra.id}
+                      className="bg-white border-2 border-red-200 hover:border-red-300 rounded-2xl p-3.5 shadow-xs space-y-3 transition-all"
+                    >
+                      {/* Yantra Header */}
+                      <div className="flex items-start justify-between gap-2">
+                        <div>
+                          <span className="text-[10px] font-black uppercase text-red-800 tracking-wider">
+                            {yantra.categoryLabelHi} • {yantra.deityOrPlanet}
+                          </span>
+                          <h4 className="text-xs sm:text-sm font-black text-stone-950">
+                            {yantra.nameHi}
+                          </h4>
+                          <p className="text-[11px] text-gray-700 font-medium mt-0.5">
+                            {yantra.purposeHi}
+                          </p>
+                        </div>
+                        <span
+                          className="w-4 h-4 rounded-full border border-gray-300 shadow-2xs shrink-0 mt-1"
+                          style={{ backgroundColor: yantra.drawingInkColorHex }}
+                          title={`निर्धारित स्याही: ${yantra.drawingInkColor}`}
+                        />
+                      </div>
+
+                      {/* Beej Mantra Strip */}
+                      <div className="p-2 rounded-xl bg-orange-50 border border-orange-200 text-center">
+                        <span className="text-[10px] font-bold text-orange-800 block">सिद्ध बीज मंत्र (नित्य जपें):</span>
+                        <p className="text-xs font-black text-orange-950 font-serif">
+                          {yantra.beejMantra}
+                        </p>
+                      </div>
+
+                      {/* 🔴 SPECIAL USER REQUEST: DAILY PAPER DRAWING REMEDY */}
+                      <div className="bg-red-50/80 border border-red-200 rounded-xl p-3 space-y-2">
+                        <div className="flex items-center justify-between">
+                          <strong className="text-xs font-black text-red-950 flex items-center gap-1">
+                            <span>✍️</span>
+                            <span>दैनिक कागज पर निर्माण विधि (चमत्कारी सुधार हेतु):</span>
+                          </strong>
+                          <span className="text-[9.5px] font-black px-2 py-0.5 rounded-full bg-red-600 text-white">
+                            नित्य उपाय
+                          </span>
+                        </div>
+
+                        {/* Ink, Paper & Muhurat Specs */}
+                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-1.5 text-[10.5px]">
+                          <div className="p-1.5 rounded-lg bg-white border border-red-200">
+                            <span className="text-gray-500 font-bold block">🎨 निर्धारित स्याही/रंग:</span>
+                            <div className="flex items-center gap-1 font-black text-red-950">
+                              <span
+                                className="w-2.5 h-2.5 rounded-full border border-gray-400 shrink-0"
+                                style={{ backgroundColor: yantra.drawingInkColorHex }}
+                              />
+                              <span>{yantra.drawingInkColor}</span>
+                            </div>
+                          </div>
+
+                          <div className="p-1.5 rounded-lg bg-white border border-red-200">
+                            <span className="text-gray-500 font-bold block">📜 पत्र/कागज:</span>
+                            <span className="font-black text-stone-900 line-clamp-1">{yantra.drawingPaperType}</span>
+                          </div>
+
+                          <div className="p-1.5 rounded-lg bg-white border border-red-200">
+                            <span className="text-gray-500 font-bold block">⏰ शुभ दिन व समय:</span>
+                            <span className="font-black text-stone-900 line-clamp-1">{yantra.drawingDay}</span>
+                          </div>
+                        </div>
+
+                        {/* Drawing Steps */}
+                        <div className="text-[11px] text-stone-800 space-y-1 bg-white/70 p-2 rounded-lg border border-red-100">
+                          <strong className="text-stone-950 block font-bold">📋 निर्माण विधि:</strong>
+                          <ol className="list-decimal pl-3.5 space-y-0.5 font-medium leading-relaxed">
+                            {yantra.drawingVidhiSteps.map((s, idx) => (
+                              <li key={idx}><span>{s}</span></li>
+                            ))}
+                          </ol>
+                        </div>
+
+                        {/* Rapid Improvement Benefit */}
+                        <div className="text-[10.5px] text-red-900 font-bold bg-amber-100/90 p-2 rounded-lg border border-amber-300">
+                          🌟 <strong>त्वरित सुधार:</strong> {yantra.dailyDrawingBenefits}
+                        </div>
+                      </div>
+
+                      {/* Wearing / Installation strip */}
+                      <div className="flex flex-wrap items-center justify-between gap-1.5 pt-1 border-t border-stone-100 text-[10.5px] text-stone-700">
+                        <span><strong>धातु:</strong> {yantra.dharanMetal}</span>
+                        <span><strong>शुभ दिन:</strong> {yantra.dharanDay}</span>
+                        <span><strong>स्थान:</strong> {yantra.installationPlacement}</span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+
+              {/* ======================================================== */}
+              {/* 💎 TAILORED GEMSTONE SECTION: BHAGYA RATNA & STRICT PROHIBITION */}
+              {/* ======================================================== */}
+              {gemstoneRecommendation && (
+                <div className="space-y-3 pt-1">
+                  <div className="flex items-center justify-between">
+                    <h3 className="text-xs font-black text-amber-950 flex items-center gap-1.5">
+                      <span className="text-sm">💎</span>
+                      <span>
+                        {isHi ? 'आपकी कुण्डली अनुसार भाग्य रत्न (Ratna Science)' : 'Auspicious Gemstone for Your Kundali'}
+                      </span>
+                    </h3>
+                    {onOpenAllRatnas && (
+                      <button
+                        type="button"
+                        onClick={onOpenAllRatnas}
+                        className="text-[10px] font-black text-amber-900 bg-amber-200/80 hover:bg-amber-300 px-2 py-0.5 rounded-full border border-amber-300 transition-all flex items-center gap-0.5"
+                      >
+                        <span>रत्न पहचान गाइड ❯</span>
+                      </button>
+                    )}
+                  </div>
+
+                  {/* Primary Recommended Gemstone Card */}
+                  <div className="bg-white border-2 border-amber-300 rounded-2xl p-3.5 shadow-xs space-y-3">
+                    <div className="flex items-start justify-between gap-2">
+                      <div className="flex items-center gap-2.5">
+                        <div
+                          className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl shadow-xs border shrink-0"
+                          style={{
+                            backgroundColor: `${gemstoneRecommendation.recommendedGemstone.colorHex}15`,
+                            borderColor: gemstoneRecommendation.recommendedGemstone.colorHex
+                          }}
+                        >
+                          {gemstoneRecommendation.recommendedGemstone.imageIcon}
+                        </div>
+                        <div>
+                          <span className="text-[10px] font-bold text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded-full">
+                            ★ सर्वोत्तम मुख्य भाग्य रत्न
+                          </span>
+                          <h4 className="text-xs sm:text-sm font-black text-amber-950 mt-0.5">
+                            {gemstoneRecommendation.recommendedGemstone.nameHi}
+                          </h4>
+                          <span className="text-[10px] text-gray-500 font-medium">
+                            स्वामी ग्रह: {gemstoneRecommendation.recommendedGemstone.planetHi} ({gemstoneRecommendation.recommendedGemstone.planet})
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <p className="text-xs text-amber-950 bg-amber-50/80 p-2.5 rounded-xl border border-amber-200 font-medium leading-relaxed">
+                      📜 <strong>ज्योतिषीय कारण:</strong> {gemstoneRecommendation.reasonHi}
+                    </p>
+
+                    {/* Wearing Vidhi Grid */}
+                    <div className="grid grid-cols-2 gap-1.5 text-[10.5px]">
+                      <div className="p-2 rounded-xl bg-orange-50/60 border border-orange-100">
+                        <span className="text-gray-500 font-bold block">💍 श्रेष्ठ धातु:</span>
+                        <span className="font-black text-stone-900">{gemstoneRecommendation.recommendedGemstone.wearingMetalHi}</span>
+                      </div>
+                      <div className="p-2 rounded-xl bg-orange-50/60 border border-orange-100">
+                        <span className="text-gray-500 font-bold block">👆 निर्धारित उंगली:</span>
+                        <span className="font-black text-stone-900">{gemstoneRecommendation.recommendedGemstone.wearingFingerHi}</span>
+                      </div>
+                      <div className="p-2 rounded-xl bg-orange-50/60 border border-orange-100">
+                        <span className="text-gray-500 font-bold block">⏰ शुभ दिन व समय:</span>
+                        <span className="font-black text-stone-900">{gemstoneRecommendation.recommendedGemstone.wearingDayHi}</span>
+                      </div>
+                      <div className="p-2 rounded-xl bg-orange-50/60 border border-orange-100">
+                        <span className="text-gray-500 font-bold block">उपरत्न:</span>
+                        <span className="font-black text-stone-900">{gemstoneRecommendation.recommendedGemstone.substituteStoneHi}</span>
+                      </div>
+                    </div>
+
+                    {/* Prana Pratishtha Mantra */}
+                    <div className="p-2.5 rounded-xl bg-amber-50 border border-amber-200 text-center">
+                      <span className="text-[10px] font-bold text-amber-900 block">प्राण-प्रतिष्ठा मंत्र:</span>
+                      <p className="text-xs font-black text-orange-950 font-serif">
+                        {gemstoneRecommendation.recommendedGemstone.pranaPratishthaMantra}
+                      </p>
+                    </div>
+
+                    {/* Quick Real Authenticity Sign */}
+                    {gemstoneRecommendation.recommendedGemstone.authenticityTests[0] && (
+                      <div className="text-[11px] text-stone-800 bg-stone-50 p-2.5 rounded-xl border border-stone-200">
+                        <strong className="text-stone-950 font-bold block mb-0.5">
+                          🔬 असली रत्न पहचान (घरेलू परीक्षण):
+                        </strong>
+                        <p>{gemstoneRecommendation.recommendedGemstone.authenticityTests[0].procedureHi}</p>
+                        <p className="text-emerald-800 font-bold mt-1">
+                          ✓ {gemstoneRecommendation.recommendedGemstone.authenticityTests[0].realSignHi}
+                        </p>
+                      </div>
+                    )}
+
+                    {/* STRICT WARNING FOR PROHIBITED GEMSTONES */}
+                    {gemstoneRecommendation.prohibitedGemstones.length > 0 && (
+                      <div className="p-2.5 rounded-xl bg-rose-50 border-2 border-rose-300 text-xs text-rose-950 space-y-1">
+                        <strong className="text-rose-900 font-black flex items-center gap-1.5">
+                          <ShieldAlert className="w-4 h-4 text-rose-700 shrink-0" />
+                          <span>कठोर चेतावनी: आपकी कुण्डली हेतु पूर्ण वर्जित रत्न!</span>
+                        </strong>
+                        <p className="text-[11px] font-medium leading-relaxed">
+                          आपकी लग्न/राशि के अनुसार भूलकर भी{' '}
+                          <span className="font-black underline text-rose-950">
+                            {gemstoneRecommendation.prohibitedGemstones.map((g) => g.nameHi.split('(')[0].trim()).join(', ')}
+                          </span>
+                          {' '}धारण न करें। यह गंभीर आर्थिक व शारीरिक हानि दे सकते हैं।
+                        </p>
+                      </div>
+                    )}
+                  </div>
+
+                  {/* 📢 CONTEXTUAL ADMOB AD CARD FOR THIS RECOMMENDED GEMSTONE */}
+                  <div className="p-3.5 bg-gradient-to-r from-amber-600 via-orange-600 to-amber-700 rounded-2xl text-white shadow-md space-y-2">
+                    <div className="flex items-center justify-between">
+                      <span className="text-[9.5px] font-black uppercase px-2 py-0.5 rounded-full bg-white/20 border border-white/30 text-amber-100">
+                        AdMob Sponsored • आपकी कुण्डली अनुसार प्रमाणित
+                      </span>
+                      <span className="text-[10px] font-bold text-amber-200">१००% प्राकृतिक व लैब सिद्ध</span>
+                    </div>
+                    <div className="flex items-center justify-between gap-2">
+                      <div>
+                        <h4 className="text-xs sm:text-sm font-black text-white">
+                          {gemstoneRecommendation.recommendedGemstone.adTitleHi}
+                        </h4>
+                        <p className="text-[10.5px] text-amber-100 font-medium">
+                          {gemstoneRecommendation.recommendedGemstone.adSubtitleHi}
+                        </p>
+                      </div>
+                      <button
+                        type="button"
+                        onClick={() => alert(`लैब-प्रमाणित प्राकृतिक ${gemstoneRecommendation.recommendedGemstone.nameHi.split('(')[0]} रत्न परामर्श एवं प्रमाणन जल्द ही उपलब्ध होगा।`)}
+                        className="px-3 py-1.5 rounded-xl bg-white text-orange-950 font-black text-xs hover:bg-amber-50 active:scale-95 transition-all shadow-xs shrink-0 flex items-center gap-1 cursor-pointer"
+                      >
+                        <span>प्रमाणित रत्न</span>
+                        <ExternalLink className="w-3 h-3 text-orange-600" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              )}
 
               {/* BOTTOM QUICK CALL-TO-ACTION FOR COMPLETE REPORT */}
               <div className="p-3 bg-gradient-to-r from-orange-600 via-amber-600 to-orange-700 rounded-2xl text-white shadow-md flex items-center justify-between gap-2">
