@@ -439,6 +439,16 @@ export const NAVARATNA_SCIENCE_COLLECTION: GemstoneItem[] = [
   }
 ];
 
+// Helper: Normalize Zodiac sign names (handling कुंभ/कुम्भ, धनु/धनुष, etc.)
+function normalizeZodiacName(s?: string): string {
+  if (!s) return '';
+  return s
+    .replace(/कुम्भ/g, 'कुंभ')
+    .replace(/धनुष/g, 'धनु')
+    .replace(/वृष(?![भ])/g, 'वृषभ')
+    .toLowerCase();
+}
+
 export function getRecommendedGemstoneForKundali(
   lagnaSign?: string,
   moonSign?: string,
@@ -449,58 +459,60 @@ export function getRecommendedGemstoneForKundali(
   prohibitedGemstones: GemstoneItem[];
   reasonHi: string;
 } {
-  const normLagna = (lagnaSign || '').split('(')[0].trim();
-  const normMoon = (moonSign || '').split('(')[0].trim();
+  const normLagna = normalizeZodiacName(lagnaSign).split('(')[0].trim();
+  const normMoon = normalizeZodiacName(moonSign).split('(')[0].trim();
+  const primarySign = normLagna || normMoon;
+  const fullSign = normalizeZodiacName(lagnaSign || moonSign || '');
 
   let rec = NAVARATNA_SCIENCE_COLLECTION[0]; // default ruby
   let sec: GemstoneItem | undefined = undefined;
   let reason = '';
 
-  if (normLagna.includes('मेष') || normMoon.includes('मेष')) {
+  if (primarySign.includes('मेष') || fullSign.includes('aries')) {
     rec = NAVARATNA_SCIENCE_COLLECTION.find((g) => g.id === 'moonga_coral')!;
     sec = NAVARATNA_SCIENCE_COLLECTION.find((g) => g.id === 'manikya_ruby')!;
-    reason = 'मेष लग्न/राशि के स्वामी मंगल देव हैं। आपके लिए लाल मूंगा (Moonga) जीवन रक्षक व भाग्योदय कारक भाग्य रत्न है।';
-  } else if (normLagna.includes('वृषभ') || normMoon.includes('वृषभ')) {
+    reason = 'मेष लग्न के स्वामी मंगल देव हैं। आपके लिए लाल मूंगा (Moonga) जीवन रक्षक व भाग्योदय कारक भाग्य रत्न है।';
+  } else if (primarySign.includes('वृषभ') || fullSign.includes('taurus')) {
     rec = NAVARATNA_SCIENCE_COLLECTION.find((g) => g.id === 'heera_diamond')!;
     sec = NAVARATNA_SCIENCE_COLLECTION.find((g) => g.id === 'panna_emerald')!;
     reason = 'वृषभ लग्न के स्वामी शुक्र देव हैं। आपके लिए ओपल या हीरा (Diamond) ऐश्वर्य, दांपत्य सुख व धन वृद्धि हेतु परम शुभ है।';
-  } else if (normLagna.includes('मिथुन') || normMoon.includes('मिथुन')) {
+  } else if (primarySign.includes('मिथुन') || fullSign.includes('gemini')) {
     rec = NAVARATNA_SCIENCE_COLLECTION.find((g) => g.id === 'panna_emerald')!;
     sec = NAVARATNA_SCIENCE_COLLECTION.find((g) => g.id === 'heera_diamond')!;
-    reason = 'मिथुन राशि/लग्न के स्वामी बुध देव हैं। आपके लिए जाम्बियन पन्ना (Emerald) व्यापार, करियर व तीव्र बुद्धि हेतु सर्वोत्तम है।';
-  } else if (normLagna.includes('कर्क') || normMoon.includes('कर्क')) {
+    reason = 'मिथुन लग्न के स्वामी बुध देव हैं। आपके लिए जाम्बियन पन्ना (Emerald) व्यापार, करियर व तीव्र बुद्धि हेतु सर्वोत्तम है।';
+  } else if (primarySign.includes('कर्क') || fullSign.includes('cancer')) {
     rec = NAVARATNA_SCIENCE_COLLECTION.find((g) => g.id === 'moti_pearl')!;
     sec = NAVARATNA_SCIENCE_COLLECTION.find((g) => g.id === 'pukhraj_yellow_sapphire')!;
     reason = 'कर्क लग्न के स्वामी चन्द्रमा हैं। आपके लिए प्राकृतिक सच्चा मोती (Pearl) मानसिक शांति, क्रोध शमन व भाग्योदय हेतु अचूक है।';
-  } else if (normLagna.includes('सिंह') || normMoon.includes('सिंह')) {
+  } else if (primarySign.includes('सिंह') || fullSign.includes('leo')) {
     rec = NAVARATNA_SCIENCE_COLLECTION.find((g) => g.id === 'manikya_ruby')!;
     sec = NAVARATNA_SCIENCE_COLLECTION.find((g) => g.id === 'moonga_coral')!;
     reason = 'सिंह लग्न के स्वामी साक्षात् सूर्य नारायण हैं। आपके लिए माणिक्य (Ruby) धारण करने से सरकारी पद, यश व अटूट प्रभाव मिलता है।';
-  } else if (normLagna.includes('कन्या') || normMoon.includes('कन्या')) {
+  } else if (primarySign.includes('कन्या') || fullSign.includes('virgo')) {
     rec = NAVARATNA_SCIENCE_COLLECTION.find((g) => g.id === 'panna_emerald')!;
     sec = NAVARATNA_SCIENCE_COLLECTION.find((g) => g.id === 'heera_diamond')!;
     reason = 'कन्या लग्न के स्वामी बुध देव हैं। आपके लिए पन्ना रत्न स्वास्थ्य, व्यापार व आर्थिक स्थिरता प्रदान करता है।';
-  } else if (normLagna.includes('तुला') || normMoon.includes('तुला')) {
+  } else if (primarySign.includes('तुला') || fullSign.includes('libra')) {
     rec = NAVARATNA_SCIENCE_COLLECTION.find((g) => g.id === 'heera_diamond')!;
     sec = NAVARATNA_SCIENCE_COLLECTION.find((g) => g.id === 'neelam_blue_sapphire')!;
     reason = 'तुला लग्न के स्वामी शुक्र देव हैं और शनि योगकारक हैं। आपके लिए हीरा या ओपल सर्वोत्तम भाग्य रत्न है।';
-  } else if (normLagna.includes('वृश्चिक') || normMoon.includes('वृश्चिक')) {
+  } else if (primarySign.includes('वृश्चिक') || fullSign.includes('scorpio')) {
     rec = NAVARATNA_SCIENCE_COLLECTION.find((g) => g.id === 'moonga_coral')!;
     sec = NAVARATNA_SCIENCE_COLLECTION.find((g) => g.id === 'pukhraj_yellow_sapphire')!;
     reason = 'वृश्चिक लग्न के स्वामी मंगल देव हैं। आपके लिए इतालवी लाल मूंगा साहस, भूमि लाभ व मांगलिक दोष निवारण करता है।';
-  } else if (normLagna.includes('धनु') || normMoon.includes('धनु')) {
+  } else if (primarySign.includes('धनु') || fullSign.includes('sagittarius')) {
     rec = NAVARATNA_SCIENCE_COLLECTION.find((g) => g.id === 'pukhraj_yellow_sapphire')!;
     sec = NAVARATNA_SCIENCE_COLLECTION.find((g) => g.id === 'manikya_ruby')!;
     reason = 'धनु लग्न के स्वामी देवगुरु बृहस्पति हैं। आपके लिए पीला पुखराज (Yellow Sapphire) ज्ञान, धन, विवाह व अध्यात्म का वरदान है।';
-  } else if (normLagna.includes('मकर') || normMoon.includes('मकर')) {
+  } else if (primarySign.includes('मकर') || fullSign.includes('capricorn')) {
     rec = NAVARATNA_SCIENCE_COLLECTION.find((g) => g.id === 'neelam_blue_sapphire')!;
     sec = NAVARATNA_SCIENCE_COLLECTION.find((g) => g.id === 'panna_emerald')!;
     reason = 'मकर लग्न के स्वामी शनिदेव हैं। आपके लिए नीलम या नीली रत्न साढ़ेसाती का शमन कर अकूत उन्नति देता है।';
-  } else if (normLagna.includes('कुम्भ') || normMoon.includes('कुम्भ')) {
+  } else if (primarySign.includes('कुंभ') || fullSign.includes('aquarius')) {
     rec = NAVARATNA_SCIENCE_COLLECTION.find((g) => g.id === 'neelam_blue_sapphire')!;
     sec = NAVARATNA_SCIENCE_COLLECTION.find((g) => g.id === 'heera_diamond')!;
-    reason = 'कुम्भ लग्न के स्वामी शनिदेव हैं। आपके लिए नीलम व हीरा अनुकूल रत्न हैं जो जीवन में स्थायित्व व अचानक धन लाते हैं।';
-  } else if (normLagna.includes('मीन') || normMoon.includes('मीन')) {
+    reason = 'कुंभ लग्न के स्वामी शनिदेव हैं। आपके लिए नीलम व हीरा अनुकूल रत्न हैं जो जीवन में स्थायित्व व अचानक धन लाते हैं।';
+  } else if (primarySign.includes('मीन') || fullSign.includes('pisces')) {
     rec = NAVARATNA_SCIENCE_COLLECTION.find((g) => g.id === 'pukhraj_yellow_sapphire')!;
     sec = NAVARATNA_SCIENCE_COLLECTION.find((g) => g.id === 'moti_pearl')!;
     reason = 'मीन लग्न के स्वामी देवगुरु बृहस्पति हैं और चन्द्रमा पंचमेश हैं। पुखराज व मोती आपके लिए अमोघ फलदायक हैं।';
@@ -510,10 +522,18 @@ export function getRecommendedGemstoneForKundali(
     reason = 'आपकी कुण्डली के अनुसार सूर्य व देवगुरु की कृपा हेतु माणिक्य अथवा पुखराज धारण करना अति शुभ है।';
   }
 
-  // Calculate prohibited gemstones
+  // Calculate prohibited gemstones strictly based on Lagna (primarySign)
   const prohibited = NAVARATNA_SCIENCE_COLLECTION.filter((g) =>
-    g.prohibitedLagnasHi.some((p) => normLagna.includes(p) || normMoon.includes(p))
-  );
+    g.prohibitedLagnasHi.some((p) => {
+      const normP = normalizeZodiacName(p);
+      const pClean = normP.split('(')[0].trim();
+      const pEn = (normP.match(/\(([^)]+)\)/)?.[1] || '').trim();
+      return (
+        (pClean && primarySign.includes(pClean)) ||
+        (pEn && fullSign.includes(pEn))
+      );
+    })
+  ).filter((g) => g.id !== rec.id && (!sec || g.id !== sec.id));
 
   return {
     recommendedGemstone: rec,
