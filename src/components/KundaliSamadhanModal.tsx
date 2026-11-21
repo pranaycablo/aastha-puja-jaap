@@ -329,7 +329,7 @@ export const KundaliSamadhanModal: React.FC<KundaliSamadhanModalProps> = ({
                 {isHi ? 'कुण्डली दर्शन व समस्या समाधान' : 'Kundali & Problem Solutions'}
               </h2>
               <span className="text-[10px] text-amber-100 font-semibold">
-                {isHi ? '१००% वास्तविक ऑफलाइन कुण्डली व शास्त्र सम्मत उपाय' : 'Authentic Offline Vedic Astrological Remedies'}
+                {isHi ? '१००% वास्तविक शास्त्र सम्मत कुण्डली व वैदिक उपाय' : 'Authentic Vedic Astrological Solutions'}
               </span>
             </div>
           </div>

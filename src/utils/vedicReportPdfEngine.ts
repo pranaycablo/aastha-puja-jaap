@@ -1699,9 +1699,9 @@ function renderConclusionAndBlessingsPage(ctx: any): string {
         ॥ ॐ शान्तिः शान्तिः शान्तिः ॥
       </div>
 
-      <div style="background: #FFFBEB; border: 1px solid #D97706; border-radius: 8px; padding: 10px 12px; font-size: 8.5px; line-height: 1.5; color: #78350F; text-align: justify; margin-top: 4px;">
-        <strong style="color: #9A3412; font-size: 9.5px; display: block; margin-bottom: 2px;">⚖️ वैधानिक एवं आध्यात्मिक अस्वीकरण (Legal & Spiritual Disclaimer):</strong>
-        यह ५१-पृष्ठीय कुण्डली व अंक ज्योतिष विश्लेषण वैदिक ज्योतिष (बृहत्पाराशर होराशास्त्र, भृगु संहिता) एवं चालडियन अंक विद्या के शास्त्रीय सूत्रों पर आधारित आस्था व व्यक्तिगत मार्गदर्शन है। यह किसी भी प्रकार की चिकित्सीय (Medical), कानूनी (Legal) या वित्तीय (Financial) सलाह का विकल्प नहीं है। जीवन के अंतिम परिणाम जातक के अपने कर्म, पुरुषार्थ एवं स्वतंत्र इच्छा पर निर्भर हैं। 'आस्था' ऐप एवं इसके विकासकर्ता किसी भी निर्णय के प्रति कानूनी या वित्तीय रूप से उत्तरदायी नहीं होंगे।
+      <div style="background: #FFFBEB; border: 2px solid #D97706; border-radius: 8px; padding: 12px 14px; font-size: 10px; line-height: 1.6; color: #78350F; text-align: center; margin-top: 6px;">
+        <strong style="color: #9A3412; font-size: 11px; display: block; margin-bottom: 3px;">🔒 व्यक्तिगत गोपनीयता एवं साधना निर्देश:</strong>
+        यह रिपोर्ट आपके द्वारा दी गई जानकारी और ज्योतिष (Astro), अंक शास्त्र (Numro), एवं शास्त्र के आधार पर बनाई गई है जो सिर्फ आपके लिए है। इसे किसी के साथ साझा (Share) नहीं करें। अपने जप, शुद्धि या सिद्धि मंत्र को किसी और को नहीं करने दें। यह सिर्फ और सिर्फ आपके लिए बना हुआ है।
       </div>
     </div>
   `;

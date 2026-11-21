@@ -430,9 +430,10 @@ export function openPrintableAnkaReport(config: PrintableReportConfig) {
       </div>
     ` : ''}
 
-    <div class="footer">
-      <strong>सनातन आस्था आध्यात्मिक संस्थान</strong> • यह रिपोर्ट वैदिक एवं चालडियन अंक ज्योतिषीय सूत्रों के आधार पर शत-प्रतिशत शास्त्र सम्मत गणना कर निर्मित की गई है।
-      <br>© ${new Date().getFullYear()} आस्था : पूजा जाप (Aastha : Puja Jaap). All spiritual rights reserved.
+    <div class="footer" style="background: #fffbeb; border: 2px solid #d97706; padding: 12px 14px; border-radius: 8px; margin-top: 15px; color: #78350f; font-size: 11px; line-height: 1.6; text-align: center;">
+      <strong style="color: #9a3412; font-size: 12px; display: block; margin-bottom: 3px;">🔒 व्यक्तिगत गोपनीयता एवं साधना निर्देश:</strong>
+      यह रिपोर्ट आपके द्वारा दी गई जानकारी और ज्योतिष (Astro), अंक शास्त्र (Numro), एवं शास्त्र के आधार पर बनाई गई है जो सिर्फ आपके लिए है। इसे किसी के साथ साझा (Share) नहीं करें। अपने जप, शुद्धि या सिद्धि मंत्र को किसी और को नहीं करने दें। यह सिर्फ और सिर्फ आपके लिए बना हुआ है।
+      <div style="margin-top: 6px; font-size: 10px; color: #92400e;">© ${new Date().getFullYear()} आस्था : पूजा पाठ (Aastha : Puja Jaap). All spiritual rights reserved.</div>
     </div>
   </div>
 </body>

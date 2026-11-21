@@ -345,7 +345,7 @@ export const AnkaGyanModal: React.FC<AnkaGyanModalProps> = ({
               <h2 className="text-sm sm:text-base font-black tracking-wide flex items-center gap-2">
                 <span>{isHi ? 'वैदिक अंक ज्ञान व मोबाइल अंक शास्त्र' : 'Vedic Anka Gyan & Numerology'}</span>
                 <span className="text-[10px] bg-amber-400 text-orange-950 px-2 py-0.5 rounded-full font-black">
-                  100% ऑफ़लाइन
+                  शास्त्र सम्मत
                 </span>
               </h2>
               <p className="text-[11px] text-amber-100 font-medium">

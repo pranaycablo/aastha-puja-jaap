@@ -55,10 +55,10 @@ export class ErrorBoundary extends Component<Props, State> {
 
             <div className="text-amber-400 font-serif text-sm font-bold mb-1">॥ ॐ नमः शिवाय ॥</div>
             <h2 className="text-xl font-black text-amber-100 mb-2">
-              स्वस्थ पुनर्प्राप्ति प्रणाली (Safe Recovery)
+              ॥ प्रभु कृपा एवं शांति ॥
             </h2>
             <p className="text-xs text-amber-200/80 mb-5 leading-relaxed">
-              ऐप में एक अप्रत्याशित समस्या को सुरक्षित रूप से रोक दिया गया है। आपका साधना डेटा और कुण्डली विवरण पूर्णतः सुरक्षित है।
+              साधना को निर्बाध बनाए रखने हेतु कृपया पुनः प्रवेश करें। आपका साधना जप एवं कुण्डली विवरण पूर्णतः सुरक्षित है।
             </p>
 
             <div className="space-y-3">
@@ -68,7 +68,7 @@ export class ErrorBoundary extends Component<Props, State> {
                 className="w-full py-3.5 px-4 rounded-xl bg-gradient-to-r from-amber-500 via-orange-500 to-amber-600 text-slate-950 font-black text-sm shadow-lg flex items-center justify-center gap-2 active:scale-95 transition-all cursor-pointer"
               >
                 <RefreshCw className="w-4 h-4" />
-                <span>ऐप को पुनः लोड करें (Reload App)</span>
+                <span>🔄 पुनः साधना आरंभ करें</span>
               </button>
 
               <button
@@ -77,7 +77,7 @@ export class ErrorBoundary extends Component<Props, State> {
                 className="w-full py-2.5 px-4 rounded-xl bg-white/10 hover:bg-white/15 text-amber-200 text-xs font-bold border border-amber-500/30 flex items-center justify-center gap-2 active:scale-95 transition-all cursor-pointer"
               >
                 <Trash2 className="w-3.5 h-3.5 text-amber-400" />
-                <span>सुरक्षित कैश साफ़ करें व पुनः लोड करें</span>
+                <span>✨ नया साधना सत्र प्रारंभ करें</span>
               </button>
             </div>
 
