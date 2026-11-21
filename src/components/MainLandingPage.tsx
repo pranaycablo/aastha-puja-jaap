@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { UserProfile, MantraItem, LanguageCode } from '../types';
 import { getTodayDivineGuidance } from '../utils/aajKaDinEngine';
 import { calculateMoolank } from '../utils/ankaJyotishEngine';
+import { audioEngine } from '../utils/audioEngine';
 import { AdMobNativeCard } from './AdMobNativeCard';
 
 interface MainLandingPageProps {
@@ -45,6 +46,22 @@ export const MainLandingPage: React.FC<MainLandingPageProps> = ({
   language = 'hi'
 }) => {
   const isHi = language === 'hi';
+  const [ringingBell, setRingingBell] = useState(false);
+  const [blowingShankh, setBlowingShankh] = useState(false);
+
+  const handleRingBell = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    setRingingBell(true);
+    audioEngine.playBell('kashi_brass', 0.85);
+    setTimeout(() => setRingingBell(false), 900);
+  };
+
+  const handleBlowShankh = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    setBlowingShankh(true);
+    audioEngine.playShankh('panchjanya', 0.85);
+    setTimeout(() => setBlowingShankh(false), 2200);
+  };
 
   // Check if user has provided custom details
   const hasCustomUserName = Boolean(
@@ -169,6 +186,42 @@ export const MainLandingPage: React.FC<MainLandingPageProps> = ({
           </span>
         </div>
       )}
+
+      {/* 1.5 SACRED SADHANA STREAK & DIGITAL TEMPLE ACTION BAR */}
+      <div className="flex items-center justify-between gap-2 px-1">
+        {/* Streak Counter */}
+        <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-2xl bg-gradient-to-r from-amber-500/20 via-orange-500/15 to-amber-500/20 border border-amber-400/80 shadow-2xs">
+          <span className="text-base animate-pulse">🔥</span>
+          <span className="text-xs font-black text-amber-950">
+            {isHi ? `${userProfile.dailyStreak || 1} दिन अखंड साधना संकल्प` : `${userProfile.dailyStreak || 1} Days Sadhana Streak`}
+          </span>
+        </div>
+
+        {/* Temple Bell & Conch Quick Interactive Buttons */}
+        <div className="flex items-center gap-1.5">
+          <button
+            type="button"
+            onClick={handleRingBell}
+            title={isHi ? 'मंदिर की पावन पीतल घंटी बजाएं' : 'Ring Temple Bell'}
+            className={`w-9 h-9 rounded-2xl bg-amber-100 hover:bg-amber-200 border border-amber-300 flex items-center justify-center text-lg shadow-xs active:scale-90 transition-all cursor-pointer ${
+              ringingBell ? 'rotate-12 scale-110 ring-2 ring-amber-400 bg-amber-200' : ''
+            }`}
+          >
+            <span>🔔</span>
+          </button>
+
+          <button
+            type="button"
+            onClick={handleBlowShankh}
+            title={isHi ? 'पावन कुरुक्षेत्र शंखनाद करें' : 'Blow Sacred Conch'}
+            className={`w-9 h-9 rounded-2xl bg-orange-100 hover:bg-orange-200 border border-orange-300 flex items-center justify-center text-lg shadow-xs active:scale-90 transition-all cursor-pointer ${
+              blowingShankh ? '-rotate-12 scale-110 ring-2 ring-orange-400 bg-orange-200' : ''
+            }`}
+          >
+            <span>🐚</span>
+          </button>
+        </div>
+      </div>
 
       {/* 2. आज का दिन ROYAL CARD (Personalized vs Verification Gate) */}
       <button

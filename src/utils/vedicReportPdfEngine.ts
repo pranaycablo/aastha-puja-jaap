@@ -22,6 +22,14 @@ import {
   NameAnalysisResult
 } from './ankaJyotishEngine';
 import { generateOfflineKundali, KundaliAnalysis } from './kundaliEngine';
+import {
+  getYantrasForKundali,
+  SACRED_YANTRAS_COLLECTION
+} from '../data/yantraMahakoshData';
+import {
+  getRecommendedGemstoneForKundali,
+  NAVARATNA_SCIENCE_COLLECTION
+} from '../data/ratnaScienceData';
 
 export interface VedicReportPdfConfig {
   tier: 'tier2_mobile' | 'tier3_life' | 'tier4_wealth' | 'tier5_vip';
@@ -357,7 +365,7 @@ function renderPageHtml(ctx: {
       width: 794px;
       min-height: 1123px;
       max-height: 1123px;
-      padding: 22px 26px;
+      padding: 18px 22px;
       box-sizing: border-box;
       background: #FFFDF9;
       color: #292524;
@@ -367,35 +375,48 @@ function renderPageHtml(ctx: {
       flex-direction: column;
       justify-content: space-between;
       overflow: hidden;
-      border: 4px double #D97706;
+      border: 5px double #B45309;
+      outline: 1.5px solid #F59E0B;
+      outline-offset: -7px;
     ">
-      <!-- HEADER STRIP -->
+      <!-- 4 CORNER DHARMIK ACCENTS (Certificate Style) -->
+      <span style="position: absolute; top: 9px; left: 11px; font-size: 13px; color: #B45309; line-height: 1;">🔔</span>
+      <span style="position: absolute; top: 9px; right: 11px; font-size: 13px; color: #B45309; line-height: 1;">ॐ</span>
+      <span style="position: absolute; bottom: 9px; left: 11px; font-size: 13px; color: #B45309; line-height: 1;">卐</span>
+      <span style="position: absolute; bottom: 9px; right: 11px; font-size: 13px; color: #B45309; line-height: 1;">🪔</span>
+
+      <!-- ROYAL CERTIFICATE HEADER STRIP -->
       <div style="
         border-bottom: 2px solid #D97706;
         padding-bottom: 6px;
-        margin-bottom: 10px;
+        margin-bottom: 8px;
         display: flex;
         align-items: center;
         justify-content: space-between;
       ">
         <div style="display: flex; align-items: center; gap: 8px;">
-          <span style="font-size: 20px;">🕉️</span>
+          <span style="font-size: 22px;">🕉️</span>
           <div>
             <div style="font-size: 13px; font-weight: 900; color: #7C2D12; letter-spacing: 0.5px;">
-              आस्था : पूजा जाप • अधिकृत वैदिक पत्रिका
+              आस्था : पूजा जाप • अधिकृत वैदिक जन्म पत्रिका व जीवन संहिता
             </div>
-            <div style="font-size: 9px; font-weight: bold; color: #B45309;">
-              ऋषि पराशर, जैमिनी एवं चालडियन अंक पद्धति सम्मत
+            <div style="font-size: 8.5px; font-weight: bold; color: #B45309;">
+              ॥ महर्षि पराशर, जैमिनी एवं चालडियन अंक पद्धति सम्मत प्रामाणिक फलादेश ॥
             </div>
           </div>
         </div>
 
-        <div style="text-align: right;">
-          <div style="font-size: 11px; font-weight: 900; color: #7C2D12;">
-            श्री ${cleanName}
+        <div style="text-align: right; display: flex; align-items: center; gap: 6px;">
+          <div style="background: #FEF3C7; border: 1px solid #FCD34D; border-radius: 4px; padding: 2px 6px; font-size: 8px; font-weight: 900; color: #9A3412;">
+            🏅 पराशर प्रमाणित
           </div>
-          <div style="font-size: 9px; font-weight: bold; color: #D97706;">
-            पृष्ठ ${pageNum} / ${totalPages}
+          <div>
+            <div style="font-size: 11px; font-weight: 900; color: #7C2D12;">
+              श्री ${cleanName}
+            </div>
+            <div style="font-size: 8.5px; font-weight: 900; color: #D97706;">
+              पृष्ठ ${pageNum} / ${totalPages}
+            </div>
           </div>
         </div>
       </div>
@@ -408,8 +429,8 @@ function renderPageHtml(ctx: {
       <!-- FOOTER STRIP -->
       <div style="
         border-top: 1.5px solid #E5E7EB;
-        padding-top: 6px;
-        margin-top: 8px;
+        padding-top: 5px;
+        margin-top: 6px;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -461,43 +482,43 @@ function renderCoverAndKundaliPage(ctx: any): string {
       <div style="
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        gap: 6px;
+        gap: 5px;
         background: #FFFDF9;
         border: 1.5px solid #FCD34D;
-        border-radius: 8px;
-        padding: 8px 10px;
-        font-size: 9.5px;
+        border-radius: 7px;
+        padding: 7px 9px;
+        font-size: 9px;
       ">
         <div>
-          <span style="color: #78716C; display: block; font-size: 8.5px;">नाम:</span>
-          <strong style="color: #7C2D12; font-size: 10.5px;">${cleanName}</strong>
+          <span style="color: #78716C; display: block; font-size: 8px;">नाम:</span>
+          <strong style="color: #7C2D12; font-size: 10px;">${cleanName}</strong>
         </div>
         <div>
-          <span style="color: #78716C; display: block; font-size: 8.5px;">जन्म तिथि:</span>
+          <span style="color: #78716C; display: block; font-size: 8px;">जन्म तिथि:</span>
           <strong style="color: #292524;">${cleanDob}</strong>
         </div>
         <div>
-          <span style="color: #78716C; display: block; font-size: 8.5px;">जन्म समय:</span>
+          <span style="color: #78716C; display: block; font-size: 8px;">जन्म समय:</span>
           <strong style="color: #292524;">${cleanTob}</strong>
         </div>
         <div>
-          <span style="color: #78716C; display: block; font-size: 8.5px;">जन्म स्थान:</span>
-          <strong style="color: #292524;">${cleanPob}</strong>
+          <span style="color: #78716C; display: block; font-size: 8px;">जन्म स्थान (अक्षांश/देशांतर):</span>
+          <strong style="color: #292524;">${cleanPob} (${kundaliData.coordinates?.lat?.toFixed(1) || '25.3'}°N, ${kundaliData.coordinates?.lng?.toFixed(1) || '82.9'}°E)</strong>
         </div>
         <div>
-          <span style="color: #78716C; display: block; font-size: 8.5px;">लग्न राशि (स्वामी):</span>
-          <span style="font-weight: 900; color: #9A3412;">${kundaliData.lagnaSign} (${kundaliData.lagnaLord})</span>
+          <span style="color: #78716C; display: block; font-size: 8px;">लग्न राशि (अंश):</span>
+          <span style="font-weight: 900; color: #9A3412;">${kundaliData.lagnaSign} (${kundaliData.lagnaDegree || '12.4'}°)</span>
         </div>
         <div>
-          <span style="color: #78716C; display: block; font-size: 8.5px;">चन्द्र राशि (स्वामी):</span>
+          <span style="color: #78716C; display: block; font-size: 8px;">चन्द्र राशि (स्वामी):</span>
           <span style="font-weight: 900; color: #9A3412;">${kundaliData.moonSign} (${kundaliData.moonSignLord})</span>
         </div>
         <div>
-          <span style="color: #78716C; display: block; font-size: 8.5px;">जन्म नक्षत्र (चरण):</span>
-          <span style="font-weight: 800; color: #451A03;">${kundaliData.nakshatra} (चरण ${kundaliData.charan})</span>
+          <span style="color: #78716C; display: block; font-size: 8px;">जन्म नक्षत्र (चरण):</span>
+          <span style="font-weight: 800; color: #451A03;">${kundaliData.nakshatra} (चरण ${kundaliData.charan}) • ${kundaliData.nakshatraLordHi}</span>
         </div>
         <div>
-          <span style="color: #78716C; display: block; font-size: 8.5px;">मूलांक व भाग्यांक:</span>
+          <span style="color: #78716C; display: block; font-size: 8px;">मूलांक व भाग्यांक:</span>
           <span style="font-weight: 900; color: #047857;">${moolank} / ${bhagyank}</span>
         </div>
       </div>
@@ -774,53 +795,103 @@ function renderNewMobileNumberD1toD10GuidePage(ctx: any): string {
 }
 
 function renderRemediesAndGuruSuggestionsPage(ctx: any): string {
-  const { cleanName, cleanIsht, isHi } = ctx;
+  const { cleanName, cleanIsht, kundaliData, isHi } = ctx;
+
+  const doshas: string[] = [];
+  if (kundaliData?.doshAnalysis?.isManglik) doshas.push('मांगलिक दोष');
+  if (kundaliData?.doshAnalysis?.hasKaalSarp) doshas.push('कालसर्प योग');
+  if (kundaliData?.doshAnalysis?.sadeSatiStatus?.includes('साढ़ेसाती') || kundaliData?.doshAnalysis?.sadeSatiStatus?.includes('ढैय्या')) {
+    doshas.push('शनि साढ़ेसाती');
+  }
+
+  const yantras = getYantrasForKundali(kundaliData?.lagnaSign || 'मेष', kundaliData?.moonSign || 'मेष', doshas);
+  const bestYantra = yantras[0] || SACRED_YANTRAS_COLLECTION[0];
+  const gemRec = getRecommendedGemstoneForKundali(kundaliData?.lagnaSign || 'मेष', kundaliData?.moonSign || 'मेष', doshas);
+  const bestGem = gemRec.recommendedGemstone;
+
+  // Exact Rudraksha based on lagna lord / ruling planet
+  const rudrakshaMap: Record<string, string> = {
+    'सूर्य': '१ मुखी अथवा १२ मुखी रुद्राक्ष (आत्मबल, तेज व नेतृत्व संवर्धन)',
+    'चन्द्रमा': '२ मुखी गौरी-शंकर रुद्राक्ष (मानसिक शांति व चित्त एकाग्रता)',
+    'मंगल': '३ मुखी रुद्राक्ष (अदम्य साहस, ऊर्जा व मांगलिक शांति)',
+    'बुध': '४ मुखी रुद्राक्ष (वाकसिद्धि, व्यापार व विद्या लाभ)',
+    'बृहस्पति': '५ मुखी नेपाली रुद्राक्ष (ज्ञान, गुरु कृपा व संतान सुख)',
+    'शुक्र': '६ मुखी कार्तिकेय रुद्राक्ष (ऐश्वर्य, आकर्षण व दांपत्य मधुरता)',
+    'शनि': '७ मुखी महालक्ष्मी रुद्राक्ष (शनि साढ़ेसाती शमन व अकूत धन)'
+  };
+  const bestRudraksha = rudrakshaMap[kundaliData?.lagnaLord] || '५ मुखी नेपाली रुद्राक्ष (समस्त मनोरथ सिद्धि)';
 
   return `
-    <div style="display: flex; flex-direction: column; gap: 8px;">
-      <div style="background: #FEF3C7; border: 1.5px solid #F59E0B; border-radius: 8px; padding: 6px 10px; font-weight: 900; color: #78350F; font-size: 11.5px; text-align: center;">
-        💎 ${isHi ? 'शास्त्र-सम्मत अचूक उपाय, रत्न, रुद्राक्ष एवं गुरु कृपा मार्गदर्शन' : 'Authentic Shastric Remedies & Life Guidance'}
+    <div style="display: flex; flex-direction: column; gap: 7px;">
+      <div style="background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%); border: 1.5px solid #F59E0B; border-radius: 7px; padding: 5px 8px; font-weight: 900; color: #78350F; font-size: 11px; text-align: center;">
+        💎 ${isHi ? 'शास्त्र-सम्मत अचूक उपाय • सिद्ध यन्त्र, रत्न, रुद्राक्ष एवं गुरु मार्गदर्शन' : 'Authentic Shastric Remedies & Life Guidance'}
       </div>
 
-      <!-- 4 SACRED REMEDY PILLARS -->
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 7px;">
-        <!-- 1. GEMSTONE -->
-        <div style="background: #FFFDF9; border: 1.5px solid #FCD34D; border-radius: 8px; padding: 8px 10px; font-size: 10px;">
-          <div style="font-weight: 900; color: #9A3412; font-size: 11px; margin-bottom: 2px;">
-            💍 १. अनुकूल भाग्य रत्न
+      <!-- 4 SACRED DYNAMIC REMEDY PILLARS -->
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6px;">
+        
+        <!-- 1. YANTRA REMEDY WITH DAILY PAPER DRAWING VIDHI -->
+        <div style="background: #FFFDF9; border: 1.5px solid #DC2626; border-radius: 7px; padding: 6px 8px; font-size: 9px; display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 2px;">
+              <span style="font-weight: 900; color: #991B1B; font-size: 10px;">🔯 १. सिद्ध यन्त्र (दैनिक कागज विधि)</span>
+              <span style="width: 8px; height: 8px; border-radius: 50%; background: ${bestYantra.drawingInkColorHex}; border: 1px solid #7F1D1D;" title="${bestYantra.drawingInkColor}"></span>
+            </div>
+            <div style="font-weight: 900; color: #7F1D1D; font-size: 9.5px; margin-bottom: 2px;">
+              ${bestYantra.nameHi}
+            </div>
+            <div style="color: #451A03; line-height: 1.35;">
+              <strong>स्याही/रंग:</strong> ${bestYantra.drawingInkColor}<br/>
+              <strong>कागज:</strong> ${bestYantra.drawingPaperType}<br/>
+              <strong>शुभ दिन:</strong> ${bestYantra.drawingDay}<br/>
+              <strong>बीज मंत्र:</strong> <span style="font-weight: bold; color: #9A3412;">${bestYantra.beejMantra}</span>
+            </div>
           </div>
-          <div style="color: #451A03; line-height: 1.45;">
-            आपकी कुण्डली अनुसार <strong>माणिक्य अथवा पुखराज</strong> धारण करना अति शुभ रहेगा। इसे तांबे अथवा पंचधातु की अंगूठी में दाहिने हाथ की अनामिका अथवा तर्जनी उंगली में शुक्ल पक्ष के शुभ वार को सूर्योदय उपरांत धारण करें।
-          </div>
-        </div>
-
-        <!-- 2. RUDRAKSHA -->
-        <div style="background: #FFFDF9; border: 1.5px solid #FCD34D; border-radius: 8px; padding: 8px 10px; font-size: 10px;">
-          <div style="font-weight: 900; color: #9A3412; font-size: 11px; margin-bottom: 2px;">
-            📿 २. सिद्ध पावन रुद्राक्ष
-          </div>
-          <div style="color: #451A03; line-height: 1.45;">
-            हृदय व मस्तिष्क में शांति तथा ग्रह दोष निवारण हेतु <strong>पंचमुखी अथवा सातमुखी नेपाली रुद्राक्ष</strong> लाल रेशमी धागे में गले में धारण करें। सोमवार को गंगाजल व कच्चे दूध से अभिमंत्रित कर पहनें।
-          </div>
-        </div>
-
-        <!-- 3. MANTRA JAAP -->
-        <div style="background: #FFFDF9; border: 1.5px solid #FCD34D; border-radius: 8px; padding: 8px 10px; font-size: 10px;">
-          <div style="font-weight: 900; color: #9A3412; font-size: 11px; margin-bottom: 2px;">
-            🕉️ ३. नित्य सिद्ध महामंत्र
-          </div>
-          <div style="color: #451A03; line-height: 1.45;">
-            इष्ट देव ${cleanIsht} का पावन मन्त्र: <strong>"ॐ नमः शिवाय"</strong> अथवा <strong>"ॐ नमो भगवते वासुदेवाय"</strong> का प्रतिदिन १०८ बार रुद्राक्ष अथवा तुलसी माला पर जप करें। इससे समस्त अमंगल दूर होते हैं।
+          <div style="background: #FEF2F2; border: 1px solid #FECACA; border-radius: 4px; padding: 3px 5px; margin-top: 3px; font-size: 8.5px; color: #991B1B; font-weight: bold;">
+            🌟 त्वरित सुधार: ${bestYantra.dailyDrawingBenefits}
           </div>
         </div>
 
-        <!-- 4. AUSPICIOUS CHARITY -->
-        <div style="background: #FFFDF9; border: 1.5px solid #FCD34D; border-radius: 8px; padding: 8px 10px; font-size: 10px;">
-          <div style="font-weight: 900; color: #9A3412; font-size: 11px; margin-bottom: 2px;">
-            🌾 ४. कल्याणकारी दान
+        <!-- 2. GEMSTONE (BHAGYA RATNA) -->
+        <div style="background: #FFFDF9; border: 1.5px solid #D97706; border-radius: 7px; padding: 6px 8px; font-size: 9px; display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="font-weight: 900; color: #9A3412; font-size: 10px; margin-bottom: 2px;">
+              💍 २. अनुकूल मुख्य भाग्य रत्न
+            </div>
+            <div style="font-weight: 900; color: #B45309; font-size: 9.5px; margin-bottom: 2px;">
+              ${bestGem.nameHi}
+            </div>
+            <div style="color: #451A03; line-height: 1.35;">
+              <strong>श्रेष्ठ धातु:</strong> ${bestGem.wearingMetalHi}<br/>
+              <strong>उंगली:</strong> ${bestGem.wearingFingerHi}<br/>
+              <strong>शुभ दिन:</strong> ${bestGem.wearingDayHi}<br/>
+              <strong>मंत्र:</strong> <span style="font-weight: bold; color: #9A3412;">${bestGem.pranaPratishthaMantra.split('॥')[0]}॥</span>
+            </div>
           </div>
-          <div style="color: #451A03; line-height: 1.45;">
-            माह की प्रत्येक पूर्णिमा व संक्रांति को किसी गौशाला में हरा चारा दान करें अथवा निर्धन विद्यार्थियों को पठन सामग्री उपलब्ध कराएं। अन्न दान समस्त पापों को नष्ट कर अक्षय पुण्य प्रदान करता है।
+          ${gemRec.prohibitedGemstones.length > 0 ? `
+            <div style="background: #FFF1F2; border: 1px solid #FECDD3; border-radius: 4px; padding: 3px 5px; margin-top: 3px; font-size: 8px; color: #9F1239; font-weight: bold;">
+              ⚠️ वर्जित रत्न: ${gemRec.prohibitedGemstones.map((g: any) => g.nameHi.split('(')[0].trim()).join(', ')} धारण न करें।
+            </div>
+          ` : ''}
+        </div>
+
+        <!-- 3. RUDRAKSHA -->
+        <div style="background: #FFFDF9; border: 1.5px solid #FCD34D; border-radius: 7px; padding: 6px 8px; font-size: 9px;">
+          <div style="font-weight: 900; color: #9A3412; font-size: 10px; margin-bottom: 2px;">
+            📿 ३. सिद्ध पावन रुद्राक्ष
+          </div>
+          <div style="color: #451A03; line-height: 1.4;">
+            आपकी कुण्डली के लग्न स्वामी <strong>${kundaliData.lagnaLord}</strong> की कृपा व ग्रह दोष निवारण हेतु <strong>${bestRudraksha}</strong> लाल रेशमी धागे में गले में धारण करें। सोमवार को गंगाजल व कच्चे दूध से अभिमंत्रित कर पहनें।
+          </div>
+        </div>
+
+        <!-- 4. MANTRA JAAP & CHARITY -->
+        <div style="background: #FFFDF9; border: 1.5px solid #FCD34D; border-radius: 7px; padding: 6px 8px; font-size: 9px;">
+          <div style="font-weight: 900; color: #9A3412; font-size: 10px; margin-bottom: 2px;">
+            🕉️ ४. नित्य सिद्ध महामंत्र व दान
+          </div>
+          <div style="color: #451A03; line-height: 1.4;">
+            इष्ट देव <strong>${cleanIsht}</strong> का पावन मन्त्र: नित्य १०८ बार जपें। साथ ही माह की प्रत्येक पूर्णिमा को गौमाता को हरा चारा व गुड़ खिलाएं। अन्न व जल दान समस्त अनिष्टों को नष्ट कर अक्षय पुण्य प्रदान करता है।
           </div>
         </div>
       </div>
@@ -828,14 +899,14 @@ function renderRemediesAndGuruSuggestionsPage(ctx: any): string {
       <!-- GURU AASHIRWAD SANSTHA NOTICE -->
       <div style="
         background: #FEF3C7;
-        border: 2px solid #F59E0B;
-        border-radius: 8px;
-        padding: 9px 12px;
-        font-size: 10px;
+        border: 1.5px solid #F59E0B;
+        border-radius: 7px;
+        padding: 7px 10px;
+        font-size: 9px;
         color: #78350F;
-        line-height: 1.5;
+        line-height: 1.45;
       ">
-        <strong style="color: #9A3412; font-size: 11px; display: block; margin-bottom: 2px;">
+        <strong style="color: #9A3412; font-size: 10px; display: block; margin-bottom: 2px;">
           🌸 गुरु कृपा एवं जीवन उत्थान संकल्प:
         </strong>
         श्री ${cleanName} जी, सनातन वैदिक ज्योतिष केवल भविष्य कथन का माध्यम नहीं, अपितु जीवन को सत्य, धर्म, शांति व समृद्धि की दिशा में मोड़ने का पावन प्रकाश है। अपने आचरण में सात्विकता, वाणी में मिठास, माता-पिता की सेवा तथा नित्य ईश्वर स्मरण बनाए रखें। आपका कल्याण निश्चित है।
@@ -1028,41 +1099,84 @@ function renderNavagrahaPositionsPage(ctx: any): string {
 }
 
 function renderDashaAndLifeCyclePage(ctx: any): string {
-  const { cleanName, isHi } = ctx;
+  const { cleanName, kundaliData, isHi } = ctx;
+  const dashaInfo = kundaliData?.vimshottariDasha || {
+    birthOpeningDasha: 'केतु महादशा',
+    balanceYearsAtBirth: 4.5,
+    currentMahadasha: 'गुरु',
+    currentAntardasha: 'गुरु में शनि',
+    dashaTimeline: []
+  };
+  const yogas = kundaliData?.yogas || [];
 
   return `
-    <div style="display: flex; flex-direction: column; gap: 8px;">
-      <div style="background: #FEF3C7; border: 1.5px solid #F59E0B; border-radius: 8px; padding: 6px 10px; font-weight: 900; color: #78350F; font-size: 11.5px; text-align: center;">
-        ⏳ ${isHi ? 'विंशोत्तरी महादशा, अंतर्दशा एवं जीवन चक्र फलादेश' : 'Vimshottari Dasha & Auspicious Timeline'}
+    <div style="display: flex; flex-direction: column; gap: 7px;">
+      <div style="background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%); border: 1.5px solid #F59E0B; border-radius: 7px; padding: 5px 8px; font-weight: 900; color: #78350F; font-size: 11px; text-align: center;">
+        ⏳ ${isHi ? 'विंशोत्तरी महादशा चक्र (१२० वर्ष) एवं जन्मकालीन ग्रह योग' : 'Vimshottari Dasha Cycle & Auspicious Yogas'}
       </div>
 
-      <div style="background: #FFFDF9; border: 2px solid #FDE68A; border-radius: 8px; padding: 11px 13px; font-size: 10.5px; line-height: 1.55; color: #451A03;">
-        <strong style="color: #9A3412; font-size: 12px; display: block; margin-bottom: 3px;">
-          🌟 वर्तमान महादशा एवं आगामी समय का सार:
-        </strong>
-        वैदिक ज्योतिष के महर्षि पराशर सिद्धांत अनुसार मानव जीवन १२० वर्ष की विंशोत्तरी महादशा चक्र में बंधा है। ${cleanName} जी, आपकी वर्तमान दशा गुरु/शुक्र के शुभ प्रभाव में है, जो ज्ञान, समृद्धि व पारिवारिक विस्तार का संकेत देती है।
-      </div>
-
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 7px; font-size: 10.5px;">
-        <div style="background: #ECFDF5; border: 1.5px solid #10B981; border-radius: 8px; padding: 9px; color: #065F46;">
-          <strong style="display: block; font-size: 11px; margin-bottom: 3px; color: #047857;">
-            ✅ अनुकूल समय (Golden Period):
+      <!-- CURRENT DASHA OVERVIEW -->
+      <div style="background: #FFFDF9; border: 1.5px solid #D97706; border-radius: 7px; padding: 7px 10px; font-size: 9.5px; color: #451A03; line-height: 1.45;">
+        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px dashed #FCD34D; padding-bottom: 3px; margin-bottom: 4px;">
+          <strong style="color: #9A3412; font-size: 10.5px;">
+            🌟 जन्मकालीन प्रथम दशा: ${dashaInfo.birthOpeningDasha} (जन्म समय शेष: ${dashaInfo.balanceYearsAtBirth} वर्ष)
           </strong>
-          आगामी ३ वर्ष आपके करियर, आर्थिक निवेश व गृह सुख के लिए अत्यंत श्रेष्ठ हैं। इस समयावधि में नए कार्य आरंभ करना व दीर्घकालीन निवेश करना महा-लाभकारी रहेगा।
+          <span style="background: #059669; color: #FFF; font-weight: 900; padding: 1px 6px; border-radius: 4px; font-size: 8.5px;">
+            सक्रिय: ${dashaInfo.currentMahadasha} महादशा
+          </span>
         </div>
-
-        <div style="background: #FFF1F2; border: 1.5px solid #F43F5E; border-radius: 8px; padding: 9px; color: #9F1239;">
-          <strong style="display: block; font-size: 11px; margin-bottom: 3px; color: #BE123C;">
-            ⚠️ सावधानी योग्य समय (Caution):
-          </strong>
-          राहु अथवा केतु के प्रत्यंतर के दौरान वाहन चलाते समय एवं अनजान व्यक्तियों के साथ वित्तीय अनुबंध करते समय सावधानी रखें। नित्य महामृत्युंजय जप रक्षा कवच बनेगा।
+        <div>
+          श्री ${cleanName} जी, आपकी वर्तमान ग्रह स्थिति <strong>${dashaInfo.currentMahadasha} महादशा</strong> के प्रभाव में है। यह काल आपके कर्म, विद्या व सामाजिक प्रतिष्ठा के विस्तार का समय है।
         </div>
       </div>
 
-      <div style="background: #FEF3C7; border: 1.5px solid #F59E0B; border-radius: 8px; padding: 9px 11px; font-size: 10px; color: #78350F; line-height: 1.5;">
-        <strong style="color: #9A3412; display: block; margin-bottom: 2px;">📿 महादशा शांति व सामंजस्य वैदिक नियम:</strong>
-        दशा के स्वामी ग्रह के बीज मंत्र का नित्य संध्या समय १०८ बार जप करें। गुरुवार के दिन पीले वस्त्र अथवा बेसन का दान करें। इससे दशा का प्रतिकूल प्रभाव शांत होकर शुभ फल सौ गुना बढ़ जाता है।
-      </div>
+      <!-- VIMSHOTTARI 9-DASHA CHRONOLOGICAL TABLE -->
+      <table style="width: 100%; border-collapse: collapse; font-size: 8.5px; border-radius: 6px; overflow: hidden; border: 1px solid #D97706;">
+        <thead>
+          <tr style="background: #B45309; color: #FFFFFF; font-weight: 900;">
+            <th style="padding: 4px 6px; border: 1px solid #D97706;">महादशा स्वामी</th>
+            <th style="padding: 4px 6px; border: 1px solid #D97706; text-align: center;">अवधि (वर्ष)</th>
+            <th style="padding: 4px 6px; border: 1px solid #D97706; text-align: center;">कालावधि (वर्ष-वर्ष)</th>
+            <th style="padding: 4px 6px; border: 1px solid #D97706;">दशा स्थिति व प्रभाव</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${dashaInfo.dashaTimeline.map((d: any, idx: number) => `
+            <tr style="background: ${d.isCurrent ? '#FEF3C7' : idx % 2 === 0 ? '#FFFDF9' : '#FFFBEB'}; color: #451A03; font-weight: ${d.isCurrent ? '900' : 'normal'};">
+              <td style="padding: 3.5px 6px; border: 1px solid #FDE68A; color: ${d.isCurrent ? '#B45309' : '#78350F'};">
+                ${d.isCurrent ? '★ ' : ''}${d.planetHi} (${d.planetEn})
+              </td>
+              <td style="padding: 3.5px 6px; border: 1px solid #FDE68A; text-align: center;">
+                ${d.durationYears} वर्ष
+              </td>
+              <td style="padding: 3.5px 6px; border: 1px solid #FDE68A; text-align: center;">
+                ${d.startYear} - ${d.endYear}
+              </td>
+              <td style="padding: 3.5px 6px; border: 1px solid #FDE68A;">
+                ${d.isCurrent ? '<strong style="color: #047857;">वर्तमान सक्रिय महादशा (सर्वोत्तम फलदायी)</strong>' : (d.endYear < new Date().getFullYear() ? '<span style="color: #78716C;">व्यतीत</span>' : '<span style="color: #B45309;">आगामी काल</span>')}
+              </td>
+            </tr>
+          `).join('')}
+        </tbody>
+      </table>
+
+      <!-- REAL AUSPICIOUS YOGAS SECTION -->
+      ${yogas.length > 0 ? `
+        <div style="background: #ECFDF5; border: 1.5px solid #10B981; border-radius: 7px; padding: 6px 9px; font-size: 9px; color: #065F46;">
+          <strong style="color: #047857; font-size: 10px; display: block; margin-bottom: 2px;">
+            👑 आपकी कुण्डली में विद्यमान शुभ वैदिक राजयोग:
+          </strong>
+          ${yogas.map((y: any) => `
+            <div style="margin-bottom: 3px;">
+              <strong>• ${y.nameHi}:</strong> ${y.descriptionHi} — <span style="font-weight: bold;">${y.effectsHi}</span>
+            </div>
+          `).join('')}
+        </div>
+      ` : `
+        <div style="background: #FFFBEB; border: 1.5px solid #FCD34D; border-radius: 7px; padding: 6px 9px; font-size: 9px; color: #78350F;">
+          <strong>🌟 शुभ ग्रह दृष्टि योग:</strong> आपकी पत्रिका में देवगुरु बृहस्पति व लग्नेश की शुभ दृष्टि से जीवन के उत्तरार्ध में निरंतर उन्नति, स्थिरता व मान-सम्मान के योग निर्मित होते हैं।
+        </div>
+      `}
     </div>
   `;
 }
