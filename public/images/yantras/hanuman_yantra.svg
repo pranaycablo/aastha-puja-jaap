@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <radialGradient id="plateGrad" cx="50%" cy="50%" r="55%" fx="35%" fy="35%">
+      <stop offset="0%" stop-color="#FFDFD3" />
+      <stop offset="65%" stop-color="#E07A5F" />
+      <stop offset="100%" stop-color="#9E2A2B" />
+    </radialGradient>
+    <linearGradient id="metalShine" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.4" />
+      <stop offset="45%" stop-color="#FFFFFF" stop-opacity="0.0" />
+      <stop offset="55%" stop-color="#000000" stop-opacity="0.0" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.3" />
+    </linearGradient>
+    <filter id="yantraGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- Metal Sacred Plate Background -->
+  <rect x="10" y="10" width="480" height="480" rx="32" fill="url(#plateGrad)" stroke="#7F1D1D" stroke-width="6" />
+  <rect x="22" y="22" width="456" height="456" rx="24" fill="none" stroke="#581845" stroke-width="1.8" stroke-dasharray="8 4" opacity="0.75" />
+  <rect x="10" y="10" width="480" height="480" rx="32" fill="url(#metalShine)" pointer-events="none" />
+
+  <!-- Corner Auspicious Symbols -->
+  <text x="36" y="52" font-family="'Nirmala UI', 'Segoe UI', Arial, sans-serif" font-size="24" font-weight="bold" fill="#581845" text-anchor="middle">卐</text>
+  <text x="464" y="52" font-family="'Nirmala UI', 'Segoe UI', Arial, sans-serif" font-size="24" font-weight="bold" fill="#581845" text-anchor="middle">ॐ</text>
+  <text x="36" y="472" font-family="'Nirmala UI', 'Segoe UI', Arial, sans-serif" font-size="24" font-weight="bold" fill="#581845" text-anchor="middle">ॐ</text>
+  <text x="464" y="472" font-family="'Nirmala UI', 'Segoe UI', Arial, sans-serif" font-size="24" font-weight="bold" fill="#581845" text-anchor="middle">卐</text>
+
+  <!-- Yantra Core Content -->
+  <g id="yantra-core" filter="url(#yantraGlow)">
+    
+    <path d="
+        M 45,45
+        H 212.0 V 29.0 H 288.0 V 45
+        H 455
+        V 212.0 H 471.0 V 288.0 H 455
+        V 455
+        H 288.0 V 471.0 H 212.0 V 455
+        H 45
+        V 288.0 H 29.0 V 212.0 H 45
+        Z
+        " fill="none" stroke="#9A3412" stroke-width="3.5" opacity="1.0" />
+<path d="
+        M 52,52
+        H 214.8 V 37.4 H 285.2 V 52
+        H 448
+        V 214.8 H 462.6 V 285.2 H 448
+        V 448
+        H 285.2 V 462.6 H 214.8 V 448
+        H 52
+        V 285.2 H 37.4 V 214.8 H 52
+        Z
+        " fill="none" stroke="#9A3412" stroke-width="1.8" opacity="0.85" />
+<path d="
+        M 59,59
+        H 217.6 V 45.8 H 282.4 V 59
+        H 441
+        V 217.6 H 454.2 V 282.4 H 441
+        V 441
+        H 282.4 V 454.2 H 217.6 V 441
+        H 59
+        V 282.4 H 45.8 V 217.6 H 59
+        Z
+        " fill="none" stroke="#9A3412" stroke-width="1.2" opacity="0.7" />
+    <circle cx="250" cy="250" r="172" fill="none" stroke="#C2410C" stroke-width="2.5" />
+    <path d="M 365.5,202.2 Q 418.0,250.0 365.5,297.8" fill="rgba(255,237,213,0.65)" stroke="#9A3412" stroke-width="2" />
+<line x1="375.0" y1="250.0" x2="418.0" y2="250.0" stroke="#9A3412" stroke-width="1" opacity="0.6" />
+<path d="M 365.5,297.8 Q 368.8,368.8 297.8,365.5" fill="rgba(255,237,213,0.65)" stroke="#9A3412" stroke-width="2" />
+<line x1="338.4" y1="338.4" x2="368.8" y2="368.8" stroke="#9A3412" stroke-width="1" opacity="0.6" />
+<path d="M 297.8,365.5 Q 250.0,418.0 202.2,365.5" fill="rgba(255,237,213,0.65)" stroke="#9A3412" stroke-width="2" />
+<line x1="250.0" y1="375.0" x2="250.0" y2="418.0" stroke="#9A3412" stroke-width="1" opacity="0.6" />
+<path d="M 202.2,365.5 Q 131.2,368.8 134.5,297.8" fill="rgba(255,237,213,0.65)" stroke="#9A3412" stroke-width="2" />
+<line x1="161.6" y1="338.4" x2="131.2" y2="368.8" stroke="#9A3412" stroke-width="1" opacity="0.6" />
+<path d="M 134.5,297.8 Q 82.0,250.0 134.5,202.2" fill="rgba(255,237,213,0.65)" stroke="#9A3412" stroke-width="2" />
+<line x1="125.0" y1="250.0" x2="82.0" y2="250.0" stroke="#9A3412" stroke-width="1" opacity="0.6" />
+<path d="M 134.5,202.2 Q 131.2,131.2 202.2,134.5" fill="rgba(255,237,213,0.65)" stroke="#9A3412" stroke-width="2" />
+<line x1="161.6" y1="161.6" x2="131.2" y2="131.2" stroke="#9A3412" stroke-width="1" opacity="0.6" />
+<path d="M 202.2,134.5 Q 250.0,82.0 297.8,134.5" fill="rgba(255,237,213,0.65)" stroke="#9A3412" stroke-width="2" />
+<line x1="250.0" y1="125.0" x2="250.0" y2="82.0" stroke="#9A3412" stroke-width="1" opacity="0.6" />
+<path d="M 297.8,134.5 Q 368.8,131.2 365.5,202.2" fill="rgba(255,237,213,0.65)" stroke="#9A3412" stroke-width="2" />
+<line x1="338.4" y1="161.6" x2="368.8" y2="131.2" stroke="#9A3412" stroke-width="1" opacity="0.6" />
+    <circle cx="250" cy="250" r="125" fill="rgba(255,255,255,0.75)" stroke="#9A3412" stroke-width="2" />
+    
+    <!-- Vajra Shatkona -->
+    <polygon points="250,140 155,305 345,305" stroke="#C2410C" stroke-width="2.8" fill="rgba(254,215,170,0.3)" />
+    <polygon points="250,360 155,195 345,195" stroke="#C2410C" stroke-width="2.8" fill="rgba(254,215,170,0.3)" />
+    <!-- Central Inverted Triangle -->
+    <polygon points="250,290 195,195 305,195" stroke="#9A3412" stroke-width="3" fill="rgba(255,237,213,0.9)" />
+    <!-- Beej HAM -->
+    <text x="250" y="250" font-family="'Nirmala UI', sans-serif" font-size="38" font-weight="black" fill="#7C2D12" text-anchor="middle">हं</text>
+    <circle cx="250" cy="265" r="4" fill="#EA580C" />
+    <!-- Cardinal Mantras -->
+    <text x="250" y="98" font-family="'Nirmala UI', sans-serif" font-size="12" font-weight="bold" fill="#7C2D12" text-anchor="middle">ॐ हं हनुमते नमः</text>
+    <text x="250" y="412" font-family="'Nirmala UI', sans-serif" font-size="12" font-weight="bold" fill="#7C2D12" text-anchor="middle">सर्व कष्ट भंजनम्</text>
+    
+    
+  </g>
+</svg>

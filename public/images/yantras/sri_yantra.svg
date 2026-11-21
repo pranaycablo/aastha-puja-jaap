@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <radialGradient id="plateGrad" cx="50%" cy="50%" r="55%" fx="35%" fy="35%">
+      <stop offset="0%" stop-color="#FFF8DB" />
+      <stop offset="65%" stop-color="#F5D061" />
+      <stop offset="100%" stop-color="#C59B27" />
+    </radialGradient>
+    <linearGradient id="metalShine" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.4" />
+      <stop offset="45%" stop-color="#FFFFFF" stop-opacity="0.0" />
+      <stop offset="55%" stop-color="#000000" stop-opacity="0.0" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.3" />
+    </linearGradient>
+    <filter id="yantraGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- Metal Sacred Plate Background -->
+  <rect x="10" y="10" width="480" height="480" rx="32" fill="url(#plateGrad)" stroke="#B38728" stroke-width="6" />
+  <rect x="22" y="22" width="456" height="456" rx="24" fill="none" stroke="#8A1807" stroke-width="1.8" stroke-dasharray="8 4" opacity="0.75" />
+  <rect x="10" y="10" width="480" height="480" rx="32" fill="url(#metalShine)" pointer-events="none" />
+
+  <!-- Corner Auspicious Symbols -->
+  <text x="36" y="52" font-family="'Nirmala UI', 'Segoe UI', Arial, sans-serif" font-size="24" font-weight="bold" fill="#8A1807" text-anchor="middle">卐</text>
+  <text x="464" y="52" font-family="'Nirmala UI', 'Segoe UI', Arial, sans-serif" font-size="24" font-weight="bold" fill="#8A1807" text-anchor="middle">ॐ</text>
+  <text x="36" y="472" font-family="'Nirmala UI', 'Segoe UI', Arial, sans-serif" font-size="24" font-weight="bold" fill="#8A1807" text-anchor="middle">ॐ</text>
+  <text x="464" y="472" font-family="'Nirmala UI', 'Segoe UI', Arial, sans-serif" font-size="24" font-weight="bold" fill="#8A1807" text-anchor="middle">卐</text>
+
+  <!-- Yantra Core Content -->
+  <g id="yantra-core" filter="url(#yantraGlow)">
+    
+    <path d="
+        M 45,45
+        H 212.0 V 29.0 H 288.0 V 45
+        H 455
+        V 212.0 H 471.0 V 288.0 H 455
+        V 455
+        H 288.0 V 471.0 H 212.0 V 455
+        H 45
+        V 288.0 H 29.0 V 212.0 H 45
+        Z
+        " fill="none" stroke="#8A1807" stroke-width="3.5" opacity="1.0" />
+<path d="
+        M 52,52
+        H 214.8 V 37.4 H 285.2 V 52
+        H 448
+        V 214.8 H 462.6 V 285.2 H 448
+        V 448
+        H 285.2 V 462.6 H 214.8 V 448
+        H 52
+        V 285.2 H 37.4 V 214.8 H 52
+        Z
+        " fill="none" stroke="#8A1807" stroke-width="1.8" opacity="0.85" />
+<path d="
+        M 59,59
+        H 217.6 V 45.8 H 282.4 V 59
+        H 441
+        V 217.6 H 454.2 V 282.4 H 441
+        V 441
+        H 282.4 V 454.2 H 217.6 V 441
+        H 59
+        V 282.4 H 45.8 V 217.6 H 59
+        Z
+        " fill="none" stroke="#8A1807" stroke-width="1.2" opacity="0.7" />
+    <circle cx="250" cy="250" r="172" fill="none" stroke="#8A1807" stroke-width="2" />
+    <circle cx="250" cy="250" r="166" fill="none" stroke="#B45309" stroke-width="1.5" />
+    <path d="M 379.5,224.2 Q 414.0,250.0 379.5,275.8" fill="rgba(255,237,213,0.35)" stroke="#991B1B" stroke-width="2" />
+<line x1="382.0" y1="250.0" x2="414.0" y2="250.0" stroke="#991B1B" stroke-width="1" opacity="0.6" />
+<path d="M 379.5,275.8 Q 401.5,312.8 359.8,323.3" fill="rgba(255,237,213,0.35)" stroke="#991B1B" stroke-width="2" />
+<line x1="372.0" y1="300.5" x2="401.5" y2="312.8" stroke="#991B1B" stroke-width="1" opacity="0.6" />
+<path d="M 359.8,323.3 Q 366.0,366.0 323.3,359.8" fill="rgba(255,237,213,0.35)" stroke="#991B1B" stroke-width="2" />
+<line x1="343.3" y1="343.3" x2="366.0" y2="366.0" stroke="#991B1B" stroke-width="1" opacity="0.6" />
+<path d="M 323.3,359.8 Q 312.8,401.5 275.8,379.5" fill="rgba(255,237,213,0.35)" stroke="#991B1B" stroke-width="2" />
+<line x1="300.5" y1="372.0" x2="312.8" y2="401.5" stroke="#991B1B" stroke-width="1" opacity="0.6" />
+<path d="M 275.8,379.5 Q 250.0,414.0 224.2,379.5" fill="rgba(255,237,213,0.35)" stroke="#991B1B" stroke-width="2" />
+<line x1="250.0" y1="382.0" x2="250.0" y2="414.0" stroke="#991B1B" stroke-width="1" opacity="0.6" />
+<path d="M 224.2,379.5 Q 187.2,401.5 176.7,359.8" fill="rgba(255,237,213,0.35)" stroke="#991B1B" stroke-width="2" />
+<line x1="199.5" y1="372.0" x2="187.2" y2="401.5" stroke="#991B1B" stroke-width="1" opacity="0.6" />
+<path d="M 176.7,359.8 Q 134.0,366.0 140.2,323.3" fill="rgba(255,237,213,0.35)" stroke="#991B1B" stroke-width="2" />
+<line x1="156.7" y1="343.3" x2="134.0" y2="366.0" stroke="#991B1B" stroke-width="1" opacity="0.6" />
+<path d="M 140.2,323.3 Q 98.5,312.8 120.5,275.8" fill="rgba(255,237,213,0.35)" stroke="#991B1B" stroke-width="2" />
+<line x1="128.0" y1="300.5" x2="98.5" y2="312.8" stroke="#991B1B" stroke-width="1" opacity="0.6" />
+<path d="M 120.5,275.8 Q 86.0,250.0 120.5,224.2" fill="rgba(255,237,213,0.35)" stroke="#991B1B" stroke-width="2" />
+<line x1="118.0" y1="250.0" x2="86.0" y2="250.0" stroke="#991B1B" stroke-width="1" opacity="0.6" />
+<path d="M 120.5,224.2 Q 98.5,187.2 140.2,176.7" fill="rgba(255,237,213,0.35)" stroke="#991B1B" stroke-width="2" />
+<line x1="128.0" y1="199.5" x2="98.5" y2="187.2" stroke="#991B1B" stroke-width="1" opacity="0.6" />
+<path d="M 140.2,176.7 Q 134.0,134.0 176.7,140.2" fill="rgba(255,237,213,0.35)" stroke="#991B1B" stroke-width="2" />
+<line x1="156.7" y1="156.7" x2="134.0" y2="134.0" stroke="#991B1B" stroke-width="1" opacity="0.6" />
+<path d="M 176.7,140.2 Q 187.2,98.5 224.2,120.5" fill="rgba(255,237,213,0.35)" stroke="#991B1B" stroke-width="2" />
+<line x1="199.5" y1="128.0" x2="187.2" y2="98.5" stroke="#991B1B" stroke-width="1" opacity="0.6" />
+<path d="M 224.2,120.5 Q 250.0,86.0 275.8,120.5" fill="rgba(255,237,213,0.35)" stroke="#991B1B" stroke-width="2" />
+<line x1="250.0" y1="118.0" x2="250.0" y2="86.0" stroke="#991B1B" stroke-width="1" opacity="0.6" />
+<path d="M 275.8,120.5 Q 312.8,98.5 323.3,140.2" fill="rgba(255,237,213,0.35)" stroke="#991B1B" stroke-width="2" />
+<line x1="300.5" y1="128.0" x2="312.8" y2="98.5" stroke="#991B1B" stroke-width="1" opacity="0.6" />
+<path d="M 323.3,140.2 Q 366.0,134.0 359.8,176.7" fill="rgba(255,237,213,0.35)" stroke="#991B1B" stroke-width="2" />
+<line x1="343.3" y1="156.7" x2="366.0" y2="134.0" stroke="#991B1B" stroke-width="1" opacity="0.6" />
+<path d="M 359.8,176.7 Q 401.5,187.2 379.5,224.2" fill="rgba(255,237,213,0.35)" stroke="#991B1B" stroke-width="2" />
+<line x1="372.0" y1="199.5" x2="401.5" y2="187.2" stroke="#991B1B" stroke-width="1" opacity="0.6" />
+    <circle cx="250" cy="250" r="132" fill="none" stroke="#8A1807" stroke-width="2" />
+    <path d="M 344.2,211.0 Q 380.0,250.0 344.2,289.0" fill="rgba(254,243,199,0.5)" stroke="#7F1D1D" stroke-width="2" />
+<line x1="352.0" y1="250.0" x2="380.0" y2="250.0" stroke="#7F1D1D" stroke-width="1" opacity="0.6" />
+<path d="M 344.2,289.0 Q 341.9,341.9 289.0,344.2" fill="rgba(254,243,199,0.5)" stroke="#7F1D1D" stroke-width="2" />
+<line x1="322.1" y1="322.1" x2="341.9" y2="341.9" stroke="#7F1D1D" stroke-width="1" opacity="0.6" />
+<path d="M 289.0,344.2 Q 250.0,380.0 211.0,344.2" fill="rgba(254,243,199,0.5)" stroke="#7F1D1D" stroke-width="2" />
+<line x1="250.0" y1="352.0" x2="250.0" y2="380.0" stroke="#7F1D1D" stroke-width="1" opacity="0.6" />
+<path d="M 211.0,344.2 Q 158.1,341.9 155.8,289.0" fill="rgba(254,243,199,0.5)" stroke="#7F1D1D" stroke-width="2" />
+<line x1="177.9" y1="322.1" x2="158.1" y2="341.9" stroke="#7F1D1D" stroke-width="1" opacity="0.6" />
+<path d="M 155.8,289.0 Q 120.0,250.0 155.8,211.0" fill="rgba(254,243,199,0.5)" stroke="#7F1D1D" stroke-width="2" />
+<line x1="148.0" y1="250.0" x2="120.0" y2="250.0" stroke="#7F1D1D" stroke-width="1" opacity="0.6" />
+<path d="M 155.8,211.0 Q 158.1,158.1 211.0,155.8" fill="rgba(254,243,199,0.5)" stroke="#7F1D1D" stroke-width="2" />
+<line x1="177.9" y1="177.9" x2="158.1" y2="158.1" stroke="#7F1D1D" stroke-width="1" opacity="0.6" />
+<path d="M 211.0,155.8 Q 250.0,120.0 289.0,155.8" fill="rgba(254,243,199,0.5)" stroke="#7F1D1D" stroke-width="2" />
+<line x1="250.0" y1="148.0" x2="250.0" y2="120.0" stroke="#7F1D1D" stroke-width="1" opacity="0.6" />
+<path d="M 289.0,155.8 Q 341.9,158.1 344.2,211.0" fill="rgba(254,243,199,0.5)" stroke="#7F1D1D" stroke-width="2" />
+<line x1="322.1" y1="177.9" x2="341.9" y2="158.1" stroke="#7F1D1D" stroke-width="1" opacity="0.6" />
+    <circle cx="250" cy="250" r="102" fill="rgba(255,251,235,0.7)" stroke="#8A1807" stroke-width="2" />
+    
+    <!-- 9 Interlocking Sacred Triangles forming 43 Triangles -->
+    <g stroke="#991B1B" stroke-width="2.2" fill="none" stroke-linejoin="round">
+      <!-- 5 Downward Triangles (Shakti) -->
+      <polygon points="250,230 162,130 338,130" stroke="#7F1D1D" stroke-width="2.5" />
+      <polygon points="250,220 178,145 322,145" />
+      <polygon points="250,210 190,160 310,160" />
+      <polygon points="250,195 204,175 296,175" />
+      <polygon points="250,182 216,190 284,190" />
+
+      <!-- 4 Upward Triangles (Shiva) -->
+      <polygon points="250,270 162,370 338,370" stroke="#7F1D1D" stroke-width="2.5" />
+      <polygon points="250,280 178,355 322,355" />
+      <polygon points="250,290 190,340 310,340" />
+      <polygon points="250,305 204,325 296,325" />
+    </g>
+    <!-- Central Golden Bindu (Mahatripurasundari) -->
+    <circle cx="250" cy="250" r="14" fill="#FEF08A" stroke="#B45309" stroke-width="2" />
+    <circle cx="250" cy="250" r="7" fill="#DC2626" />
+    <circle cx="250" cy="250" r="2.5" fill="#FFFFFF" />
+    <text x="250" y="222" font-family="'Nirmala UI', sans-serif" font-size="12" font-weight="bold" fill="#7F1D1D" text-anchor="middle">श्रीं</text>
+    <text x="250" y="284" font-family="'Nirmala UI', sans-serif" font-size="11" font-weight="bold" fill="#7F1D1D" text-anchor="middle">ह्रीं</text>
+    
+    
+  </g>
+</svg>

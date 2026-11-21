@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <radialGradient id="plateGrad" cx="50%" cy="50%" r="55%" fx="35%" fy="35%">
+      <stop offset="0%" stop-color="#FFF8DB" />
+      <stop offset="65%" stop-color="#F5D061" />
+      <stop offset="100%" stop-color="#C59B27" />
+    </radialGradient>
+    <linearGradient id="metalShine" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.4" />
+      <stop offset="45%" stop-color="#FFFFFF" stop-opacity="0.0" />
+      <stop offset="55%" stop-color="#000000" stop-opacity="0.0" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.3" />
+    </linearGradient>
+    <filter id="yantraGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- Metal Sacred Plate Background -->
+  <rect x="10" y="10" width="480" height="480" rx="32" fill="url(#plateGrad)" stroke="#B38728" stroke-width="6" />
+  <rect x="22" y="22" width="456" height="456" rx="24" fill="none" stroke="#8A1807" stroke-width="1.8" stroke-dasharray="8 4" opacity="0.75" />
+  <rect x="10" y="10" width="480" height="480" rx="32" fill="url(#metalShine)" pointer-events="none" />
+
+  <!-- Corner Auspicious Symbols -->
+  <text x="36" y="52" font-family="'Nirmala UI', 'Segoe UI', Arial, sans-serif" font-size="24" font-weight="bold" fill="#8A1807" text-anchor="middle">卐</text>
+  <text x="464" y="52" font-family="'Nirmala UI', 'Segoe UI', Arial, sans-serif" font-size="24" font-weight="bold" fill="#8A1807" text-anchor="middle">ॐ</text>
+  <text x="36" y="472" font-family="'Nirmala UI', 'Segoe UI', Arial, sans-serif" font-size="24" font-weight="bold" fill="#8A1807" text-anchor="middle">ॐ</text>
+  <text x="464" y="472" font-family="'Nirmala UI', 'Segoe UI', Arial, sans-serif" font-size="24" font-weight="bold" fill="#8A1807" text-anchor="middle">卐</text>
+
+  <!-- Yantra Core Content -->
+  <g id="yantra-core" filter="url(#yantraGlow)">
+    
+    <path d="
+        M 45,45
+        H 212.0 V 29.0 H 288.0 V 45
+        H 455
+        V 212.0 H 471.0 V 288.0 H 455
+        V 455
+        H 288.0 V 471.0 H 212.0 V 455
+        H 45
+        V 288.0 H 29.0 V 212.0 H 45
+        Z
+        " fill="none" stroke="#854D0E" stroke-width="3.5" opacity="1.0" />
+<path d="
+        M 52,52
+        H 214.8 V 37.4 H 285.2 V 52
+        H 448
+        V 214.8 H 462.6 V 285.2 H 448
+        V 448
+        H 285.2 V 462.6 H 214.8 V 448
+        H 52
+        V 285.2 H 37.4 V 214.8 H 52
+        Z
+        " fill="none" stroke="#854D0E" stroke-width="1.8" opacity="0.85" />
+<path d="
+        M 59,59
+        H 217.6 V 45.8 H 282.4 V 59
+        H 441
+        V 217.6 H 454.2 V 282.4 H 441
+        V 441
+        H 282.4 V 454.2 H 217.6 V 441
+        H 59
+        V 282.4 H 45.8 V 217.6 H 59
+        Z
+        " fill="none" stroke="#854D0E" stroke-width="1.2" opacity="0.7" />
+    <circle cx="250" cy="250" r="170" fill="none" stroke="#A16207" stroke-width="2.5" />
+    <path d="M 360.9,204.1 Q 415.0,250.0 360.9,295.9" fill="rgba(254,249,195,0.6)" stroke="#854D0E" stroke-width="2" />
+<line x1="370.0" y1="250.0" x2="415.0" y2="250.0" stroke="#854D0E" stroke-width="1" opacity="0.6" />
+<path d="M 360.9,295.9 Q 366.7,366.7 295.9,360.9" fill="rgba(254,249,195,0.6)" stroke="#854D0E" stroke-width="2" />
+<line x1="334.9" y1="334.9" x2="366.7" y2="366.7" stroke="#854D0E" stroke-width="1" opacity="0.6" />
+<path d="M 295.9,360.9 Q 250.0,415.0 204.1,360.9" fill="rgba(254,249,195,0.6)" stroke="#854D0E" stroke-width="2" />
+<line x1="250.0" y1="370.0" x2="250.0" y2="415.0" stroke="#854D0E" stroke-width="1" opacity="0.6" />
+<path d="M 204.1,360.9 Q 133.3,366.7 139.1,295.9" fill="rgba(254,249,195,0.6)" stroke="#854D0E" stroke-width="2" />
+<line x1="165.1" y1="334.9" x2="133.3" y2="366.7" stroke="#854D0E" stroke-width="1" opacity="0.6" />
+<path d="M 139.1,295.9 Q 85.0,250.0 139.1,204.1" fill="rgba(254,249,195,0.6)" stroke="#854D0E" stroke-width="2" />
+<line x1="130.0" y1="250.0" x2="85.0" y2="250.0" stroke="#854D0E" stroke-width="1" opacity="0.6" />
+<path d="M 139.1,204.1 Q 133.3,133.3 204.1,139.1" fill="rgba(254,249,195,0.6)" stroke="#854D0E" stroke-width="2" />
+<line x1="165.1" y1="165.1" x2="133.3" y2="133.3" stroke="#854D0E" stroke-width="1" opacity="0.6" />
+<path d="M 204.1,139.1 Q 250.0,85.0 295.9,139.1" fill="rgba(254,249,195,0.6)" stroke="#854D0E" stroke-width="2" />
+<line x1="250.0" y1="130.0" x2="250.0" y2="85.0" stroke="#854D0E" stroke-width="1" opacity="0.6" />
+<path d="M 295.9,139.1 Q 366.7,133.3 360.9,204.1" fill="rgba(254,249,195,0.6)" stroke="#854D0E" stroke-width="2" />
+<line x1="334.9" y1="165.1" x2="366.7" y2="133.3" stroke="#854D0E" stroke-width="1" opacity="0.6" />
+    <circle cx="250" cy="250" r="120" fill="rgba(255,255,255,0.75)" stroke="#A16207" stroke-width="2" />
+    
+    <!-- Ashta-Dal Beej Inscriptions -->
+    <text x="250" y="100" font-family="'Nirmala UI', sans-serif" font-size="14" font-weight="bold" fill="#713F12" text-anchor="middle">ॐ</text>
+    <text x="355" y="145" font-family="'Nirmala UI', sans-serif" font-size="14" font-weight="bold" fill="#713F12" text-anchor="middle">ह्रीं</text>
+    <text x="400" y="255" font-family="'Nirmala UI', sans-serif" font-size="14" font-weight="bold" fill="#713F12" text-anchor="middle">क्लीं</text>
+    <text x="355" y="365" font-family="'Nirmala UI', sans-serif" font-size="14" font-weight="bold" fill="#713F12" text-anchor="middle">कुबेराय</text>
+    <text x="250" y="410" font-family="'Nirmala UI', sans-serif" font-size="14" font-weight="bold" fill="#713F12" text-anchor="middle">नमः</text>
+    <text x="145" y="365" font-family="'Nirmala UI', sans-serif" font-size="14" font-weight="bold" fill="#713F12" text-anchor="middle">धनम्</text>
+    <text x="100" y="255" font-family="'Nirmala UI', sans-serif" font-size="14" font-weight="bold" fill="#713F12" text-anchor="middle">लाभम्</text>
+    <text x="145" y="145" font-family="'Nirmala UI', sans-serif" font-size="14" font-weight="bold" fill="#713F12" text-anchor="middle">श्रीं</text>
+    
+    <rect x="172.0" y="172.0" width="156" height="156" fill="rgba(255,255,255,0.7)" stroke="#854D0E" stroke-width="3" />
+<line x1="172.0" y1="224.0" x2="328.0" y2="224.0" stroke="#854D0E" stroke-width="2.5" />
+<line x1="172.0" y1="276.0" x2="328.0" y2="276.0" stroke="#854D0E" stroke-width="2.5" />
+<line x1="224.0" y1="172.0" x2="224.0" y2="328.0" stroke="#854D0E" stroke-width="2.5" />
+<line x1="276.0" y1="172.0" x2="276.0" y2="328.0" stroke="#854D0E" stroke-width="2.5" />
+<text x="198.0" y="206.0" font-family="'Nirmala UI', 'Segoe UI', Arial, sans-serif" font-size="24" font-weight="bold" fill="#713F12" text-anchor="middle">२०</text>
+<text x="250.0" y="206.0" font-family="'Nirmala UI', 'Segoe UI', Arial, sans-serif" font-size="24" font-weight="bold" fill="#713F12" text-anchor="middle">२७</text>
+<text x="302.0" y="206.0" font-family="'Nirmala UI', 'Segoe UI', Arial, sans-serif" font-size="24" font-weight="bold" fill="#713F12" text-anchor="middle">२२</text>
+<text x="198.0" y="258.0" font-family="'Nirmala UI', 'Segoe UI', Arial, sans-serif" font-size="24" font-weight="bold" fill="#713F12" text-anchor="middle">२५</text>
+<text x="250.0" y="258.0" font-family="'Nirmala UI', 'Segoe UI', Arial, sans-serif" font-size="24" font-weight="bold" fill="#713F12" text-anchor="middle">२३</text>
+<text x="302.0" y="258.0" font-family="'Nirmala UI', 'Segoe UI', Arial, sans-serif" font-size="24" font-weight="bold" fill="#713F12" text-anchor="middle">२१</text>
+<text x="198.0" y="310.0" font-family="'Nirmala UI', 'Segoe UI', Arial, sans-serif" font-size="24" font-weight="bold" fill="#713F12" text-anchor="middle">२४</text>
+<text x="250.0" y="310.0" font-family="'Nirmala UI', 'Segoe UI', Arial, sans-serif" font-size="24" font-weight="bold" fill="#713F12" text-anchor="middle">१९</text>
+<text x="302.0" y="310.0" font-family="'Nirmala UI', 'Segoe UI', Arial, sans-serif" font-size="24" font-weight="bold" fill="#713F12" text-anchor="middle">२६</text>
+    
+  </g>
+</svg>

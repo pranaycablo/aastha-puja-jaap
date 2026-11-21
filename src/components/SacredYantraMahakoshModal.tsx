@@ -28,100 +28,49 @@ interface SacredYantraMahakoshModalProps {
   initialYantraId?: string;
 }
 
-// Geometric SVG renderer for authentic sacred Yantra visual
-const YantraGeometrySvg: React.FC<{ yantra: SacredYantraItem; size?: number }> = ({
-  yantra,
-  size = 180
-}) => {
+// Authentic Sacred Shastric Yantra Image Renderer
+const YantraGeometrySvg: React.FC<{
+  yantra: SacredYantraItem;
+  size?: number;
+  onClickEnlarge?: () => void;
+}> = ({ yantra, size = 180, onClickEnlarge }) => {
+  const [imageError, setImageError] = useState(false);
   const strokeColor = yantra.accentColor || '#D97706';
-  const inkColor = yantra.drawingInkColorHex || '#DC2626';
+  const imgUrl = `/images/yantras/${yantra.id}.svg`;
 
   return (
     <div
-      className="relative flex items-center justify-center p-3 rounded-2xl border-2 shadow-inner overflow-hidden select-none"
+      onClick={onClickEnlarge}
+      className={`relative flex items-center justify-center rounded-2xl border-2 shadow-md overflow-hidden select-none transition-transform hover:scale-[1.02] ${
+        onClickEnlarge ? 'cursor-pointer' : ''
+      }`}
       style={{
-        backgroundColor: '#FFFBEB',
+        backgroundColor: '#FFFDF0',
         borderColor: strokeColor,
         width: size,
         height: size
       }}
+      title="क्लिक करके पूर्ण दर्शन करें"
     >
-      <svg
-        viewBox="0 0 200 200"
-        className="w-full h-full drop-shadow-sm transition-transform duration-500 hover:rotate-3"
-      >
-        {/* Background Sacred Outer Bhupura (4 Gates) */}
-        <path
-          d="M 20,20 L 70,20 L 70,10 L 130,10 L 130,20 L 180,20 L 180,70 L 190,70 L 190,130 L 180,130 L 180,180 L 130,180 L 130,190 L 70,190 L 70,180 L 20,180 L 20,130 L 10,130 L 10,70 L 20,70 Z"
-          fill="none"
-          stroke={strokeColor}
-          strokeWidth="3.5"
+      {!imageError ? (
+        <img
+          src={imgUrl}
+          alt={yantra.nameHi}
+          className="w-full h-full object-contain p-1 drop-shadow-sm transition-transform duration-300"
+          onError={() => setImageError(true)}
+          loading="lazy"
         />
-        <path
-          d="M 26,26 L 74,26 L 74,18 L 126,18 L 126,26 L 174,26 L 174,74 L 182,74 L 182,126 L 174,126 L 174,174 L 126,174 L 126,182 L 74,182 L 74,174 L 26,174 L 26,126 L 18,126 L 18,74 L 26,74 Z"
-          fill="none"
-          stroke={inkColor}
-          strokeWidth="1.5"
-          opacity="0.8"
-        />
-
-        {/* Concentric Circles */}
-        <circle cx="100" cy="100" r="66" fill="none" stroke={strokeColor} strokeWidth="2" />
-        <circle cx="100" cy="100" r="58" fill="none" stroke={strokeColor} strokeWidth="1.5" strokeDasharray="3 3" />
-        <circle cx="100" cy="100" r="48" fill="none" stroke={inkColor} strokeWidth="1.5" />
-
-        {/* Lotus Petals / Astadal Ring */}
-        {[0, 45, 90, 135, 180, 225, 270, 315].map((angle, i) => {
-          const rad = (angle * Math.PI) / 180;
-          const x = 100 + 58 * Math.cos(rad);
-          const y = 100 + 58 * Math.sin(rad);
-          return (
-            <circle
-              key={i}
-              cx={x}
-              cy={y}
-              r="4"
-              fill={strokeColor}
-              opacity="0.75"
-            />
-          );
-        })}
-
-        {/* Specialized Geometric Core */}
-        {yantra.geometryType === 'sri_chakra' || yantra.geometryType === 'triangle_nine' ? (
-          // Interlocking Sacred Triangles
-          <g stroke={inkColor} strokeWidth="2" fill="none">
-            <polygon points="100,60 70,120 130,120" />
-            <polygon points="100,140 70,80 130,80" />
-            <polygon points="100,68 78,114 122,114" />
-            <polygon points="100,132 78,86 122,86" />
-          </g>
-        ) : yantra.geometryType === 'diamond_nine' || yantra.geometryType === 'square_gates' ? (
-          // 3x3 Planetary Sacred Grid
-          <g stroke={strokeColor} strokeWidth="1.5" fill="none">
-            <rect x="68" y="68" width="64" height="64" />
-            <line x1="89.3" y1="68" x2="89.3" y2="132" />
-            <line x1="110.6" y1="68" x2="110.6" y2="132" />
-            <line x1="68" y1="89.3" x2="132" y2="89.3" />
-            <line x1="68" y1="110.6" x2="132" y2="110.6" />
-          </g>
-        ) : (
-          // Hexagram Shatkona (Star of David / Shiva-Shakti union)
-          <g stroke={inkColor} strokeWidth="2.5" fill="none">
-            <polygon points="100,62 68,118 132,118" />
-            <polygon points="100,138 68,82 132,82" />
-          </g>
-        )}
-
-        {/* Central Bindu (Divine Center) */}
-        <circle cx="100" cy="100" r="5" fill={inkColor} />
-        <circle cx="100" cy="100" r="1.8" fill="#FFF" />
-      </svg>
+      ) : (
+        <div className="w-full h-full flex flex-col items-center justify-center p-2 text-center bg-amber-50">
+          <span className="text-3xl">🔯</span>
+          <span className="text-[10px] font-bold text-amber-900 mt-1">{yantra.nameHi}</span>
+        </div>
+      )}
       {/* Corner Watermarks */}
-      <span className="absolute top-1 left-2 text-[10px] font-bold text-amber-800/60">卐</span>
-      <span className="absolute top-1 right-2 text-[10px] font-bold text-amber-800/60">ॐ</span>
-      <span className="absolute bottom-1 left-2 text-[10px] font-bold text-amber-800/60">ॐ</span>
-      <span className="absolute bottom-1 right-2 text-[10px] font-bold text-amber-800/60">卐</span>
+      <span className="absolute top-1 left-1.5 text-[9px] font-bold text-amber-800/60 pointer-events-none">卐</span>
+      <span className="absolute top-1 right-1.5 text-[9px] font-bold text-amber-800/60 pointer-events-none">ॐ</span>
+      <span className="absolute bottom-1 left-1.5 text-[9px] font-bold text-amber-800/60 pointer-events-none">ॐ</span>
+      <span className="absolute bottom-1 right-1.5 text-[9px] font-bold text-amber-800/60 pointer-events-none">卐</span>
     </div>
   );
 };
@@ -142,6 +91,7 @@ export const SacredYantraMahakoshModal: React.FC<SacredYantraMahakoshModalProps>
     return null;
   });
   const [copiedMantra, setCopiedMantra] = useState(false);
+  const [showDarshanModal, setShowDarshanModal] = useState(false);
 
   // Filtered Yantras
   const filteredYantras = useMemo(() => {
@@ -220,7 +170,21 @@ export const SacredYantraMahakoshModal: React.FC<SacredYantraMahakoshModalProps>
 
             {/* YANTRA HERO CARD */}
             <div className="bg-white border-2 border-amber-300 rounded-3xl p-4 shadow-md flex flex-col sm:flex-row items-center gap-4">
-              <YantraGeometrySvg yantra={activeYantra} size={160} />
+              <div className="flex flex-col items-center gap-2 shrink-0">
+                <YantraGeometrySvg
+                  yantra={activeYantra}
+                  size={160}
+                  onClickEnlarge={() => setShowDarshanModal(true)}
+                />
+                <button
+                  type="button"
+                  onClick={() => setShowDarshanModal(true)}
+                  className="px-2.5 py-1 rounded-xl bg-amber-100 hover:bg-amber-200 text-amber-950 text-[10.5px] font-black border border-amber-300 flex items-center gap-1 active:scale-95 transition-all cursor-pointer shadow-2xs"
+                >
+                  <span>🔍</span>
+                  <span>{isHi ? 'विस्तृत दर्शन / डाउनलोड' : 'Full Darshan / View'}</span>
+                </button>
+              </div>
               <div className="flex-1 text-center sm:text-left space-y-1.5 min-w-0">
                 <span className="text-[10px] font-black uppercase text-orange-800 tracking-wider">
                   {activeYantra.deityOrPlanet}
@@ -533,6 +497,66 @@ export const SacredYantraMahakoshModal: React.FC<SacredYantraMahakoshModalProps>
           <span>🚩 शास्त्र सम्मत सिद्ध यन्त्र महाकोश</span>
           <span>आस्था पूजा व जाप</span>
         </div>
+
+        {/* FULLSCREEN YANTRA DARSHAN / ZOOM MODAL */}
+        {showDarshanModal && activeYantra && (
+          <div className="fixed inset-0 z-60 bg-black/90 backdrop-blur-md flex items-center justify-center p-3 animate-fadeIn">
+            <div className="relative w-full max-w-lg bg-gradient-to-b from-[#FFFDF9] via-[#FFF9EE] to-[#FFF5E5] rounded-3xl border-3 border-amber-400 p-4 sm:p-6 shadow-2xl flex flex-col items-center gap-3.5 text-stone-900">
+              <button
+                type="button"
+                onClick={() => setShowDarshanModal(false)}
+                className="absolute top-3 right-3 w-8 h-8 rounded-full bg-stone-900/10 hover:bg-stone-900/20 text-stone-900 flex items-center justify-center font-bold text-base active:scale-95 transition-all cursor-pointer"
+              >
+                ✕
+              </button>
+
+              <div className="text-center space-y-0.5">
+                <span className="text-[10px] font-black text-orange-800 uppercase tracking-wider">
+                  {activeYantra.deityOrPlanet}
+                </span>
+                <h3 className="text-base sm:text-lg font-black text-amber-950">
+                  {activeYantra.nameHi}
+                </h3>
+                <p className="text-[11px] text-amber-900 font-bold">
+                  {isHi ? 'शास्त्रसम्मत सिद्ध रेखागणितीय स्वरूप' : 'Sacred Shastric Geometry'}
+                </p>
+              </div>
+
+              {/* High Definition Yantra Display */}
+              <div className="w-64 h-64 sm:w-80 sm:h-80 rounded-2xl overflow-hidden border-2 border-amber-400 shadow-xl bg-[#FFFDF0] p-2 flex items-center justify-center">
+                <img
+                  src={`/images/yantras/${activeYantra.id}.svg`}
+                  alt={activeYantra.nameHi}
+                  className="w-full h-full object-contain"
+                />
+              </div>
+
+              {/* Mantra bar */}
+              <div className="w-full p-2.5 rounded-xl bg-orange-100 border border-orange-300 text-center">
+                <span className="text-xs font-black text-orange-950 block">
+                  {activeYantra.beejMantra}
+                </span>
+              </div>
+
+              <div className="flex items-center gap-2.5 w-full">
+                <a
+                  href={`/images/yantras/${activeYantra.id}.svg`}
+                  download={`${activeYantra.id}_vedic_yantra.svg`}
+                  className="flex-1 py-2.5 rounded-2xl bg-gradient-to-r from-amber-500 to-orange-600 text-white font-black text-xs text-center shadow-md active:scale-95 transition-all"
+                >
+                  📥 {isHi ? 'यन्त्र छवि डाउनलोड करें' : 'Download Yantra'}
+                </a>
+                <button
+                  type="button"
+                  onClick={() => setShowDarshanModal(false)}
+                  className="px-5 py-2.5 rounded-2xl bg-stone-200 text-stone-800 font-black text-xs active:scale-95 transition-all cursor-pointer"
+                >
+                  {isHi ? 'बंद करें' : 'Close'}
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
