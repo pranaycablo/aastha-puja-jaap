@@ -40,6 +40,8 @@ import { MantraMahakoshModal } from './components/MantraMahakoshModal';
 import { MandirLiveDarshanModal } from './components/MandirLiveDarshanModal';
 import { SacredYantraMahakoshModal } from './components/SacredYantraMahakoshModal';
 import { RatnaGyanModal } from './components/RatnaGyanModal';
+import { SanatanTotkeModal } from './components/SanatanTotkeModal';
+import { NaamSamputitMantraModal } from './components/NaamSamputitMantraModal';
 import { notificationEngine } from './utils/notificationEngine';
 import { updateEngine, UpdateCheckResult } from './utils/updateEngine';
 import { calculateMantraRecommendedDuration } from './utils/ttsEngine';
@@ -50,6 +52,7 @@ const DEFAULT_PROFILE: UserProfile = {
   gotra: '',
   kulDevta: '',
   ishtDevta: 'shiva',
+  gender: 'male',
   isProfileSet: false,
   language: 'hi',
   totalMalasCompletedAllTime: 0,
@@ -150,6 +153,8 @@ export const App: React.FC = () => {
   const [selectedGemstoneId, setSelectedGemstoneId] = useState<string | undefined>(undefined);
   const [showSevaModal, setShowSevaModal] = useState<boolean>(false);
   const [sevaInitialTab, setSevaInitialTab] = useState<SevaTab>('donation');
+  const [showTotkeModal, setShowTotkeModal] = useState<boolean>(false);
+  const [showNaamMantraModal, setShowNaamMantraModal] = useState<boolean>(false);
 
   const handleOpenSeva = (tab: SevaTab = 'donation') => {
     setSevaInitialTab(tab);
@@ -672,6 +677,8 @@ export const App: React.FC = () => {
                 onOpenMandirDarshan={() => setShowMandirDarshanModal(true)}
                 onOpenYantraMahakosh={() => setShowYantraMahakoshModal(true)}
                 onOpenRatnaGyan={() => setShowRatnaGyanModal(true)}
+                onOpenTotke={() => setShowTotkeModal(true)}
+                onOpenNaamMantra={() => setShowNaamMantraModal(true)}
                 onOpenSeva={handleOpenSeva}
                 onOpenProfileSetup={() => {
                   setIsEditingProfile(true);
@@ -1117,6 +1124,31 @@ export const App: React.FC = () => {
             }}
             language={userProfile.language}
             initialGemstoneId={selectedGemstoneId}
+          />
+        )}
+
+        {/* 13. सनातन अचूक टोटके व सात्विक उपाय */}
+        {showTotkeModal && (
+          <SanatanTotkeModal
+            onClose={() => setShowTotkeModal(false)}
+            isHi={userProfile.language === 'hi'}
+          />
+        )}
+
+        {/* 14. नाम-सहित संपुटित सिद्ध जप महामंत्र */}
+        {showNaamMantraModal && (
+          <NaamSamputitMantraModal
+            userProfile={userProfile}
+            onClose={() => setShowNaamMantraModal(false)}
+            onStartJaapWithMantra={(customMantra) => {
+              handleSelectMantra(customMantra);
+              setHasChosenMantra(true);
+              try {
+                localStorage.setItem('divya_jaap_has_chosen', 'true');
+              } catch (e) {}
+              setActiveTab('jaap');
+            }}
+            isHi={userProfile.language === 'hi'}
           />
         )}
 

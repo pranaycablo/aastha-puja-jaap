@@ -22,6 +22,8 @@ interface MainLandingPageProps {
   onOpenMandirDarshan?: () => void;
   onOpenYantraMahakosh?: () => void;
   onOpenRatnaGyan?: () => void;
+  onOpenTotke?: () => void;
+  onOpenNaamMantra?: () => void;
   onOpenSeva?: (tab?: 'donation' | 'rating' | 'share' | 'feedback') => void;
   language?: LanguageCode;
 }
@@ -42,6 +44,8 @@ export const MainLandingPage: React.FC<MainLandingPageProps> = ({
   onOpenMandirDarshan,
   onOpenYantraMahakosh,
   onOpenRatnaGyan,
+  onOpenTotke,
+  onOpenNaamMantra,
   onOpenSeva,
   language = 'hi'
 }) => {
@@ -148,6 +152,20 @@ export const MainLandingPage: React.FC<MainLandingPageProps> = ({
       name: isHi ? 'रत्न पहचान' : 'Ratna Gyan',
       logo: '💎',
       onClick: onOpenRatnaGyan || (() => {}),
+      isFullWidth: false
+    },
+    {
+      id: 'totke',
+      name: isHi ? 'अचूक टोटके व उपाय' : 'Sanatan Totke',
+      logo: '🔮',
+      onClick: onOpenTotke || (() => {}),
+      isFullWidth: false
+    },
+    {
+      id: 'naam-mantra',
+      name: isHi ? 'नाम संपुटित जप' : 'Name Mantra',
+      logo: '✨',
+      onClick: onOpenNaamMantra || (() => {}),
       isFullWidth: false
     },
     {
@@ -413,6 +431,59 @@ export const MainLandingPage: React.FC<MainLandingPageProps> = ({
               </h4>
               <p className="text-[10px] text-amber-100/80 font-medium line-clamp-1 mt-0.5">
                 {isHi ? '५-सूत्रीय असली/नकली टेस्ट' : '5-Point Real/Fake Test'}
+              </p>
+            </div>
+          </button>
+        )}
+      </div>
+
+      {/* 2.8 SANATAN TOTKE & NAAM SAMPUTIT MANTRA DUAL CARDS */}
+      <div className="grid grid-cols-2 gap-2.5">
+        {onOpenTotke && (
+          <button
+            type="button"
+            onClick={onOpenTotke}
+            className="bg-gradient-to-br from-[#3D0A24] via-[#5C1037] to-[#3D0A24] text-white rounded-3xl p-3 sm:p-3.5 shadow-lg hover:shadow-xl active:scale-[0.98] transition-all text-left border-2 border-pink-400/80 flex flex-col justify-between group cursor-pointer"
+          >
+            <div className="flex items-center justify-between w-full mb-1">
+              <span className="w-9 h-9 rounded-xl bg-pink-400/20 border border-pink-300/40 text-xl flex items-center justify-center shadow-2xs group-hover:scale-110 transition-transform">
+                🔮
+              </span>
+              <span className="text-[9px] font-black uppercase px-2 py-0.5 rounded-full bg-pink-400 text-stone-950">
+                {isHi ? 'चमत्कारी लाभ' : 'Divine Remedies'}
+              </span>
+            </div>
+            <div>
+              <h4 className="text-xs sm:text-sm font-black text-pink-200 line-clamp-1 mt-1">
+                {isHi ? 'सनातन अचूक टोटके' : 'Sanatan Totke'}
+              </h4>
+              <p className="text-[10px] text-pink-100/80 font-medium line-clamp-1 mt-0.5">
+                {isHi ? 'धन, नजर व क्लेश निवारण' : 'Wealth, Evil Eye & Peace'}
+              </p>
+            </div>
+          </button>
+        )}
+
+        {onOpenNaamMantra && (
+          <button
+            type="button"
+            onClick={onOpenNaamMantra}
+            className="bg-gradient-to-br from-[#1C1917] via-[#292524] to-[#1C1917] text-white rounded-3xl p-3 sm:p-3.5 shadow-lg hover:shadow-xl active:scale-[0.98] transition-all text-left border-2 border-yellow-400/90 flex flex-col justify-between group cursor-pointer"
+          >
+            <div className="flex items-center justify-between w-full mb-1">
+              <span className="w-9 h-9 rounded-xl bg-yellow-400/20 border border-yellow-300/40 text-xl flex items-center justify-center shadow-2xs group-hover:scale-110 transition-transform">
+                ✨
+              </span>
+              <span className="text-[9px] font-black uppercase px-2 py-0.5 rounded-full bg-yellow-400 text-stone-950">
+                {isHi ? 'शीघ्र फल' : 'Fast Result'}
+              </span>
+            </div>
+            <div>
+              <h4 className="text-xs sm:text-sm font-black text-yellow-200 line-clamp-1 mt-1">
+                {isHi ? 'नाम संपुटित जप' : 'Name Mantra'}
+              </h4>
+              <p className="text-[10px] text-yellow-100/80 font-medium line-clamp-1 mt-0.5">
+                {isHi ? 'अपना नाम जोड़कर जपें' : 'Chant with your name'}
               </p>
             </div>
           </button>

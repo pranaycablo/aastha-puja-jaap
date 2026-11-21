@@ -464,6 +464,16 @@ export const KundaliSamadhanModal: React.FC<KundaliSamadhanModalProps> = ({
                 </button>
               </div>
 
+              {/* Shastric Information Integrity Note */}
+              <div className="bg-amber-50/90 border border-amber-300 rounded-xl p-2.5 text-[10.5px] text-amber-950 font-medium flex items-center gap-1.5 shadow-2xs">
+                <span>📜</span>
+                <span>
+                  {isHi
+                    ? 'प्राप्त जानकारी के आधार पर आपकी यह रिपोर्ट निर्मित की गई है। अन्य / अतिरिक्त जानकारी देने पर रिपोर्ट में कुछ सूक्ष्म परिवर्तन आ सकते हैं।'
+                    : 'This report is prepared based on the information provided. Providing further details may refine the astrological calculations.'}
+                </span>
+              </div>
+
               {/* RASHI & NAKSHATRA HIGHLIGHT PILLS */}
               <div className="grid grid-cols-3 gap-1.5 text-center">
                 <div className="bg-white border border-orange-200 rounded-2xl p-2 shadow-xs">

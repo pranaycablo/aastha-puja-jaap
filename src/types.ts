@@ -96,6 +96,7 @@ export interface UserProfile {
   kulDevta: string;
   ishtDevta: DeityType;
   customIshtDevtaName?: string;
+  gender?: 'male' | 'female' | 'other';
   isProfileSet: boolean;
   language: LanguageCode;
   selectedMalaType?: MalaBeadVisualType;

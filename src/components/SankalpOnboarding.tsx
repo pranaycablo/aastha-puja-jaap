@@ -76,6 +76,12 @@ export const SankalpOnboarding: React.FC<SankalpOnboardingProps> = ({
   );
   const [birthPlace, setBirthPlace] = useState(initialProfile?.birthPlace || initialProfile?.address || '');
   const [phone, setPhone] = useState(initialProfile?.phone || '');
+  const [gender, setGender] = useState<'male' | 'female' | 'other'>(
+    initialProfile?.gender || 'male'
+  );
+  const [gotra, setGotra] = useState<string>(initialProfile?.gotra || '');
+  const [kulDevta, setKulDevta] = useState<string>(initialProfile?.kulDevta || '');
+  const [ishtDevta, setIshtDevta] = useState<any>(initialProfile?.ishtDevta || 'shiva');
 
   const handleSelectLanguage = (langOpt: LanguageOption) => {
     setSelectedLangId(langOpt.id);
@@ -85,21 +91,21 @@ export const SankalpOnboarding: React.FC<SankalpOnboardingProps> = ({
   const handleSaveAndContinue = () => {
     setErrorMessage('');
     if (!name.trim()) {
-      setErrorMessage(language === 'hi' ? '⚠️ कृपया आगे बढ़ने के लिए अपना शुभ नाम दर्ज करें।' : '⚠️ Please enter your sacred name to proceed.');
+      setErrorMessage(language === 'hi' ? '⚠️ कृपया आगे बढ़ने के लिए अपना शुभ नाम दर्ज करें।' : '⚠️ Please enter your name.');
       return;
     }
 
-    if ((redirectReason === 'kundali' || redirectReason === 'ank_gyan' || redirectReason === 'aaj_ka_din') && !dob.trim()) {
-      setErrorMessage(language === 'hi' ? '⚠️ कुण्डली, अंक व आज का दिन फलादेश हेतु जन्म तिथि अनिवार्य है।' : '⚠️ Date of birth is mandatory for Kundali, Numerology & Today\'s Forecast.');
+    const cleanPhone = phone.replace(/\D/g, '');
+    if (!cleanPhone || cleanPhone.length < 10) {
+      setErrorMessage(language === 'hi' ? '⚠️ कृपया आगे बढ़ने के लिए १० अंकों का मोबाइल नंबर दर्ज करें।' : '⚠️ Please enter valid 10-digit mobile number.');
       return;
     }
 
-    if (redirectReason === 'ank_gyan' && phone.replace(/\D/g, '').length < 10) {
-      setErrorMessage(language === 'hi' ? '⚠️ अंक ज्ञान हेतु १० अंकों का मोबाइल नंबर अनिवार्य है।' : '⚠️ 10-digit mobile number is mandatory for Anka Gyan.');
+    if (!dob.trim()) {
+      setErrorMessage(language === 'hi' ? '⚠️ कृपया आगे बढ़ने के लिए अपनी जन्म तिथि अवश्य चुनें।' : '⚠️ Please select date of birth.');
       return;
     }
 
-    const hasValidDetails = Boolean(name.trim());
     const updatedProfile: UserProfile = {
       name: name.trim(),
       dob: dob.trim(),
@@ -107,10 +113,11 @@ export const SankalpOnboarding: React.FC<SankalpOnboardingProps> = ({
       birthPlace: birthPlace.trim(),
       address: birthPlace.trim(),
       phone: phone.trim(),
-      gotra: initialProfile?.gotra || '',
-      kulDevta: initialProfile?.kulDevta || '',
-      ishtDevta: initialProfile?.ishtDevta || 'shiva',
-      isProfileSet: hasValidDetails,
+      gender: gender,
+      gotra: gotra.trim(),
+      kulDevta: kulDevta.trim(),
+      ishtDevta: ishtDevta,
+      isProfileSet: true,
       language: language,
       totalMalasCompletedAllTime: initialProfile?.totalMalasCompletedAllTime || 0,
       totalBeadsAllTime: initialProfile?.totalBeadsAllTime || 0,
@@ -128,10 +135,11 @@ export const SankalpOnboarding: React.FC<SankalpOnboardingProps> = ({
       birthPlace: birthPlace.trim(),
       address: birthPlace.trim(),
       phone: phone.trim(),
-      gotra: initialProfile?.gotra || '',
-      kulDevta: initialProfile?.kulDevta || '',
-      ishtDevta: initialProfile?.ishtDevta || 'shiva',
-      isProfileSet: false,
+      gender: gender,
+      gotra: gotra.trim(),
+      kulDevta: kulDevta.trim(),
+      ishtDevta: ishtDevta,
+      isProfileSet: Boolean(name.trim()),
       language: language,
       totalMalasCompletedAllTime: initialProfile?.totalMalasCompletedAllTime || 0,
       totalBeadsAllTime: initialProfile?.totalBeadsAllTime || 0,
@@ -276,12 +284,18 @@ export const SankalpOnboarding: React.FC<SankalpOnboardingProps> = ({
               </div>
             )}
 
-            {/* Form Fields: Name, DOB, DOB Time, Location, Mobile Number */}
-            <div className="space-y-3">
-              {/* 1. Name */}
+            {/* Compulsory Fields Guidance Note */}
+            <div className="mb-2.5 p-2 bg-amber-50/80 border border-amber-300 rounded-xl text-[10.5px] text-amber-950 font-medium">
+              ℹ️ <strong>{language === 'hi' ? 'सूचना:' : 'Note:'}</strong> {language === 'hi' ? 'नाम, मोबाइल नंबर और जन्म तिथि अनिवार्य हैं। अन्य विवरण वैकल्पिक हैं।' : 'Name, Mobile and Date of Birth are mandatory. Other details are optional.'}
+            </div>
+
+            {/* Form Fields */}
+            <div className="space-y-3 max-h-[50vh] overflow-y-auto pr-1 scrollbar-thin">
+              {/* 1. Name (Mandatory) */}
               <div>
-                <label className="text-xs font-bold text-gray-700 mb-1 block">
-                  {language === 'hi' ? 'नाम (Name)' : 'Full Name'}
+                <label className="text-xs font-bold text-gray-700 mb-1 flex items-center justify-between">
+                  <span>{language === 'hi' ? 'शुभ नाम *' : 'Full Name *'}</span>
+                  <span className="text-[10px] text-red-600 font-bold">{language === 'hi' ? '(अनिवार्य)' : '(Required)'}</span>
                 </label>
                 <div className="relative">
                   <User className="w-4 h-4 text-amber-500 stroke-[2.75] absolute left-3 top-3" />
@@ -289,17 +303,37 @@ export const SankalpOnboarding: React.FC<SankalpOnboardingProps> = ({
                     type="text"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    placeholder={language === 'hi' ? 'आपका नाम' : 'Your Name'}
+                    placeholder={language === 'hi' ? 'आपका नाम दर्ज करें' : 'Enter your name'}
                     className="w-full pl-9 pr-3 py-2.5 rounded-xl border border-gray-200 text-sm font-semibold text-gray-900 focus:outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500 bg-gray-50/50"
                   />
                 </div>
               </div>
 
-              {/* 2 & 3. DOB and DOB Time Side by Side */}
+              {/* 2. Mobile Number (Mandatory) */}
+              <div>
+                <label className="text-xs font-bold text-gray-700 mb-1 flex items-center justify-between">
+                  <span>{language === 'hi' ? 'मोबाइल नंबर *' : 'Mobile Number *'}</span>
+                  <span className="text-[10px] text-red-600 font-bold">{language === 'hi' ? '(अनिवार्य)' : '(Required)'}</span>
+                </label>
+                <div className="relative">
+                  <Phone className="w-4 h-4 text-amber-500 stroke-[2.75] absolute left-3 top-3" />
+                  <input
+                    type="tel"
+                    maxLength={15}
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value)}
+                    placeholder={language === 'hi' ? '१० अंकों का मोबाइल नंबर' : '10-digit mobile number'}
+                    className="w-full pl-9 pr-3 py-2.5 rounded-xl border border-gray-200 text-sm font-semibold text-gray-900 focus:outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500 bg-gray-50/50"
+                  />
+                </div>
+              </div>
+
+              {/* 3. DOB (Mandatory) & Birth Time (Optional) */}
               <div className="grid grid-cols-2 gap-2">
                 <div>
-                  <label className="text-xs font-bold text-gray-700 mb-1 block">
-                    {language === 'hi' ? 'जन्म तिथि' : 'Date of Birth'}
+                  <label className="text-xs font-bold text-gray-700 mb-1 flex items-center justify-between">
+                    <span>{language === 'hi' ? 'जन्म तिथि *' : 'Birth Date *'}</span>
+                    <span className="text-[10px] text-red-600 font-bold">*</span>
                   </label>
                   <div className="relative">
                     <Calendar className="w-4 h-4 text-amber-500 stroke-[2.75] absolute left-3 top-3 pointer-events-none" />
@@ -311,7 +345,7 @@ export const SankalpOnboarding: React.FC<SankalpOnboardingProps> = ({
                     />
                   </div>
                   <span className="text-[10px] text-gray-400 font-normal block mt-0.5 pl-1">
-                    {language === 'hi' ? 'दिन / माह / वर्ष (DD/MM/YYYY)' : 'DD / MM / YYYY'}
+                    DD/MM/YYYY
                   </span>
                 </div>
 
@@ -329,15 +363,111 @@ export const SankalpOnboarding: React.FC<SankalpOnboardingProps> = ({
                     />
                   </div>
                   <span className="text-[10px] text-gray-400 font-normal block mt-0.5 pl-1">
-                    {language === 'hi' ? 'घंटे : मिनट (HH:MM)' : 'HH : MM'}
+                    (वैकल्पिक)
                   </span>
                 </div>
               </div>
 
-              {/* 4. Location */}
+              {/* 4. Gender (लिंग - NEW FIELD) */}
               <div>
                 <label className="text-xs font-bold text-gray-700 mb-1 block">
-                  {language === 'hi' ? 'स्थान' : 'City / Place'}
+                  {language === 'hi' ? 'लिंग (Gender):' : 'Gender:'}
+                </label>
+                <div className="grid grid-cols-3 gap-2">
+                  {[
+                    { id: 'male', labelHi: 'पुरुष', icon: '🚹' },
+                    { id: 'female', labelHi: 'स्त्री', icon: '🚺' },
+                    { id: 'other', labelHi: 'अन्य', icon: '🕉️' }
+                  ].map((g) => (
+                    <button
+                      key={g.id}
+                      type="button"
+                      onClick={() => setGender(g.id as any)}
+                      className={`py-2 px-2.5 rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-1.5 cursor-pointer ${
+                        gender === g.id
+                          ? 'bg-orange-600 text-white shadow-xs ring-1 ring-orange-500'
+                          : 'bg-gray-100 text-gray-800 hover:bg-gray-200'
+                      }`}
+                    >
+                      <span>{g.icon}</span>
+                      <span>{g.labelHi}</span>
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              {/* 5. Gotra (गोत्र - NEW FIELD) */}
+              <div>
+                <label className="text-xs font-bold text-gray-700 mb-1 flex items-center justify-between">
+                  <span>{language === 'hi' ? 'गोत्र (Gotra):' : 'Gotra:'}</span>
+                  <span className="text-[10px] text-gray-500">{language === 'hi' ? '(वैकल्पिक)' : '(Optional)'}</span>
+                </label>
+                <input
+                  type="text"
+                  value={gotra}
+                  onChange={(e) => setGotra(e.target.value)}
+                  placeholder={language === 'hi' ? 'उदा. भारद्वाज, कश्यप, वशिष्ठ या अज्ञात' : 'e.g. Kashyap, Bhardwaj or Unknown'}
+                  className="w-full px-3 py-2.5 rounded-xl border border-gray-200 text-sm font-semibold text-gray-900 focus:outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500 bg-gray-50/50"
+                />
+              </div>
+
+              {/* 6. Kul Devta (कुलदेवता / कुलदेवी - NEW FIELD) */}
+              <div>
+                <label className="text-xs font-bold text-gray-700 mb-1 flex items-center justify-between">
+                  <span>{language === 'hi' ? 'कुलदेवता / कुलदेवी:' : 'Kul Devta / Devi:'}</span>
+                  <span className="text-[10px] text-gray-500">{language === 'hi' ? '(वैकल्पिक)' : '(Optional)'}</span>
+                </label>
+                <input
+                  type="text"
+                  value={kulDevta}
+                  onChange={(e) => setKulDevta(e.target.value)}
+                  placeholder={language === 'hi' ? 'अपने कुलदेवता अथवा कुलदेवी का नाम' : 'Kuldevta or Kuldevi name'}
+                  className="w-full px-3 py-2.5 rounded-xl border border-gray-200 text-sm font-semibold text-gray-900 focus:outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500 bg-gray-50/50"
+                />
+              </div>
+
+              {/* 7. Isht Devta (इष्ट देवता / देवी - NEW FIELD) */}
+              <div>
+                <label className="text-xs font-bold text-gray-700 mb-1 flex items-center justify-between">
+                  <span>{language === 'hi' ? 'इष्ट देवता / देवी:' : 'Isht Devta:'}</span>
+                  <span className="text-[10px] text-gray-500">{language === 'hi' ? '(वैकल्पिक)' : '(Optional)'}</span>
+                </label>
+                <div className="grid grid-cols-3 gap-1.5 max-h-28 overflow-y-auto pr-1">
+                  {[
+                    { id: 'shiva', nameHi: 'शिव जी', icon: '🔱' },
+                    { id: 'hanuman', nameHi: 'हनुमान जी', icon: '🚩' },
+                    { id: 'krishna', nameHi: 'श्री कृष्ण', icon: '🦚' },
+                    { id: 'ram', nameHi: 'श्री राम', icon: '🏹' },
+                    { id: 'durga_kali', nameHi: 'माँ दुर्गा/काली', icon: '🌺' },
+                    { id: 'ganesha', nameHi: 'श्री गणेश', icon: '🐘' },
+                    { id: 'vishnu', nameHi: 'श्री विष्णु', icon: '🐚' },
+                    { id: 'lakshmi_kuber', nameHi: 'माँ लक्ष्मी', icon: '🌸' },
+                    { id: 'saraswati', nameHi: 'माँ सरस्वती', icon: '🪕' },
+                    { id: 'baglamukhi', nameHi: 'माँ बगलामुखी', icon: '⚔️' },
+                    { id: 'bhairav', nameHi: 'कालभैरव', icon: '🕉️' }
+                  ].map((d) => (
+                    <button
+                      key={d.id}
+                      type="button"
+                      onClick={() => setIshtDevta(d.id as any)}
+                      className={`p-1.5 rounded-xl text-[11px] font-bold transition-all flex items-center gap-1 cursor-pointer ${
+                        ishtDevta === d.id
+                          ? 'bg-orange-600 text-white shadow-xs'
+                          : 'bg-gray-100 text-gray-800 hover:bg-gray-200'
+                      }`}
+                    >
+                      <span>{d.icon}</span>
+                      <span className="truncate">{d.nameHi}</span>
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              {/* 8. Location (City / Place - Optional) */}
+              <div>
+                <label className="text-xs font-bold text-gray-700 mb-1 flex items-center justify-between">
+                  <span>{language === 'hi' ? 'जन्म स्थान / शहर' : 'City / Place'}</span>
+                  <span className="text-[10px] text-gray-500">{language === 'hi' ? '(वैकल्पिक)' : '(Optional)'}</span>
                 </label>
                 <div className="relative">
                   <MapPin className="w-4 h-4 text-amber-500 stroke-[2.75] absolute left-3 top-3" />
@@ -346,24 +476,6 @@ export const SankalpOnboarding: React.FC<SankalpOnboardingProps> = ({
                     value={birthPlace}
                     onChange={(e) => setBirthPlace(e.target.value)}
                     placeholder={language === 'hi' ? 'शहर या राज्य' : 'City or State'}
-                    className="w-full pl-9 pr-3 py-2.5 rounded-xl border border-gray-200 text-sm font-semibold text-gray-900 focus:outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500 bg-gray-50/50"
-                  />
-                </div>
-              </div>
-
-              {/* 5. Mobile Number */}
-              <div>
-                <label className="text-xs font-bold text-gray-700 mb-1 block">
-                  {language === 'hi' ? 'मोबाइल नंबर' : 'Mobile Number'}
-                </label>
-                <div className="relative">
-                  <Phone className="w-4 h-4 text-amber-500 stroke-[2.75] absolute left-3 top-3" />
-                  <input
-                    type="tel"
-                    maxLength={15}
-                    value={phone}
-                    onChange={(e) => setPhone(e.target.value)}
-                    placeholder={language === 'hi' ? 'मोबाइल नंबर' : 'Phone Number'}
                     className="w-full pl-9 pr-3 py-2.5 rounded-xl border border-gray-200 text-sm font-semibold text-gray-900 focus:outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500 bg-gray-50/50"
                   />
                 </div>

@@ -478,6 +478,11 @@ function renderCoverAndKundaliPage(ctx: any): string {
         </div>
       </div>
 
+      <!-- PRAAPT JANKARI NOTE -->
+      <div style="background: #FEF3C7; border: 1.5px solid #F59E0B; border-radius: 6px; padding: 4.5px 8px; font-size: 8.5px; color: #78350F; text-align: center; font-weight: bold;">
+        📜 <strong>शास्त्रोक्त सूचना:</strong> प्राप्त जानकारी के आधार पर आपकी यह रिपोर्ट निर्मित की गई है। अन्य / अतिरिक्त जानकारी देने पर रिपोर्ट में कुछ सूक्ष्म परिवर्तन आ सकते हैं।
+      </div>
+
       <!-- DEVOTEE METADATA GRID -->
       <div style="
         display: grid;
@@ -1702,6 +1707,9 @@ function renderConclusionAndBlessingsPage(ctx: any): string {
       <div style="background: #FFFBEB; border: 2px solid #D97706; border-radius: 8px; padding: 12px 14px; font-size: 10px; line-height: 1.6; color: #78350F; text-align: center; margin-top: 6px;">
         <strong style="color: #9A3412; font-size: 11px; display: block; margin-bottom: 3px;">🔒 व्यक्तिगत गोपनीयता एवं साधना निर्देश:</strong>
         यह रिपोर्ट आपके द्वारा दी गई जानकारी और ज्योतिष (Astro), अंक शास्त्र (Numro), एवं शास्त्र के आधार पर बनाई गई है जो सिर्फ आपके लिए है। इसे किसी के साथ साझा (Share) नहीं करें। अपने जप, शुद्धि या सिद्धि मंत्र को किसी और को नहीं करने दें। यह सिर्फ और सिर्फ आपके लिए बना हुआ है।
+        <div style="margin-top: 6px; padding-top: 5px; border-top: 1px dashed #D97706; font-size: 9px; color: #9A3412; font-weight: bold;">
+          📜 प्राप्त जानकारी के आधार पर आपकी यह रिपोर्ट निर्मित की गई है। अन्य / अतिरिक्त जानकारी देने पर रिपोर्ट में कुछ सूक्ष्म परिवर्तन आ सकते हैं।
+        </div>
       </div>
     </div>
   `;
