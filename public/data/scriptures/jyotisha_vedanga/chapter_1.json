@@ -1,0 +1,78 @@
+{
+  "chapterIndex": 1,
+  "chapterTitleHi": "वेदांग ज्योतिष: काल विधान शास्त्र",
+  "chapterTitleEn": "Vedanga Jyotisha: Science of Cosmic Time",
+  "totalVersesText": "१० श्लोक",
+  "sections": [
+    {
+      "sectionIndex": 1,
+      "verseRange": "श्लोक 1 - 10",
+      "sectionTitleHi": "कालचक्र, संवत्सर एवं नक्षत्र ज्ञान",
+      "sectionTitleEn": "Section 1: The Cosmic Wheel of Time & Nakshatras",
+      "tattvaBodhaHi": "यथा शिखा मयूराणां नागानां मणयो यथा। तद्वद्वेदाङ्गशास्त्राणां गणितं मूर्धनि स्थितम्॥",
+      "tattvaBodhaEn": "Like the crest on a peacock or the gem in a serpent's hood, mathematics and celestial astronomy sit supreme at the crown of all Vedangas.",
+      "verses": [
+        {
+          "shlokaNum": 1,
+          "sanskrit": "यथा शिखा मयूराणां नागानां मणयो यथा ।\nतद्वद्वेदाङ्गशास्त्राणां गणितं मूर्धनि स्थितम् ॥ १ ॥",
+          "hindi": "जैसे मोरों के सिर पर कलगी और साँपों के सिर पर मणि सबसे ऊँचा स्थान पाती है, वैसे ही समस्त वेदांग शास्त्रों में ज्योतिष (गणित) शीर्ष स्थान पर स्थित है।",
+          "english": "As the crest on the head of a peacock and the jewel on the hood of a serpent, so does astronomical science stand at the pinnacle of all Vedangas."
+        },
+        {
+          "shlokaNum": 2,
+          "sanskrit": "वेदा हि यज्ञार्थमभिप्रवृत्ताः कालानुपूर्व्या विहिताश्च यज्ञाः ।\nतस्मादिदं कालविधानशास्त्रं यो ज्योतिषं वेद स वेद यज्ञान् ॥ २ ॥",
+          "hindi": "वेद यज्ञों के संपादन हेतु प्रवृत्त हुए हैं और सभी यज्ञ काल (मुहूर्त) के नियम से बंधे हैं; इसलिए जो इस काल-विधान ज्योतिष शास्त्र को जानता है, वही यज्ञों का मर्म जानता है।",
+          "english": "The Vedas arose for sacrificial action, and all sacred acts are governed by celestial time; he who knows this science of time understands all rituals."
+        },
+        {
+          "shlokaNum": 3,
+          "sanskrit": "माघशुक्लप्रपन्नस्य पौषकृष्णसमापिनः ।\nयुगस्य पञ्चवर्षस्य कालज्ञानं प्रचक्षते ॥ ३ ॥",
+          "hindi": "माघ शुक्ल पक्ष की प्रतिपदा से आरंभ होकर पौष कृष्ण पक्ष की अमावस्या को समाप्त होने वाले पांच वर्षों के युग काल-चक्र की गणना की जाती है।",
+          "english": "They explain the five-year yuga cycle, which begins on the first day of the bright half of Magha and ends at the dark half of Pausha."
+        },
+        {
+          "shlokaNum": 4,
+          "sanskrit": "प्रपद्येते श्रविष्ठादौ सूर्याचन्द्रमसावुदक् ।\nसार्पार्धे दक्षिणार्कस्तु माघश्रावणयोः सदा ॥ ४ ॥",
+          "hindi": "माघ मास में सूर्य और चन्द्रमा श्रविष्ठा (धनिष्ठा) नक्षत्र से उत्तरायण होते हैं, और श्रावण मास में आश्लेषा नक्षत्र से दक्षिणायन की ओर गति करते हैं।",
+          "english": "The sun and moon turn northward at the beginning of Dhanishtha in Magha, and the sun turns southward in the middle of Ashlesha in Shravana."
+        },
+        {
+          "shlokaNum": 5,
+          "sanskrit": "संवत्सरो परिवत्सरो इदावत्सरोऽनुवत्सरः ।\nवत्सरोऽथ युगाख्यः स्यात् पञ्चाब्दं चक्रमुत्तमम् ॥ ५ ॥",
+          "hindi": "संवत्सर, परिवत्सर, इदावत्सर, अनुवत्सर और वत्सर—इन पांच वर्षों के समूह को \"पंचवर्षीय युग\" कहा जाता है, जो काल का उत्तम चक्र है।",
+          "english": "Samvatsara, Parivatsara, Idavatsara, Anuvatsara, and Vatsara—these five comprise the sacred five-year cosmic cycle."
+        },
+        {
+          "shlokaNum": 6,
+          "sanskrit": "सप्तविंशति नक्षत्राणि कृत्तिकादीनि विदुः ।\nचन्द्रस्य नित्यसञ्चारात् कालविभागः प्रकीर्तितः ॥ ६ ॥",
+          "hindi": "कृत्तिका से लेकर २७ नक्षत्र कहे गए हैं; चन्द्रमा के इन नक्षत्रों में नित्य भ्रमण से ही तिथियों और काल-खंडों का निर्धारण होता है।",
+          "english": "Twenty-seven are the lunar mansions from Krittika to Revati; from the moon's daily passage through them, celestial divisions are measured."
+        },
+        {
+          "shlokaNum": 7,
+          "sanskrit": "अयनं द्विविधं प्रोक्तमुत्तरायणदक्षिणम् ।\nउत्तरायणकाले तु सर्वं शुभकरं भवेत् ॥ ७ ॥",
+          "hindi": "काल के दो मुख्य अयन हैं: उत्तरायण और दक्षिणायन। उत्तरायण काल देवताओं का दिन माना जाता है और यह समस्त शुभ कार्यों हेतु सर्वोत्तम है।",
+          "english": "Twofold is the sun's passage: northern (Uttarayana) and southern (Dakshinayana); the northern path is the day of gods and auspicious for all noble acts."
+        },
+        {
+          "shlokaNum": 8,
+          "sanskrit": "तिथिवारं च नक्षत्रं योगः करणमेव च ।\nपञ्चाङ्गस्य परिज्ञानात् सर्वपापैः प्रमुच्यते ॥ ८ ॥",
+          "hindi": "तिथि, वार, नक्षत्र, योग और करण—पंचांग के इन पांच अंगों के ज्ञान से मनुष्य को समय की शुद्धि मिलती है और अमंगल का नाश होता है।",
+          "english": "Lunar day (Tithi), weekday (Vara), asterism (Nakshatra), solar-lunar union (Yoga), and half-tithi (Karana)—knowledge of these five dissolves negativities."
+        },
+        {
+          "shlokaNum": 9,
+          "sanskrit": "नक्षत्रदेवता वन्दे ये ग्रहाश्च दिवौकसः ।\nशान्तिं कुर्वन्तु सततं मङ्गलानि दिशन्तु नः ॥ ९ ॥",
+          "hindi": "नक्षत्रों के अधिष्ठाता देवों तथा आकाश में स्थित नवग्रहों की मैं वंदना करता हूँ; वे सदा शांति प्रदान करें और हमारा मंगल करें।",
+          "english": "I revere the presiding divinities of the constellations and planetary spheres; may they ever bestow peace and guide our destiny."
+        },
+        {
+          "shlokaNum": 10,
+          "sanskrit": "कालो हि सर्वभूतानां धाता नेता च पालकः ।\nकाले सर्वाणि लीयन्ते कालं ज्ञात्त्वा न सीदति ॥ १० ॥",
+          "hindi": "काल ही समस्त प्राणियों का विधाता, नेता और पालक है; काल में ही सब कुछ विलीन हो जाता है। काल के रहस्य को जानने वाला कभी विचलित नहीं होता।",
+          "english": "Time is the ordainer, guide, and sustainer of all beings; in time all things dissolve. He who understands cosmic time is never shaken."
+        }
+      ]
+    }
+  ]
+}

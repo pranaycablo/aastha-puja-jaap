@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <radialGradient id="vishnuSky" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" stopColor="#1E3A8A"/>
+      <stop offset="50%" stopColor="#172554"/>
+      <stop offset="100%" stopColor="#050B1E"/>
+    </radialGradient>
+    <radialGradient id="vishnuHalo" cx="50%" cy="35%" r="45%">
+      <stop offset="0%" stopColor="#FEF08A" stopOpacity="0.85"/>
+      <stop offset="60%" stopColor="#38BDF8" stopOpacity="0.4"/>
+      <stop offset="100%" stopColor="#1D4ED8" stopOpacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="500" height="500" rx="30" fill="url(#vishnuSky)"/>
+  <circle cx="250" cy="180" r="140" fill="url(#vishnuHalo)"/>
+
+  <!-- Chakra & Shankha -->
+  <circle cx="390" cy="130" r="24" fill="#FDE047" stroke="#EA580C" stroke-width="2"/>
+  <ellipse cx="110" cy="130" rx="18" ry="12" fill="#FFFFFF" stroke="#FDE047" stroke-width="2"/>
+
+  <!-- Face -->
+  <path d="M 215 145 C 215 125 285 125 285 145 C 290 190 280 225 250 230 C 220 225 210 190 215 145 Z" fill="#60A5FA"/>
+  <path d="M 242 140 L 242 175 Q 250 183 258 175 L 258 140" fill="#FFFFFF"/>
+  <line x1="250" y1="140" x2="250" y2="180" stroke="#DC2626" stroke-width="2.5"/>
+
+  <ellipse cx="233" cy="172" rx="9" ry="5.5" fill="#FFFFFF"/>
+  <circle cx="234" cy="172" r="3.5" fill="#0F172A"/>
+  <ellipse cx="267" cy="172" rx="9" ry="5.5" fill="#FFFFFF"/>
+  <circle cx="266" cy="172" r="3.5" fill="#0F172A"/>
+
+  <path d="M 170 245 C 160 325 180 395 250 395 C 320 395 340 325 330 245 Z" fill="#FACC15"/>
+
+  <text x="250" y="475" font-family="serif" font-size="22" font-weight="bold" fill="#FEF08A" text-anchor="middle">🐚 ॐ नमो भगवते वासुदेवाय 🐚</text>
+</svg>

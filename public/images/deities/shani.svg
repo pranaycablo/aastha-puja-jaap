@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <radialGradient id="shaniBg" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" stopColor="#1E3A8A"/>
+      <stop offset="50%" stopColor="#0F172A"/>
+      <stop offset="100%" stopColor="#020617"/>
+    </radialGradient>
+  </defs>
+  <rect width="500" height="500" rx="30" fill="url(#shaniBg)"/>
+  <circle cx="250" cy="190" r="140" fill="#3B82F6" opacity="0.4"/>
+  <!-- Crow Vahana Silhouette -->
+  <ellipse cx="330" cy="380" rx="40" ry="20" fill="#0F172A"/>
+  <!-- Face -->
+  <path d="M 215 145 C 215 125 285 125 285 145 C 290 190 280 225 250 230 C 220 225 210 190 215 145 Z" fill="#93C5FD"/>
+  <circle cx="250" cy="155" r="5" fill="#2563EB"/>
+  <text x="250" y="475" font-family="serif" font-size="22" font-weight="bold" fill="#FEF08A" text-anchor="middle">⚖️ ॐ शं शनैश्चराय नमः • न्याय देवता ⚖️</text>
+</svg>

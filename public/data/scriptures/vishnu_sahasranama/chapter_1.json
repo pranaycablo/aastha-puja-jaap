@@ -1,0 +1,78 @@
+{
+  "chapterIndex": 1,
+  "chapterTitleHi": "विष्णु सहस्रनाम: आरम्भिक मंगलाचरण व प्रथम २४ नाम",
+  "chapterTitleEn": "Vishnu Sahasranama: Invocation & The First 24 Divine Names",
+  "totalVersesText": "१० श्लोक",
+  "sections": [
+    {
+      "sectionIndex": 1,
+      "verseRange": "श्लोक 1 - 10",
+      "sectionTitleHi": "किमेकं दैवतं लोके एवं विश्वं विष्णुर्वषट्कारः",
+      "sectionTitleEn": "Section 1: Who is the One Divinity & The Cosmic Names of Vishnu",
+      "tattvaBodhaHi": "यस्य स्मरणमात्रेण जन्मसंसारबन्धनात्। विमुच्यते नमस्तस्मै विष्णवे प्रभविष्णवे॥",
+      "tattvaBodhaEn": "By the mere remembrance of whom one is liberated from the bondage of worldly rebirth, unto that all-pervading, almighty Lord Vishnu be homage.",
+      "verses": [
+        {
+          "shlokaNum": 1,
+          "sanskrit": "शुक्लाम्बरधरं विष्णुं शशिवर्णं चतुर्भुजम् ।\nप्रसन्नवदनं ध्यायेत् सर्वविघ्नोपशान्तये ॥ १ ॥",
+          "hindi": "श्वेत वस्त्र धारण करने वाले, सर्वव्यापक, चंद्रमा के समान शांत वर्ण वाले, चार भुजाओं वाले और प्रसन्न मुख वाले भगवान श्री विष्णु का समस्त विघ्नों की शांति हेतु ध्यान करें।",
+          "english": "For the pacification of all obstacles, let one meditate upon Vishnu, robed in white, luminous like the moon, four-armed, and of serene countenance."
+        },
+        {
+          "shlokaNum": 2,
+          "sanskrit": "यस्य स्मरणमात्रेण जन्मसंसारबन्धनात् ।\nविमुच्यते नमस्तस्मै विष्णवे प्रभविष्णवे ॥ २ ॥",
+          "hindi": "जिनके स्मरण मात्र से मनुष्य जन्म-मरण के संसार-बंधन से सदा के लिए मुक्त हो जाता है, उन परम समर्थ सर्वव्यापी भगवान विष्णु को मेरा नमस्कार है।",
+          "english": "By mere remembrance of whom a soul is released from the bondage of worldly rebirth, salutations unto that almighty, all-pervading Vishnu."
+        },
+        {
+          "shlokaNum": 3,
+          "sanskrit": "किमेकं दैवतं लोके किं वाप्येकं परायणम् ।\nस्तुवन्तः कं कमर्चन्तः प्राप्नुयुर्मानवाः शुभम् ॥ ३ ॥",
+          "hindi": "युधिष्ठिर ने पूछा: संसार में एकमात्र पूज्य देव कौन हैं? एकमात्र परम आश्रय कौन हैं? किसकी स्तुति और किसकी पूजा करके मनुष्य परम कल्याण को प्राप्त कर सकता है?",
+          "english": "Yudhishthira asked: Who is the one Supreme Deity in the universe? Who is the sole ultimate refuge? By praising whom and worshipping whom do mortals attain supreme good?"
+        },
+        {
+          "shlokaNum": 4,
+          "sanskrit": "को धर्मः सर्वधर्माणां भवतः परमो मतः ।\nकिं जपन्मुच्यते जन्तुर्जन्मसंसारबन्धनात् ॥ ४ ॥",
+          "hindi": "समस्त धर्मों में आपके मत से सबसे श्रेष्ठ और परम धर्म कौन सा है? और किसका जप करने से जीव जन्म-मरण के चक्र से छूट जाता है?",
+          "english": "Which among all spiritual duties is considered by thee as the highest? And by chanting whose name is an individual released from worldly bondage?"
+        },
+        {
+          "shlokaNum": 5,
+          "sanskrit": "भीष्म उवाच: जगत्प्रभुं देवदेवमनन्तं पुरुषोत्तमम् ।\nस्तुवन्नामसहस्रेण पुरुषः सततोत्थितः ॥ ५ ॥",
+          "hindi": "भीष्म पितामह ने कहा: संपूर्ण जगत के स्वामी, देवों के देव, अनंत, पुरुषोत्तम श्रीहरि के सहस्र नामों द्वारा जो नित्य एकाग्र होकर स्तुति करता है—",
+          "english": "Bhishma said: A man who, ever alert and devoted, continuously glorifies with the thousand names the Lord of the Universe, God of gods, the Infinite Purushottama—"
+        },
+        {
+          "shlokaNum": 6,
+          "sanskrit": "तमेव चार्चयन्नित्यं भक्त्या पुरुषमव्ययम् ।\nध्यायन् स्तुवन् नमस्यंश्च यजमानस्तमेव च ॥ ६ ॥",
+          "hindi": "उस अविनाशी परम पुरुष की भक्तिपूर्वक नित्य अर्चना करते हुए, ध्यान करते हुए, स्तुति करते हुए और नमस्कार करते हुए—वह संपूर्ण दुखों को पार कर जाता है।",
+          "english": "Ever worshipping with pure devotion that imperishable Being, meditating upon Him, praising Him, and prostrating before Him—he transcends all sorrow."
+        },
+        {
+          "shlokaNum": 7,
+          "sanskrit": "एष मे सर्वधर्माणां धर्मोऽधिकतमो मतः ।\nयद्भक्त्या पुण्डरीकाक्षं स्तवैरर्चेन्नरः सदा ॥ ७ ॥",
+          "hindi": "समस्त धर्मों में मेरी दृष्टि में यही सबसे बड़ा और सर्वोच्च धर्म है कि मनुष्य कमल-नयन भगवान विष्णु की भक्तिपूर्वक स्तुतियों द्वारा नित्य आराधना करे।",
+          "english": "This I hold to be the highest of all Dharmas: that one should constantly worship the lotus-eyed Lord with devotional hymns."
+        },
+        {
+          "shlokaNum": 8,
+          "sanskrit": "विश्वं विष्णुर्वषट्कारो भूतभव्यभवत्प्रभुः ।\nभूतकृद् भूतभृद्भावो भूतात्मा भूतभावनः ॥ ८ ॥",
+          "hindi": "१. विश्वम् (संपूर्ण ब्रह्मांड रूप), २. विष्णुः (सर्वव्यापक), ३. वषट्कारः (यज्ञ स्वरूप), ४. भूतभव्यभवत्प्रभुः (तीनों कालों के स्वामी), ५. भूतकृत् (सृष्टि-कर्ता), ६. भूतभृत् (पोषणकर्ता), ७. भावः (सत् स्वरूप), ८. भूतात्मा (सबकी आत्मा), ९. भूतभावनः (सबका कल्याण करने वाले)।",
+          "english": "1. Vishvam (the Cosmos), 2. Vishnu (All-pervading), 3. Vashatkara (Sacrifice), 4. Master of past, present, future, 5. Creator of beings, 6. Sustainer of beings, 7. Pure Existence, 8. Soul of all, 9. Generator of all life."
+        },
+        {
+          "shlokaNum": 9,
+          "sanskrit": "पूतात्मा परमात्मा च मुक्तानां परमा गतिः ।\nअव्ययः पुरुषः साक्षी क्षेत्रज्ञोऽक्षर एव च ॥ ९ ॥",
+          "hindi": "१०. पूतात्मा (परम पवित्र आत्मा), ११. परमात्मा (सर्वोच्च आत्मा), १२. मुक्तानां परमा गतिः (मुक्त पुरुषों की परम गति), १३. अव्ययः (अविनाशी), १४. पुरुषः, १५. साक्षी (सबके द्रष्टा), १६. क्षेत्रज्ञः (शरीर के ज्ञाता), १७. अक्षरः (नष्ट न होने वाले)।",
+          "english": "10. Pure Self, 11. Supreme Soul, 12. Highest goal of liberated souls, 13. Imperishable, 14. Divine Person, 15. Eternal Witness, 16. Knower of the field of body, 17. Undecaying."
+        },
+        {
+          "shlokaNum": 10,
+          "sanskrit": "योगो योगविदां नेता प्रधानपुरुषेश्वरः ।\nनारसिंहवपुः श्रीमान् केशवः पुरुषोत्तमः ॥ १० ॥",
+          "hindi": "१८. योगः (साधना मार्ग), १९. योगविदां नेता (योगियों के मार्गदर्शक), २०. प्रधानपुरुषेश्वरः (प्रकृति और पुरुष के स्वामी), २१. नारसिंहवपुः (नृसिंह रूप), २२. श्रीमान् (लक्ष्मीपति), २३. केशवः (ब्रह्मा-विष्णु-शिव के स्वामी), २४. पुरुषोत्तमः (सर्वश्रेष्ठ पुरुष)।",
+          "english": "18. Yoga, 19. Leader of those who know Yoga, 20. Lord of Matter and Spirit, 21. Having the divine Man-Lion form, 22. Possessor of all divine glory, 23. Keshava, 24. Supreme Divine Being."
+        }
+      ]
+    }
+  ]
+}

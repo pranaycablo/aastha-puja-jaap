@@ -1,0 +1,78 @@
+{
+  "chapterIndex": 1,
+  "chapterTitleHi": "अध्याय ३३: पंडित (ज्ञानी) और मूर्ख के लक्षण",
+  "chapterTitleEn": "Chapter 33: Hallmarks of the Wise Man and the Fool",
+  "totalVersesText": "१० श्लोक",
+  "sections": [
+    {
+      "sectionIndex": 1,
+      "verseRange": "श्लोक 1 - 10",
+      "sectionTitleHi": "पंडित के श्रेष्ठ लक्षण एवं आठ आत्म-गुण",
+      "sectionTitleEn": "Section 1: Characteristics of the Truly Wise Mind",
+      "tattvaBodhaHi": "यस्य कृत्यं न जानन्ति मन्त्रं वा मन्त्रितं परे। कृतमेवास्य जानन्ति स वै पण्डित उच्यते॥",
+      "tattvaBodhaEn": "He whose actions, plans, and counsels others know only after they are accomplished—he alone is called truly wise.",
+      "verses": [
+        {
+          "shlokaNum": 1,
+          "sanskrit": "यस्य कृत्यं न विघ्नन्ति शीतमुष्णं भयं रतिः ।\nसमृद्धिरसमृद्धिर्वा स वै पण्डित उच्यते ॥ १ ॥",
+          "hindi": "जिसके कर्तव्य-कर्म में सर्दी, गर्मी, भय, प्रेम, समृद्धि अथवा दरिद्रता कोई बाधा नहीं डाल पाती—वही वास्तव में \"पंडित\" (ज्ञानी) कहलाता है।",
+          "english": "He whose noble actions are not deterred by cold, heat, fear, pleasure, prosperity, or adversity—he alone is called wise."
+        },
+        {
+          "shlokaNum": 2,
+          "sanskrit": "यस्य कृत्यं न जानन्ति मन्त्रं वा मन्त्रितं परे ।\nकृतमेवास्य जानन्ति स वै पण्डित उच्यते ॥ २ ॥",
+          "hindi": "जिसके कार्य और गुप्त योजनाओं को दूसरे लोग कार्य पूरा हो जाने के बाद ही जान पाते हैं, पहले से नहीं—वही बुद्धिमान कहलाता है।",
+          "english": "He whose intentions and counsels others discover only after they are successfully accomplished—he alone is called wise."
+        },
+        {
+          "shlokaNum": 3,
+          "sanskrit": "आत्मज्ञानं समारम्भस्तितिक्षा धर्मनित्यता ।\nयमर्थान्नापकर्षन्ति स वै पण्डित उच्यते ॥ ३ ॥",
+          "hindi": "आत्मज्ञान, सही समय पर कार्य का आरंभ, सहनशीलता और धर्म पर अडिग निष्ठा—जिस पुरुष को ये गुण कभी सन्मार्ग से विचलित नहीं होने देते, वही पंडित है।",
+          "english": "Self-knowledge, timely endeavor, forbearance, and steady adherence to righteousness—from which nothing can divert him—he is called wise."
+        },
+        {
+          "shlokaNum": 4,
+          "sanskrit": "नाप्राप्यमभिवाञ्छन्ति नष्टं नेच्छन्ति शोचितुम् ।\nआपत्सु च न मुह्यन्ति नराः पण्डितबुद्धयः ॥ ४ ॥",
+          "hindi": "जो असंभव वस्तु की इच्छा नहीं करते, जो खो चुका है उसके लिए व्यर्थ शोक नहीं करते, और विपत्ति आने पर घबराते नहीं—वे ही श्रेष्ठ बुद्धि वाले ज्ञानी हैं।",
+          "english": "They desire not the unobtainable, grieve not for what is lost, and lose not their head in adversity—such men possess wise intellects."
+        },
+        {
+          "shlokaNum": 5,
+          "sanskrit": "निश्चित्य यः प्रक्रमते नान्तर्वसति कर्मणः ।\nअवन्ध्यकालो वश्यात्मा स वै पण्डित उच्यते ॥ ५ ॥",
+          "hindi": "जो भली-भांति सोच-समझकर कार्य आरंभ करता है, कार्य के बीच में रुकता नहीं, अपने समय को व्यर्थ नहीं जाने देता और मन को वश में रखता है—वही पंडित है।",
+          "english": "He who begins an undertaking after due reflection, halts not mid-way, wastes no precious time, and governs his passions—he is called wise."
+        },
+        {
+          "shlokaNum": 6,
+          "sanskrit": "अनाश्रुतस्तूपहसति ह्यपृष्टो बहु भाषते ।\nअविश्वस्ते विश्वसिति मूढचेता नराधमः ॥ ६ ॥",
+          "hindi": "मूर्ख के लक्षण: जो बिना ज्ञान के उपहास करता है, बिना पूछे बहुत बोलता है, और अविश्वसनीय व्यक्ति पर भी आँख मूंदकर विश्वास कर लेता है।",
+          "english": "Characteristics of a fool: he sneers without listening, babbles unasked, and places trust in the untrustworthy."
+        },
+        {
+          "shlokaNum": 7,
+          "sanskrit": "एकः पापानि कुरुते फलं भुङ्क्ते महाजनः ।\nभोक्तारो विप्रमुच्यन्ते कर्ता दोषेण लिप्यते ॥ ७ ॥",
+          "hindi": "पाप एक व्यक्ति करता है और उसका भोग अनेक लोग करते हैं; भोगने वाले तो बच निकलते हैं, किंतु पाप करने वाला स्वयं घोर दंड भोगता है।",
+          "english": "One commits sins, and many enjoy the fruits; the enjoyers escape responsibility, but the perpetrator alone is tainted by the guilt."
+        },
+        {
+          "shlokaNum": 8,
+          "sanskrit": "एकं विषरसो हन्ति शस्त्रेणैकश्च वध्यते ।\nसराष्ट्रं सप्रजं हन्ति राजानं मन्त्रविप्लवः ॥ ८ ॥",
+          "hindi": "विष केवल एक को मारता है, शस्त्र भी एक को ही मारता है; किंतु गुप्त मंत्रणा (नीति) का भेद खुल जाना पूरे राष्ट्र और प्रजा सहित राजा को नष्ट कर देता है।",
+          "english": "Poison kills a single person; a weapon slays only one; but a leak of confidential counsel destroys the ruler together with his kingdom and people."
+        },
+        {
+          "shlokaNum": 9,
+          "sanskrit": "अक्रोधेन जयेत् क्रोधमसाधुं साधुना जयेत् ।\nजयेत् कदर्यं दानेन जयेत् सत्येन चानृतम् ॥ ९ ॥",
+          "hindi": "क्रोध को शांत रहकर जीतो; दुष्ट को अपनी भलाई से जीतो; कंजूस को उदारता से जीतो; और असत्य को केवल सत्य के आचरण से जीतो।",
+          "english": "Conquer anger by calmness; conquer the wicked by goodness; conquer the miser by generosity; and conquer falsehood by truth."
+        },
+        {
+          "shlokaNum": 10,
+          "sanskrit": "षड् दोषाः पुरुषेणेह हातव्या भूतिमिच्छता ।\nनिद्रा तन्द्रा भयं क्रोध आलस्यं दीर्घसूत्रता ॥ १० ॥",
+          "hindi": "उन्नति चाहने वाले पुरुष को छह दोषों को तुरंत त्याग देना चाहिए: अधिक सोना, तंद्रा (ऊंघना), भय, क्रोध, आलस्य और काम को टालते रहना (दीर्घसूत्रता)।",
+          "english": "Six faults should be avoided by a man who desires prosperity: excessive sleep, lethargy, fear, anger, laziness, and procrastination."
+        }
+      ]
+    }
+  ]
+}

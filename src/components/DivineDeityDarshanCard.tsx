@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Sparkles, Heart } from 'lucide-react';
 
 export type DeityImageType =
@@ -31,6 +31,8 @@ export const DivineDeityDarshanCard: React.FC<DivineDeityDarshanCardProps> = ({
   shloka,
   size = 'banner'
 }) => {
+  const [imageError, setImageError] = useState(false);
+
   // Normalize deity
   const normalizedKey = (deityType || '').toLowerCase();
 
@@ -40,6 +42,7 @@ export const DivineDeityDarshanCard: React.FC<DivineDeityDarshanCardProps> = ({
         name: 'श्री हनुमान जी महाराज',
         tag: 'संकटमोचन • अष्टसिद्धि नौ निधि के दाता',
         icon: '🚩',
+        imageSrc: '/images/deities/hanuman.svg',
         bgGradient: 'from-orange-600 via-red-600 to-amber-700',
         borderColor: 'border-amber-400',
         haloGlow: '#F59E0B',
@@ -51,6 +54,7 @@ export const DivineDeityDarshanCard: React.FC<DivineDeityDarshanCardProps> = ({
         name: 'देवाधिदेव महादेव शिव',
         tag: 'कैलासपति • त्रिनेत्रधारी • कर्पूरगौरम्',
         icon: '🔱',
+        imageSrc: '/images/deities/shiva.svg',
         bgGradient: 'from-cyan-800 via-sky-800 to-indigo-900',
         borderColor: 'border-cyan-300',
         haloGlow: '#38BDF8',
@@ -62,6 +66,7 @@ export const DivineDeityDarshanCard: React.FC<DivineDeityDarshanCardProps> = ({
         name: 'मर्यादा पुरुषोत्तम श्री राम व जानकी',
         tag: 'रघुकुल तिलक • धनुर्धारी • तारक ब्रह्म',
         icon: '🏹',
+        imageSrc: '/images/deities/ram.svg',
         bgGradient: 'from-amber-600 via-orange-600 to-rose-700',
         borderColor: 'border-amber-300',
         haloGlow: '#FBBF24',
@@ -73,6 +78,7 @@ export const DivineDeityDarshanCard: React.FC<DivineDeityDarshanCardProps> = ({
         name: 'भगवान श्री द्वारकाधीश कृष्ण',
         tag: 'मुरलीधर • पीताम्बरधारी • जगद्गुरु',
         icon: '🪈',
+        imageSrc: '/images/deities/krishna.svg',
         bgGradient: 'from-indigo-800 via-purple-800 to-amber-700',
         borderColor: 'border-amber-300',
         haloGlow: '#A855F7',
@@ -84,6 +90,7 @@ export const DivineDeityDarshanCard: React.FC<DivineDeityDarshanCardProps> = ({
         name: 'भगवती माँ जगदम्बा दुर्गा',
         tag: 'आदिशक्ति • महिषासुरमर्दिनी • सिंहवाहिनी',
         icon: '🌸',
+        imageSrc: '/images/deities/durga.svg',
         bgGradient: 'from-rose-700 via-red-700 to-orange-800',
         borderColor: 'border-rose-300',
         haloGlow: '#F43F5E',
@@ -95,6 +102,7 @@ export const DivineDeityDarshanCard: React.FC<DivineDeityDarshanCardProps> = ({
         name: 'प्रथम पूज्य भगवान श्री गणेश',
         tag: 'विघ्नहर्ता • मोदकप्रिय • गजानन',
         icon: '🐘',
+        imageSrc: '/images/deities/ganesha.svg',
         bgGradient: 'from-orange-600 via-amber-600 to-yellow-600',
         borderColor: 'border-yellow-300',
         haloGlow: '#F59E0B',
@@ -105,7 +113,8 @@ export const DivineDeityDarshanCard: React.FC<DivineDeityDarshanCardProps> = ({
       return {
         name: 'माँ महालक्ष्मी',
         tag: 'अष्टलक्ष्मी • धन-धान्य ऐश्वर्य प्रदायिनी',
-        icon: '💰',
+        icon: '🪙',
+        imageSrc: '/images/deities/lakshmi.svg',
         bgGradient: 'from-amber-600 via-yellow-600 to-rose-600',
         borderColor: 'border-yellow-300',
         haloGlow: '#FDE047',
@@ -117,21 +126,11 @@ export const DivineDeityDarshanCard: React.FC<DivineDeityDarshanCardProps> = ({
         name: 'विद्या की देवी माँ सरस्वती',
         tag: 'वीणावादिनी • हंसवाहिनी • वाग्देवी',
         icon: '🪕',
+        imageSrc: '/images/deities/saraswati.svg',
         bgGradient: 'from-sky-700 via-indigo-700 to-purple-800',
         borderColor: 'border-sky-300',
         haloGlow: '#E0E7FF',
         shlokaText: 'या कुन्देन्दुतुषारहारधवला या शुभ्रवस्त्रावृता या वीणावरदण्डमण्डितकरा या श्वेतपद्मासना।'
-      };
-    }
-    if (normalizedKey.includes('shyam') || normalizedKey.includes('khatu')) {
-      return {
-        name: 'शीश के दानी भगवान खाटू श्याम',
-        tag: 'हारे का सहारा • लखदातारी • मोर्वी नन्दन',
-        icon: '🌸',
-        bgGradient: 'from-amber-600 via-rose-700 to-indigo-900',
-        borderColor: 'border-amber-400',
-        haloGlow: '#F59E0B',
-        shlokaText: 'हारे के सहारे श्याम प्यारे की जय। तीन बाण धारी शीश के दानी नमोऽस्तु ते।'
       };
     }
     if (normalizedKey.includes('vishnu') || normalizedKey.includes('narayan')) {
@@ -139,164 +138,23 @@ export const DivineDeityDarshanCard: React.FC<DivineDeityDarshanCardProps> = ({
         name: 'जगतपालक भगवान श्री हरि विष्णु',
         tag: 'शंख-चक्र-गदा-पद्मधारी • क्षीरसागरवासी',
         icon: '🐚',
-        bgGradient: 'from-amber-600 via-yellow-600 to-cyan-800',
-        borderColor: 'border-yellow-400',
-        haloGlow: '#FBBF24',
+        imageSrc: '/images/deities/vishnu.svg',
+        bgGradient: 'from-blue-800 via-indigo-800 to-amber-700',
+        borderColor: 'border-amber-300',
+        haloGlow: '#38BDF8',
         shlokaText: 'शान्ताकारं भुजगशयनं पद्मनाभं सुरेशं विश्वाधारं गगनसदृशं मेघवर्णं शुभाङ्गम्।'
       };
     }
-    if (normalizedKey.includes('radha')) {
-      return {
-        name: 'श्री किशोरी जी राधा रानी',
-        tag: 'वृन्दावन ईश्वरी • वृषभानु नन्दिनी • कृष्ण वल्लभा',
-        icon: '🦚',
-        bgGradient: 'from-rose-600 via-pink-600 to-amber-700',
-        borderColor: 'border-pink-300',
-        haloGlow: '#F472B6',
-        shlokaText: 'तप्तकाञ्चनगौराङ्गी राधे वृन्दावनेश्वरी। वृषभानुसुते देवि प्रणमामि हरिप्रिये॥'
-      };
-    }
-    if (normalizedKey.includes('ganga')) {
-      return {
-        name: 'पतित पावनी माँ गंगा',
-        tag: 'मोक्षदायिनी • त्रिपथगा • विष्णुपदी',
-        icon: '🌊',
-        bgGradient: 'from-cyan-700 via-sky-600 to-blue-800',
-        borderColor: 'border-cyan-300',
-        haloGlow: '#38BDF8',
-        shlokaText: 'गङ्गे च यमुने चैव गोदावरि सरस्वति। नर्मदे सिन्धु कावेरि जलेऽस्मिन् संनिधिं कुरु॥'
-      };
-    }
-    if (normalizedKey.includes('kuber')) {
-      return {
-        name: 'धनपति यक्षराज भगवान कुबेर',
-        tag: 'अधिपति उत्तर दिशा • नव निधि दाता',
-        icon: '🪙',
-        bgGradient: 'from-amber-600 via-yellow-500 to-emerald-800',
-        borderColor: 'border-yellow-300',
-        haloGlow: '#FDE047',
-        shlokaText: 'ॐ यक्षाय कुबेराय वैश्रवणाय धनधान्याधिपतये धनधान्यसमृद्धिं मे देहि दापय स्वाहा।'
-      };
-    }
-    if (normalizedKey.includes('navgraha')) {
-      return {
-        name: 'समस्त नवग्रह देवता मण्डल',
-        tag: 'सूर्य-सोम-मङ्गल-बुध-गुरु-शुक्र-शनि-राहु-केतु',
-        icon: '🪐',
-        bgGradient: 'from-purple-800 via-indigo-800 to-amber-700',
-        borderColor: 'border-amber-300',
-        haloGlow: '#C084FC',
-        shlokaText: 'ब्रह्मामुरारिस्त्रिपुरान्तकारी भानुः शशी भूमिसुतो बुधश्च गुरुश्च शुक्रः शनिराहुकेतवः कुर्वन्तु सर्वे मम सुप्रभातम्॥'
-      };
-    }
-    if (normalizedKey.includes('baglamukhi')) {
-      return {
-        name: 'माँ पीताम्बरा बगलामुखी',
-        tag: 'ब्रह्मास्त्र विद्या • शत्रु स्तम्भिनी • दशमहाविद्या',
-        icon: '💛',
-        bgGradient: 'from-yellow-600 via-amber-600 to-orange-700',
-        borderColor: 'border-yellow-300',
-        haloGlow: '#FACC15',
-        shlokaText: 'ॐ ह्लीं बगलामुखि सर्वदुष्टानां वाचं मुखं पदं स्तम्भय जिह्वां कीलय बुद्धिं विनाशय ह्लीं ॐ स्वाहा।'
-      };
-    }
-    if (normalizedKey.includes('santoshi')) {
-      return {
-        name: 'माँ संतोषी (सुख-संतोष दायिनी)',
-        tag: 'गणेश सुता • रिद्धि-सिद्धि पोषिता • सुखदात्री',
-        icon: '🌺',
-        bgGradient: 'from-rose-600 via-amber-600 to-red-700',
-        borderColor: 'border-rose-300',
-        haloGlow: '#FB7185',
-        shlokaText: 'जय सन्तोषी माँ नमो नमः। सुख-शान्ति की खानि कृपामयी वरदायिनी नमोऽस्तु ते॥'
-      };
-    }
-    if (normalizedKey.includes('tulsi')) {
-      return {
-        name: 'माँ भगवती तुलसी (वृंदा)',
-        tag: 'हरिप्रिया • वास्तु दोष नाशिनी • मोक्षदात्री',
-        icon: '🌿',
-        bgGradient: 'from-emerald-700 via-teal-700 to-amber-700',
-        borderColor: 'border-emerald-300',
-        haloGlow: '#34D399',
-        shlokaText: 'वृन्दा वृन्दावनी विश्वपूजिता विश्वपावनी। पुष्पसारा नन्दिनी च तुलसी कृष्णजीवनी॥'
-      };
-    }
-    if (normalizedKey.includes('sheetla')) {
-      return {
-        name: 'आरोग्यदायिनी माँ शीतला',
-        tag: 'शीतलता प्रदायिनी • रोग-ताप नाशिनी',
-        icon: '🪷',
-        bgGradient: 'from-sky-700 via-teal-700 to-indigo-800',
-        borderColor: 'border-teal-300',
-        haloGlow: '#2DD4BF',
-        shlokaText: 'वन्देऽहं शीतलां देवीं रासभस्थां दिगम्बराम्। मार्जनीकलशोपेतां शूर्पालङ्कृतमस्तकाम्॥'
-      };
-    }
-    if (normalizedKey.includes('vishwakarma')) {
-      return {
-        name: 'देवशिल्पी भगवान विश्वकर्मा',
-        tag: 'सृष्टि शिल्पी • वास्तु अधिपति • यंत्र विधाता',
-        icon: '⚙️',
-        bgGradient: 'from-amber-700 via-orange-700 to-blue-800',
-        borderColor: 'border-amber-400',
-        haloGlow: '#F59E0B',
-        shlokaText: 'विश्वकर्मन् नमस्तुभ्यं विश्वात्मा विश्वसम्भवः। शिल्पकर्मप्रवर्तकाय देवाय नमो नमः॥'
-      };
-    }
-    if (normalizedKey.includes('parashuram')) {
-      return {
-        name: 'चिरंजीवी भगवान परशुराम',
-        tag: 'भृगुकुल भूषण • षष्ठावतार • परशुधर',
-        icon: '🪓',
-        bgGradient: 'from-red-800 via-amber-700 to-orange-800',
-        borderColor: 'border-amber-400',
-        haloGlow: '#F97316',
-        shlokaText: 'अश्वत्थामा बलिर्व्यासो हनूमांश्च विभीषणः। कृपः परशुरामश्च सप्तैते चिरजीविनः॥'
-      };
-    }
-    if (normalizedKey.includes('dattatreya')) {
-      return {
-        name: 'भगवान श्री दत्तात्रेय (अवधूत)',
-        tag: 'ब्रह्मा-विष्णु-महेश त्रिदेवावतार • जगद्गुरु',
-        icon: '🕉️',
-        bgGradient: 'from-amber-600 via-orange-700 to-purple-800',
-        borderColor: 'border-amber-300',
-        haloGlow: '#F59E0B',
-        shlokaText: 'गुरुर्ब्रह्मा गुरुर्विष्णुः गुरुर्देवो महेश्वरः। गुरुः साक्षात् परं ब्रह्म तस्मै श्रीगुरवे नमः॥'
-      };
-    }
-    if (normalizedKey.includes('gorakhnath') || normalizedKey.includes('nath')) {
-      return {
-        name: 'महायोगी श्री गुरु गोरखनाथ',
-        tag: 'हठयोग प्रवर्तक • नवनाथ शिरोमणि • शाबर प्रणेता',
-        icon: '🧘‍♂️',
-        bgGradient: 'from-orange-700 via-amber-800 to-stone-900',
-        borderColor: 'border-amber-400',
-        haloGlow: '#FB923C',
-        shlokaText: 'ॐ गुरुजी सत नमो आदेश। अलख निरंजन जय गुरु गोरखनाथ॥'
-      };
-    }
-    if (normalizedKey.includes('surya') || normalizedKey.includes('aditya')) {
+    if (normalizedKey.includes('surya') || normalizedKey.includes('aditya') || normalizedKey.includes('sun')) {
       return {
         name: 'भगवान श्री भुवन भास्कर सूर्यदेव',
-        tag: 'प्रत्यक्ष देवता • आरोग्य व तेज प्रदाता • जगच्चक्षु',
+        tag: 'प्रत्यक्ष देवता • आरोग्य प्रदाता • सप्त-अश्व रथ',
         icon: '☀️',
-        bgGradient: 'from-amber-600 via-orange-600 to-red-700',
-        borderColor: 'border-yellow-300',
-        haloGlow: '#FDE047',
-        shlokaText: 'आदित्यस्य नमस्कारं ये कुर्वन्ति दिने दिने। आयुः प्रज्ञा बलं वीर्यं तेजस्तेषां च जायते॥'
-      };
-    }
-    if (normalizedKey.includes('shani')) {
-      return {
-        name: 'न्याय के देवता भगवान श्री शनिदेव',
-        tag: 'कर्मफलदाता • सूर्यपुत्र • छायात्मज',
-        icon: '⚖️',
-        bgGradient: 'from-blue-900 via-indigo-950 to-slate-900',
-        borderColor: 'border-blue-400',
-        haloGlow: '#60A5FA',
-        shlokaText: 'नीलांजनसमाभासं रविपुत्रं यमाग्रजम्। छायामार्तण्डसम्भूतं तं नमामि शनैश्चरम्॥'
+        imageSrc: '/images/deities/surya.svg',
+        bgGradient: 'from-amber-500 via-orange-600 to-red-700',
+        borderColor: 'border-amber-300',
+        haloGlow: '#FBBF24',
+        shlokaText: 'आदित्यस्य नमस्कारं ये कुर्वन्ति दिने दिने। जन्मान्तरसहस्रेषु दारिद्र्यं नोपजायते॥'
       };
     }
     if (normalizedKey.includes('bhairav')) {
@@ -304,6 +162,7 @@ export const DivineDeityDarshanCard: React.FC<DivineDeityDarshanCardProps> = ({
         name: 'भगवान श्री काल भैरव',
         tag: 'काशी के कोतवाल • अष्टभैरव • भयभंजन',
         icon: '⚔️',
+        imageSrc: '/images/deities/bhairav.svg',
         bgGradient: 'from-red-900 via-stone-900 to-indigo-950',
         borderColor: 'border-red-400',
         haloGlow: '#EF4444',
@@ -315,21 +174,23 @@ export const DivineDeityDarshanCard: React.FC<DivineDeityDarshanCardProps> = ({
         name: 'वेदमाता भगवती गायत्री',
         tag: 'सद्बुद्धि प्रदायिनी • समस्त वेदों की जननी',
         icon: '🪷',
+        imageSrc: '/images/deities/gayatri.svg',
         bgGradient: 'from-yellow-600 via-amber-600 to-orange-700',
         borderColor: 'border-yellow-300',
         haloGlow: '#FDE047',
         shlokaText: 'ॐ भूर्भुवः स्वः तत्सवितुर्वरेण्यं भर्गो देवस्य धीमहि धियो यो नः प्रचोदयात्॥'
       };
     }
-    if (normalizedKey.includes('ved')) {
+    if (normalizedKey.includes('shani')) {
       return {
-        name: 'चतुर्मुख ब्रह्मा व वैदिक ज्ञान ज्योति',
-        tag: 'अपौरुषेय श्रुति • सत्यमेव जयते',
-        icon: '🔥',
-        bgGradient: 'from-amber-700 via-orange-800 to-red-800',
-        borderColor: 'border-amber-400',
-        haloGlow: '#F59E0B',
-        shlokaText: 'ऋचां त्वः पोषमास्ते पुपुष्वान् गायत्रं त्वो गायति शक्वरीषु।'
+        name: 'न्याय के देवता भगवान श्री शनिदेव',
+        tag: 'कर्मफलदाता • सूर्यपुत्र • छायात्मज',
+        icon: '⚖️',
+        imageSrc: '/images/deities/shani.svg',
+        bgGradient: 'from-blue-900 via-indigo-950 to-slate-900',
+        borderColor: 'border-blue-400',
+        haloGlow: '#60A5FA',
+        shlokaText: 'नीलांजनसमाभासं रविपुत्रं यमाग्रजम्। छायामार्तण्डसम्भूतं तं नमामि शनैश्चरम्॥'
       };
     }
 
@@ -338,6 +199,7 @@ export const DivineDeityDarshanCard: React.FC<DivineDeityDarshanCardProps> = ({
       name: title || 'सच्चिदानंद परब्रह्म परमात्मा',
       tag: subtitle || 'सनातन सत्य • अखंड शांति',
       icon: '🕉️',
+      imageSrc: '/images/deities/shiva.svg',
       bgGradient: 'from-amber-700 via-orange-800 to-purple-900',
       borderColor: 'border-amber-400',
       haloGlow: '#FBBF24',
@@ -353,8 +215,17 @@ export const DivineDeityDarshanCard: React.FC<DivineDeityDarshanCardProps> = ({
   if (size === 'compact') {
     return (
       <div className={`p-2.5 rounded-2xl bg-gradient-to-r ${theme.bgGradient} text-white border-2 ${theme.borderColor} shadow-md flex items-center gap-2.5`}>
-        <div className="w-10 h-10 rounded-xl bg-black/25 flex items-center justify-center text-xl shrink-0 border border-white/20">
-          {theme.icon}
+        <div className="w-10 h-10 rounded-xl overflow-hidden bg-black/25 flex items-center justify-center shrink-0 border border-white/20">
+          {!imageError ? (
+            <img
+              src={theme.imageSrc}
+              alt={displayTitle}
+              className="w-full h-full object-cover"
+              onError={() => setImageError(true)}
+            />
+          ) : (
+            <span className="text-xl">{theme.icon}</span>
+          )}
         </div>
         <div className="min-w-0">
           <h4 className="text-xs font-black truncate text-amber-100">{displayTitle}</h4>
@@ -383,12 +254,21 @@ export const DivineDeityDarshanCard: React.FC<DivineDeityDarshanCardProps> = ({
       <div className="absolute bottom-2 right-3 text-amber-300/40 text-[10px] font-serif">卐</div>
 
       <div className="relative z-10 flex flex-col sm:flex-row items-center sm:items-start gap-3.5 text-center sm:text-left">
-        {/* Deity Icon Avatar with Sacred Halo */}
+        {/* Deity Authentic Portrait Image with Sacred Halo */}
         <div className="relative shrink-0">
           <div
-            className="w-16 h-16 sm:w-18 sm:h-18 rounded-2xl bg-black/35 backdrop-blur-xs border-2 border-amber-300/50 flex items-center justify-center text-3xl sm:text-4xl shadow-inner ring-4 ring-amber-400/20"
+            className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl overflow-hidden bg-black/35 backdrop-blur-xs border-2 border-amber-300/60 flex items-center justify-center shadow-lg ring-4 ring-amber-400/20"
           >
-            {theme.icon}
+            {!imageError ? (
+              <img
+                src={theme.imageSrc}
+                alt={displayTitle}
+                className="w-full h-full object-cover transition-transform hover:scale-105 duration-300"
+                onError={() => setImageError(true)}
+              />
+            ) : (
+              <span className="text-3xl sm:text-4xl">{theme.icon}</span>
+            )}
           </div>
           <span className="absolute -bottom-1 -right-1 flex h-4 w-4">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75" />

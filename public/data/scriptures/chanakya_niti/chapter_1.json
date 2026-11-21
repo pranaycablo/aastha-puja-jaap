@@ -1,0 +1,36 @@
+{
+  "chapterIndex": 1,
+  "chapterTitleHi": "अध्याय १: विद्या, सत्य व जीवन नीति",
+  "chapterTitleEn": "Chapter 1: Knowledge & Conduct",
+  "totalVersesText": "१७ सूत्र सम्पूर्ण",
+  "sections": [
+    {
+      "sectionIndex": 1,
+      "verseRange": "श्लोक 1 - 10",
+      "sectionTitleHi": "प्रथम खण्ड: विद्या की महिमा व मूर्ख संगति त्याग",
+      "sectionTitleEn": "Section 1: Glory of Learning & Avoiding Fools",
+      "tattvaBodhaHi": "विद्या रूपं कुरूपाणां क्षमा रूपं तपस्विनाम्। दुर्जन संगति का त्याग और धर्मनिष्ठ आचरण।",
+      "tattvaBodhaEn": "Wisdom is the beauty of the ugly; forgiveness is the strength of the ascetic.",
+      "verses": [
+        {
+          "shlokaNum": 1,
+          "sanskrit": "प्रणम्य शिरसा विष्णुं त्रैलोक्याधिपतिं प्रभुम् |\nनानाशास्त्रोद्धृतं वक्ष्ये राजनीतिसमुच्चयम् || १ ||",
+          "hindi": "तीनों लोकों के स्वामी भगवान श्री विष्णु को सिर झुकाकर प्रणाम करते हुए मैं अनेक शास्त्रों से एकत्रित की गई राजनीति (नीति-शास्त्र) को कहता हूँ।",
+          "english": "Humbly bowing before Lord Vishnu, the supreme master of the three worlds, I present this collection of political maxims gathered from various scriptures."
+        },
+        {
+          "shlokaNum": 2,
+          "sanskrit": "यस्य नास्ति स्वयं प्रज्ञा शास्त्रं तस्य करोति किम् |\nलोचनाभ्यां विहीनस्य दर्पणः किं करिष्यति || २ ||",
+          "hindi": "जिस मनुष्य के पास स्वयं की विवेकबुद्धि नहीं है, शास्त्र उसका क्या भला कर सकता है? जैसे आंखों से अंधे व्यक्ति के लिए दर्पण किस काम का?",
+          "english": "What can scriptures do for a person who lacks innate intelligence? Of what use is a mirror to someone devoid of eyes?"
+        },
+        {
+          "shlokaNum": 3,
+          "sanskrit": "दुर्जनस्य च सर्पस्य वरं सर्पो न दुर्जनः |\nसर्पो दंशति कालेन दुर्जनस्तु पदे पदे || ३ ||",
+          "hindi": "दुर्जन और सर्प में से सर्प भला है, दुर्जन नहीं। क्योंकि सर्प तो समय आने पर (छेड़ने पर) ही काटता है, परन्तु दुर्जन पग-पग पर वार करता है।",
+          "english": "Between a wicked person and a serpent, the serpent is preferable. The snake bites only in self-defense, but the wicked person strikes at every step."
+        }
+      ]
+    }
+  ]
+}

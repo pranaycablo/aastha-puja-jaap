@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <radialGradient id="sukhaBg" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stopColor="#1E1B4B"/>
+      <stop offset="60%" stopColor="#2E1065"/>
+      <stop offset="100%" stopColor="#0B0314"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="500" height="500" rx="30" fill="url(#sukhaBg)"/>
+  <ellipse cx="250" cy="420" rx="180" ry="32" fill="#78350F" stroke="#F59E0B" stroke-width="2"/>
+
+  <circle cx="250" cy="140" r="32" fill="#FED7AA" stroke="#EA580C" stroke-width="2"/>
+  <circle cx="250" cy="105" r="12" fill="#78350F"/>
+  <circle cx="250" cy="138" r="3" fill="#DC2626"/>
+
+  <path d="M 195 200 C 195 270 215 320 250 320 C 285 320 305 270 305 200 Z" fill="#F97316" stroke="#C2410C" stroke-width="2"/>
+
+  <path d="M 195 210 C 160 250 145 320 155 365" fill="none" stroke="#FED7AA" stroke-width="18" stroke-linecap="round"/>
+  <circle cx="155" cy="365" r="9" fill="#FED7AA"/>
+
+  <path d="M 305 210 C 340 250 355 320 345 365" fill="none" stroke="#FED7AA" stroke-width="18" stroke-linecap="round"/>
+  <circle cx="345" cy="365" r="9" fill="#FED7AA"/>
+
+  <!-- Simple Cross Legs -->
+  <path d="M 210 320 C 150 330 120 370 160 395 C 200 410 250 400 280 375" fill="#F97316" stroke="#C2410C" stroke-width="2"/>
+  <path d="M 290 320 C 350 330 380 370 340 395 C 300 410 250 400 220 375" fill="#F97316" stroke="#C2410C" stroke-width="2"/>
+
+  <text x="250" y="465" font-family="serif" font-size="20" font-weight="bold" fill="#FEF08A" text-anchor="middle">🧘 सुखासन (सहजासन) • नित्य नित्य शांति</text>
+</svg>

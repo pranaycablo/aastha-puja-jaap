@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <radialGradient id="handBg" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stopColor="#1E1B4B"/>
+      <stop offset="60%" stopColor="#0F172A"/>
+      <stop offset="100%" stopColor="#020617"/>
+    </radialGradient>
+    <linearGradient id="palmSkin" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#FED7AA"/>
+      <stop offset="60%" stopColor="#FDBA74"/>
+      <stop offset="100%" stopColor="#FB923C"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="500" height="500" rx="30" fill="url(#handBg)"/>
+  <text x="250" y="38" font-family="serif" font-size="20" font-weight="bold" fill="#FEF08A" text-anchor="middle">🖐️ शास्त्रोक्त कर-माला (१० पोर जप विधान)</text>
+
+  <!-- Palm & Wrist -->
+  <path d="M 170 420 C 160 350 140 280 180 230 L 320 230 C 360 280 340 350 330 420 Z" fill="url(#palmSkin)" stroke="#EA580C" stroke-width="2.5"/>
+
+  <!-- Thumb & Fingers -->
+  <path d="M 175 320 C 130 300 90 260 110 220 C 125 190 155 220 180 250" fill="url(#palmSkin)" stroke="#EA580C" stroke-width="2.5"/>
+  <path d="M 180 230 C 175 160 175 110 195 110 C 215 110 215 160 215 230" fill="url(#palmSkin)" stroke="#EA580C" stroke-width="2.5"/>
+  <path d="M 220 230 C 215 140 215 80 240 80 C 265 80 265 140 260 230" fill="url(#palmSkin)" stroke="#EA580C" stroke-width="2.5"/>
+  <path d="M 265 230 C 265 150 270 100 290 100 C 310 100 310 150 305 230" fill="url(#palmSkin)" stroke="#EA580C" stroke-width="2.5"/>
+  <path d="M 310 230 C 315 170 325 140 345 140 C 365 140 360 170 350 230" fill="url(#palmSkin)" stroke="#EA580C" stroke-width="2.5"/>
+
+  <!-- Meru Prohibition -->
+  <rect x="230" y="210" width="20" height="15" rx="3" fill="#DC2626" opacity="0.8"/>
+  <text x="240" y="222" font-size="10" font-weight="bold" fill="#FFFFFF" text-anchor="middle">मेरु ❌</text>
+
+  <!-- 10 Nodes -->
+  <circle cx="285" cy="180" r="16" fill="#16A34A" stroke="#FEF08A" stroke-width="2.5"/>
+  <text x="285" y="186" font-size="14" font-weight="900" fill="#FFFFFF" text-anchor="middle">१</text>
+
+  <circle cx="285" cy="225" r="14" fill="#EA580C" stroke="#FEF08A" stroke-width="2"/>
+  <text x="285" y="230" font-size="12" font-weight="900" fill="#FFFFFF" text-anchor="middle">२</text>
+
+  <circle cx="335" cy="225" r="14" fill="#EA580C" stroke="#FEF08A" stroke-width="2"/>
+  <text x="335" y="230" font-size="12" font-weight="900" fill="#FFFFFF" text-anchor="middle">३</text>
+
+  <circle cx="335" cy="185" r="14" fill="#EA580C" stroke="#FEF08A" stroke-width="2"/>
+  <text x="335" y="190" font-size="12" font-weight="900" fill="#FFFFFF" text-anchor="middle">४</text>
+
+  <circle cx="335" cy="150" r="14" fill="#EA580C" stroke="#FEF08A" stroke-width="2"/>
+  <text x="335" y="155" font-size="12" font-weight="900" fill="#FFFFFF" text-anchor="middle">५</text>
+
+  <circle cx="285" cy="120" r="14" fill="#EA580C" stroke="#FEF08A" stroke-width="2"/>
+  <text x="285" y="125" font-size="12" font-weight="900" fill="#FFFFFF" text-anchor="middle">६</text>
+
+  <circle cx="240" cy="100" r="14" fill="#EA580C" stroke="#FEF08A" stroke-width="2"/>
+  <text x="240" y="105" font-size="12" font-weight="900" fill="#FFFFFF" text-anchor="middle">७</text>
+
+  <circle cx="195" cy="130" r="14" fill="#EA580C" stroke="#FEF08A" stroke-width="2"/>
+  <text x="195" y="135" font-size="12" font-weight="900" fill="#FFFFFF" text-anchor="middle">८</text>
+
+  <circle cx="195" cy="175" r="14" fill="#EA580C" stroke="#FEF08A" stroke-width="2"/>
+  <text x="195" y="180" font-size="12" font-weight="900" fill="#FFFFFF" text-anchor="middle">९</text>
+
+  <circle cx="195" cy="225" r="16" fill="#2563EB" stroke="#FEF08A" stroke-width="2.5"/>
+  <text x="195" y="231" font-size="13" font-weight="900" fill="#FFFFFF" text-anchor="middle">१०</text>
+
+  <!-- Flow Line -->
+  <path d="M 285 180 L 285 225 L 335 225 L 335 185 L 335 150 L 285 120 L 240 100 L 195 130 L 195 175 L 195 225" fill="none" stroke="#FDE047" stroke-width="2.5" stroke-dasharray="5,3"/>
+
+  <text x="250" y="465" font-family="serif" font-size="17" font-weight="bold" fill="#FEF08A" text-anchor="middle">"अनामिका मध्यमारभ्य प्रदक्षिणेन तर्जनीमूलपर्यन्तम्"</text>
+</svg>

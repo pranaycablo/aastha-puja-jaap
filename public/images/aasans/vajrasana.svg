@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <radialGradient id="vajraBg" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stopColor="#1E3A8A"/>
+      <stop offset="60%" stopColor="#0F172A"/>
+      <stop offset="100%" stopColor="#020617"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="500" height="500" rx="30" fill="url(#vajraBg)"/>
+  <ellipse cx="250" cy="425" rx="160" ry="28" fill="#78350F" stroke="#F59E0B" stroke-width="2"/>
+
+  <circle cx="250" cy="130" r="30" fill="#FED7AA" stroke="#EA580C" stroke-width="2"/>
+  <circle cx="250" cy="98" r="10" fill="#78350F"/>
+  <circle cx="250" cy="128" r="3" fill="#DC2626"/>
+
+  <path d="M 205 190 C 205 260 220 300 250 300 C 280 300 295 260 295 190 Z" fill="#F59E0B" stroke="#B45309" stroke-width="2"/>
+
+  <!-- Palms on Thighs -->
+  <path d="M 205 200 L 210 320" fill="none" stroke="#FED7AA" stroke-width="18" stroke-linecap="round"/>
+  <rect x="195" y="320" width="30" height="15" rx="7" fill="#FED7AA" stroke="#78350F" stroke-width="1.5"/>
+
+  <path d="M 295 200 L 290 320" fill="none" stroke="#FED7AA" stroke-width="18" stroke-linecap="round"/>
+  <rect x="275" y="320" width="30" height="15" rx="7" fill="#FED7AA" stroke="#78350F" stroke-width="1.5"/>
+
+  <!-- Folded Knees -->
+  <path d="M 205 300 C 190 330 170 380 190 410 C 210 420 290 420 310 410 C 330 380 310 330 295 300 Z" fill="#D97706" stroke="#92400E" stroke-width="2"/>
+
+  <text x="250" y="465" font-family="serif" font-size="20" font-weight="bold" fill="#FEF08A" text-anchor="middle">🧘 वज्रासन (हीरक आसन) • पाचन व स्थिरता</text>
+</svg>

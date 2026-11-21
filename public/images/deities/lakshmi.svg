@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <radialGradient id="lakshmiSky" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" stopColor="#831843"/>
+      <stop offset="50%" stopColor="#500724"/>
+      <stop offset="100%" stopColor="#1E030D"/>
+    </radialGradient>
+    <radialGradient id="lakshmiHalo" cx="50%" cy="35%" r="45%">
+      <stop offset="0%" stopColor="#FDE047" stopOpacity="0.85"/>
+      <stop offset="60%" stopColor="#F472B6" stopOpacity="0.4"/>
+      <stop offset="100%" stopColor="#BE185D" stopOpacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="500" height="500" rx="30" fill="url(#lakshmiSky)"/>
+  <circle cx="250" cy="180" r="145" fill="url(#lakshmiHalo)"/>
+
+  <!-- Gold Coins Shower -->
+  <g fill="#FDE047" stroke="#CA8A04" stroke-width="1.5">
+    <circle cx="340" cy="270" r="9"/>
+    <circle cx="355" cy="295" r="8"/>
+    <circle cx="335" cy="320" r="9"/>
+    <circle cx="360" cy="345" r="7.5"/>
+    <circle cx="340" cy="370" r="8.5"/>
+  </g>
+
+  <polygon points="250,55 210,125 290,125" fill="#F59E0B" stroke="#FEF08A" stroke-width="2"/>
+  <circle cx="250" cy="80" r="7" fill="#E11D48"/>
+
+  <!-- Face -->
+  <path d="M 215 140 C 215 120 285 120 285 140 C 290 185 280 220 250 225 C 220 220 210 185 215 140 Z" fill="#FED7AA"/>
+  <circle cx="250" cy="155" r="4.5" fill="#E11D48"/>
+
+  <ellipse cx="233" cy="172" rx="9" ry="5.5" fill="#FFFFFF"/>
+  <circle cx="234" cy="172" r="3.5" fill="#1C1917"/>
+  <ellipse cx="267" cy="172" rx="9" ry="5.5" fill="#FFFFFF"/>
+  <circle cx="266" cy="172" r="3.5" fill="#1C1917"/>
+
+  <!-- Lotus Pedestal -->
+  <ellipse cx="250" cy="425" rx="140" ry="30" fill="#FB7185"/>
+  <ellipse cx="250" cy="420" rx="120" ry="22" fill="#F43F5E"/>
+
+  <text x="250" y="475" font-family="serif" font-size="22" font-weight="bold" fill="#FEF08A" text-anchor="middle">🪙 ॐ श्रीं ह्रीं क्लीं महालक्ष्म्यै नमः 🪙</text>
+</svg>

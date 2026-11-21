@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bhairavBg" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" stopColor="#7F1D1D"/>
+      <stop offset="60%" stopColor="#18181B"/>
+      <stop offset="100%" stopColor="#09090B"/>
+    </radialGradient>
+  </defs>
+  <rect width="500" height="500" rx="30" fill="url(#bhairavBg)"/>
+  <circle cx="250" cy="180" r="140" fill="#EF4444" opacity="0.4"/>
+  <line x1="365" y1="80" x2="365" y2="400" stroke="#FDE047" stroke-width="8"/>
+  <polygon points="365,50 355,85 375,85" fill="#FDE047"/>
+  <!-- Face -->
+  <path d="M 215 145 C 215 125 285 125 285 145 C 290 190 280 225 250 230 C 220 225 210 190 215 145 Z" fill="#FCA5A5"/>
+  <circle cx="250" cy="155" r="6" fill="#DC2626"/>
+  <text x="250" y="475" font-family="serif" font-size="22" font-weight="bold" fill="#FEF08A" text-anchor="middle">⚔️ ॐ भ्रं भैरवाय नमः • काशी के कोतवाल ⚔️</text>
+</svg>

@@ -145,6 +145,7 @@ export const KarMalaMudraGuide: React.FC<KarMalaMudraGuideProps> = ({
       name: isHi ? '१. ज्ञान मुद्रा (चिन्मुद्रा)' : '1. Gyan Mudra (Chin Mudra)',
       tag: isHi ? 'स्मरण शक्ति, चित्त शांति व विवेक' : 'Wisdom & Inner Peace',
       element: isHi ? 'अग्नि (अंगूठा) + वायु (तर्जनी)' : 'Fire + Air',
+      imageSrc: '/images/mudras/gyan_mudra.svg',
       fingerTouch: isHi ? 'तर्जनी का अग्रभाग + अंगूठे का अग्रभाग' : 'Index tip + Thumb tip',
       otherFingers: isHi ? 'मध्यमा, अनामिका, कनिष्ठिका तीनों सीधी व शांत' : 'Middle, Ring, Little fingers straight',
       benefits: isHi
@@ -159,6 +160,7 @@ export const KarMalaMudraGuide: React.FC<KarMalaMudraGuideProps> = ({
       name: isHi ? '२. ध्यान / भैरव मुद्रा' : '2. Dhyana / Bhairava Mudra',
       tag: isHi ? 'चित्त की एकाग्रता व शून्य विचार' : 'Supreme Meditative Focus',
       element: isHi ? 'ईड़ा व पिंगला नाड़ी संतुलन' : 'Nadi Balancing',
+      imageSrc: '/images/mudras/dhyana_mudra.svg',
       fingerTouch: isHi ? 'बाएं हाथ पर दाहिना हाथ + दोनों अंगूठे मिले हुए' : 'Right palm over Left palm, thumb tips touching',
       otherFingers: isHi ? 'उंगलियां एक-दूसरे पर विश्राम मुद्रा में' : 'Fingers relaxed and curved naturally',
       benefits: isHi
@@ -173,6 +175,7 @@ export const KarMalaMudraGuide: React.FC<KarMalaMudraGuideProps> = ({
       name: isHi ? '३. प्राण मुद्रा (जीवन शक्ति)' : '3. Prana Mudra (Vital Force)',
       tag: isHi ? 'आलस्य नाश व प्रचंड ओज' : 'Vitality & Divine Radiance',
       element: isHi ? 'पृथ्वी + जल + अग्नि' : 'Earth + Water + Fire',
+      imageSrc: '/images/mudras/prana_mudra.svg',
       fingerTouch: isHi ? 'अनामिका + कनिष्ठिका + अंगूठे का अग्रभाग' : 'Ring tip + Little tip + Thumb tip',
       otherFingers: isHi ? 'तर्जनी व मध्यमा पूर्णतः सीधी' : 'Index & Middle fingers held upright',
       benefits: isHi
@@ -187,6 +190,7 @@ export const KarMalaMudraGuide: React.FC<KarMalaMudraGuideProps> = ({
       name: isHi ? '४. चिन्मय मुद्रा' : '4. Chinmaya Mudra',
       tag: isHi ? 'प्राण ऊर्जा का अंतर्मुखीकरण व संचय' : 'Directing Prana Inward',
       element: isHi ? 'प्राण संचय चक्र' : 'Pranic Containment',
+      imageSrc: '/images/mudras/chinmaya_mudra.svg',
       fingerTouch: isHi ? 'ज्ञान चक्र (तर्जनी + अंगूठा)' : 'Index + Thumb circle',
       otherFingers: isHi ? 'शेष ३ उंगलियां हथेली की ओर मुट्ठी समान मुड़ी हुई' : 'Remaining 3 fingers curled into palm',
       benefits: isHi
@@ -201,6 +205,7 @@ export const KarMalaMudraGuide: React.FC<KarMalaMudraGuideProps> = ({
       name: isHi ? '५. वायु मुद्रा' : '5. Vayu Mudra',
       tag: isHi ? 'चंचलता व वात रोग शमन' : 'Calming Restlessness & Vata',
       element: isHi ? 'वायु तत्व संतुलन' : 'Balancing Air Element',
+      imageSrc: '/images/mudras/vayu_mudra.svg',
       fingerTouch: isHi ? 'तर्जनी मुड़कर अंगूठे की जड़ में + अंगूठे का दबाव' : 'Index folded to thumb base, thumb on top',
       otherFingers: isHi ? 'मध्यमा, अनामिका, कनिष्ठिका तीनों सीधी' : 'Middle, Ring, Little fingers extended straight',
       benefits: isHi
@@ -215,6 +220,7 @@ export const KarMalaMudraGuide: React.FC<KarMalaMudraGuideProps> = ({
       name: isHi ? '६. अपान मुद्रा (शुद्धिकरण)' : '6. Apana Mudra (Detoxification)',
       tag: isHi ? 'शरीर व नाभि चक्र शुद्धि' : 'Purification & Manipura Balance',
       element: isHi ? 'आकाश + पृथ्वी + अग्नि' : 'Ether + Earth + Fire',
+      imageSrc: '/images/mudras/apana_mudra.svg',
       fingerTouch: isHi ? 'मध्यमा + अनामिका + अंगूठे का अग्रभाग' : 'Middle + Ring + Thumb tips joined',
       otherFingers: isHi ? 'तर्जनी व कनिष्ठिका बाहर की ओर सीधी' : 'Index and Little fingers extended straight',
       benefits: isHi
@@ -226,10 +232,11 @@ export const KarMalaMudraGuide: React.FC<KarMalaMudraGuideProps> = ({
     },
     {
       id: 'prithvi',
-      name: isHi ? '७. पृथ्वी मुद्रा' : '7. Prithvi Mudra (Grounding)',
-      tag: isHi ? 'शारीरिक दुर्बलता व अस्थिरता नाश' : 'Grounding & Physical Strength',
+      name: isHi ? '७. पृथ्वी / शंख मुद्रा' : '7. Prithvi / Shankh Mudra',
+      tag: isHi ? 'शारीरिक दुर्बलता व कंठ शुद्धि' : 'Grounding & Voice Purification',
       element: isHi ? 'पृथ्वी तत्व' : 'Earth Element',
-      fingerTouch: isHi ? 'केवल अनामिका का अग्रभाग + अंगूठे का अग्रभाग' : 'Ring finger tip + Thumb tip',
+      imageSrc: '/images/mudras/shankh_mudra.svg',
+      fingerTouch: isHi ? 'शंख मुद्रा अथवा अनामिका अग्रभाग + अंगूठा' : 'Shankh shape / Ring + Thumb tip',
       otherFingers: isHi ? 'तर्जनी, मध्यमा, कनिष्ठिका सीधी' : 'Index, Middle, Little fingers straight',
       benefits: isHi
         ? 'शरीर में स्थायित्व, वजन संतुलन और चेहरे पर दिव्य तेज लाती है। मानसिक दुर्बलता और असुरक्षा का भाव मिटाती है।'
@@ -243,6 +250,7 @@ export const KarMalaMudraGuide: React.FC<KarMalaMudraGuideProps> = ({
       name: isHi ? '८. शून्य मुद्रा' : '8. Shunya Mudra (Space Balance)',
       tag: isHi ? 'कान विकार व आंतरिक मौन' : 'Ear & Head Pressure Relief',
       element: isHi ? 'आकाश तत्व' : 'Space / Ether Element',
+      imageSrc: '/images/mudras/vayu_mudra.svg',
       fingerTouch: isHi ? 'मध्यमा मुड़कर अंगूठे की जड़ में + अंगूठे का दबाव' : 'Middle folded to thumb base, thumb on top',
       otherFingers: isHi ? 'तर्जनी, अनामिका, कनिष्ठिका सीधी' : 'Index, Ring, Little fingers straight',
       benefits: isHi
@@ -309,6 +317,7 @@ export const KarMalaMudraGuide: React.FC<KarMalaMudraGuideProps> = ({
       name: isHi ? '१. पद्मासन (कमलासन)' : '1. Padmasana (Lotus Pose)',
       subtitle: isHi ? 'आसनों का राजा - सर्वोच्च स्थिरता व समाधि' : 'King of Asanas - Supreme Stillness',
       icon: '🪷',
+      imageSrc: '/images/aasans/padmasana.svg',
       benefits: isHi
         ? 'रीढ़ की हड्डी पूर्णतः सीधी रहती है। मूलाधार से सहस्रार चक्र तक प्राण ऊर्जा का निरंतर ऊर्ध्वगमन होता है। मन तुरंत स्थिर होकर समाधि की अवस्था में प्रवेश करता है।'
         : 'Aligns spine perfectly, directs prana upwards through all chakras, and induces effortless deep meditation.',
@@ -321,6 +330,7 @@ export const KarMalaMudraGuide: React.FC<KarMalaMudraGuideProps> = ({
       name: isHi ? '२. सिद्धासन (सिद्ध पुरुषों का प्रिय)' : '2. Siddhasana (Adept Pose)',
       subtitle: isHi ? 'ब्रह्मचर्य व ७२,००० नाड़ियों की शुद्धि' : 'Awakens Kundalini & 72,000 Nadis',
       icon: '🧘‍♂️',
+      imageSrc: '/images/aasans/siddhasana.svg',
       benefits: isHi
         ? 'शास्त्रों में इसे मंत्र सिद्धि हेतु सर्वश्रेष्ठ आसन कहा गया है। यह वीर्य रक्षा (ब्रह्मचर्य), काम-वासना पर विजय और सुषुम्ना नाड़ी को जाग्रत करने में सर्वाधिक सिद्ध है।'
         : 'Praised across Shastras as best for mantra siddhi, celibacy, calming desires and awakening the central Sushumna nadi.',
@@ -333,6 +343,7 @@ export const KarMalaMudraGuide: React.FC<KarMalaMudraGuideProps> = ({
       name: isHi ? '३. सुखासन (सहज आलती-पालती)' : '3. Sukhasana (Easy / Joyful Pose)',
       subtitle: isHi ? 'दीर्घकालीन जप हेतु अत्यंत सुगम' : 'Comfortable for Long Chanting',
       icon: '🌿',
+      imageSrc: '/images/aasans/sukhasana.svg',
       benefits: isHi
         ? 'घुटनों या जोड़ों में खिंचाव नहीं होता। वृद्धजन अथवा कई घंटों तक निरंतर नाम जप करने वाले भक्तों के लिए यह अत्यंत आरामदायक और सुखद है।'
         : 'Zero strain on knee joints; ideal for senior devotees and long multi-hour Naam Jaap sankirtan sessions.',
@@ -345,6 +356,7 @@ export const KarMalaMudraGuide: React.FC<KarMalaMudraGuideProps> = ({
       name: isHi ? '४. वज्रासन (डायमंड मुद्रा)' : '4. Vajrasana (Thunderbolt Pose)',
       subtitle: isHi ? 'जठराग्नि प्रदीप्त व मानसिक दृढ़ता' : 'Enhances Digestion & Pranic Strength',
       icon: '⚡',
+      imageSrc: '/images/aasans/vajrasana.svg',
       benefits: isHi
         ? 'एकमात्र आसन जो भोजन के तुरंत बाद भी किया जा सकता है। यह शरीर को वज्र के समान सुदृढ़ बनाता है, आलस्य व तंद्रा को दूर भगाता है और मन को वज्र जैसी शक्ति देता है।'
         : 'The only posture executable right after food. Strengthens digestive fire, removes lethargy and fortifies mental willpower.',
@@ -524,172 +536,17 @@ export const KarMalaMudraGuide: React.FC<KarMalaMudraGuideProps> = ({
     );
   };
 
-  // 2. HIGH-DEFINITION REALISTIC MUDRA SVG VISUALIZER
+  // 2. HIGH-DEFINITION AUTHENTIC MUDRA VISUALIZER
   const renderMudraVisual = (mudra: typeof mudrasList[0]) => {
-    switch (mudra.id) {
-      case 'gyan':
-        return (
-          <svg viewBox="0 0 280 180" className="w-full h-full drop-shadow-lg" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <radialGradient id="gyanGlowCore" cx="50%" cy="50%" r="50%">
-                <stop offset="0%" stopColor="#F59E0B" stopOpacity="0.9" />
-                <stop offset="50%" stopColor="#EA580C" stopOpacity="0.4" />
-                <stop offset="100%" stopColor="#EA580C" stopOpacity="0" />
-              </radialGradient>
-              <linearGradient id="handGyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#FED7AA" />
-                <stop offset="60%" stopColor="#FDBA74" />
-                <stop offset="100%" stopColor="#EA580C" />
-              </linearGradient>
-            </defs>
-
-            {/* Arm & Wrist */}
-            <path d="M 20 160 C 40 140, 60 135, 90 130 L 120 130 C 135 130, 150 145, 160 170 Z" fill="url(#handGyanGrad)" stroke="#C2410C" strokeWidth="2" />
-            
-            {/* Extended 3 Straight Fingers (Middle, Ring, Little) */}
-            <path d="M 120 120 C 150 110, 200 95, 235 90 C 248 88, 252 102, 238 108 L 140 135" fill="#FED7AA" stroke="#C2410C" strokeWidth="2" />
-            <path d="M 125 128 C 160 120, 205 110, 240 108 C 252 108, 255 120, 240 125 L 145 145" fill="#FED7AA" stroke="#C2410C" strokeWidth="2" />
-            <path d="M 130 138 C 165 132, 205 128, 235 128 C 245 128, 248 138, 235 142 L 148 152" fill="#FED7AA" stroke="#C2410C" strokeWidth="2" />
-
-            {/* Thumb curved upward */}
-            <path d="M 75 140 C 75 105, 90 75, 115 75 C 128 75, 128 95, 105 125" fill="#FDBA74" stroke="#C2410C" strokeWidth="2" />
-
-            {/* Index Finger curving to touch Thumb forming sacred loop */}
-            <path d="M 120 125 C 130 100, 128 75, 115 75 C 105 75, 112 105, 120 125" fill="#FED7AA" stroke="#C2410C" strokeWidth="2" />
-
-            {/* Luminous Gyan Spark Core */}
-            <circle cx="115" cy="75" r="28" fill="url(#gyanGlowCore)" />
-            <circle cx="115" cy="75" r="6" fill="#FFFFFF" stroke="#EA580C" strokeWidth="2" />
-            
-            {/* Explanatory Annotations */}
-            <text x="115" y="42" fontSize="10.5" fontWeight="900" fill="#FDE047" textAnchor="middle">
-              ✨ तर्जनी (वायु) + अंगूठा (अग्नि) का मिलन
-            </text>
-            <text x="245" y="75" fontSize="9.5" fontWeight="bold" fill="#FEF08A" textAnchor="middle">
-              👉 ३ उंगलियां सीधी
-            </text>
-          </svg>
-        );
-
-      case 'dhyan':
-        return (
-          <svg viewBox="0 0 280 180" className="w-full h-full drop-shadow-lg" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <radialGradient id="dhyanGlowCore" cx="50%" cy="50%" r="50%">
-                <stop offset="0%" stopColor="#38BDF8" stopOpacity="0.9" />
-                <stop offset="50%" stopColor="#0284C7" stopOpacity="0.4" />
-                <stop offset="100%" stopColor="#0284C7" stopOpacity="0" />
-              </radialGradient>
-            </defs>
-
-            {/* Left Palm Underneath */}
-            <path d="M 50 150 C 50 120, 90 110, 140 110 C 190 110, 230 120, 230 150 C 230 165, 50 165, 50 150 Z" fill="#FED7AA" stroke="#0369A1" strokeWidth="2" />
-            
-            {/* Right Palm Resting On Top */}
-            <path d="M 70 125 C 70 100, 105 92, 140 92 C 175 92, 210 100, 210 125 C 210 138, 70 138, 70 125 Z" fill="#FDBA74" stroke="#0284C7" strokeWidth="2" />
-
-            {/* Left Thumb curving up */}
-            <path d="M 90 110 C 105 80, 125 65, 138 65 C 138 80, 115 95, 105 110" fill="#FED7AA" stroke="#0369A1" strokeWidth="2" />
-
-            {/* Right Thumb curving up to touch tip */}
-            <path d="M 190 110 C 175 80, 155 65, 142 65 C 142 80, 165 95, 175 110" fill="#FDBA74" stroke="#0284C7" strokeWidth="2" />
-
-            {/* Supreme Stillness Glow (Bowl of Samadhi) */}
-            <circle cx="140" cy="65" r="26" fill="url(#dhyanGlowCore)" />
-            <circle cx="140" cy="65" r="5" fill="#FFFFFF" stroke="#0284C7" strokeWidth="2" />
-
-            <text x="140" y="38" fontSize="11" fontWeight="900" fill="#38BDF8" textAnchor="middle">
-              ⚡ दोनों अंगूठे मिले हुए (शून्य विचार)
-            </text>
-            <text x="140" y="172" fontSize="9.5" fontWeight="bold" fill="#BAE6FD" textAnchor="middle">
-              🤲 बाएं हाथ पर दाहिना हाथ गोदी में
-            </text>
-          </svg>
-        );
-
-      case 'pran':
-        return (
-          <svg viewBox="0 0 280 180" className="w-full h-full drop-shadow-lg" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <radialGradient id="pranGlowCore" cx="50%" cy="50%" r="50%">
-                <stop offset="0%" stopColor="#22C55E" stopOpacity="0.9" />
-                <stop offset="50%" stopColor="#16A34A" stopOpacity="0.4" />
-                <stop offset="100%" stopColor="#16A34A" stopOpacity="0" />
-              </radialGradient>
-            </defs>
-
-            {/* Palm */}
-            <path d="M 70 165 C 70 120, 85 100, 110 95 L 140 95 C 165 95, 175 115, 175 165 Z" fill="#FED7AA" stroke="#15803D" strokeWidth="2" />
-
-            {/* Straight Index and Middle Fingers pointing high */}
-            <path d="M 98 95 L 98 35 C 98 25, 116 25, 116 35 L 116 95" fill="#FED7AA" stroke="#15803D" strokeWidth="2" />
-            <path d="M 120 95 L 120 28 C 120 18, 138 18, 138 28 L 138 95" fill="#FED7AA" stroke="#15803D" strokeWidth="2" />
-
-            {/* Thumb curving to touch Ring & Little */}
-            <path d="M 80 120 C 95 95, 135 80, 165 75 C 172 82, 140 105, 110 120" fill="#FDBA74" stroke="#15803D" strokeWidth="2" />
-
-            {/* Ring and Little finger bent in */}
-            <path d="M 142 95 C 152 75, 165 75, 165 75" stroke="#15803D" strokeWidth="7" strokeLinecap="round" />
-
-            {/* Pranic Glow Node */}
-            <circle cx="165" cy="75" r="25" fill="url(#pranGlowCore)" />
-            <circle cx="165" cy="75" r="5" fill="#FFFFFF" stroke="#16A34A" strokeWidth="2" />
-
-            <text x="110" y="16" fontSize="10.5" fontWeight="900" fill="#4ADE80" textAnchor="middle">
-              ☝️ तर्जनी व मध्यमा पूर्णतः सीधी
-            </text>
-            <text x="175" y="55" fontSize="9.5" fontWeight="bold" fill="#BBF7D0" textAnchor="start">
-              🌿 अंगूठा + अनामिका + कनिष्ठिका
-            </text>
-          </svg>
-        );
-
-      case 'vayu':
-        return (
-          <svg viewBox="0 0 280 180" className="w-full h-full drop-shadow-lg" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <radialGradient id="vayuGlowCore" cx="50%" cy="50%" r="50%">
-                <stop offset="0%" stopColor="#06B6D4" stopOpacity="0.9" />
-                <stop offset="50%" stopColor="#0891B2" stopOpacity="0.4" />
-                <stop offset="100%" stopColor="#0891B2" stopOpacity="0" />
-              </radialGradient>
-            </defs>
-
-            {/* Palm */}
-            <path d="M 70 165 C 70 120, 85 100, 110 95 L 140 95 C 165 95, 175 115, 175 165 Z" fill="#FED7AA" stroke="#0E7490" strokeWidth="2" />
-
-            {/* 3 Straight Fingers (Middle, Ring, Little) */}
-            <path d="M 115 95 L 115 28 C 115 18, 132 18, 132 28 L 132 95" fill="#FED7AA" stroke="#0E7490" strokeWidth="2" />
-            <path d="M 135 95 L 135 35 C 135 25, 150 25, 150 35 L 150 95" fill="#FED7AA" stroke="#0E7490" strokeWidth="2" />
-            <path d="M 153 95 L 153 50 C 153 42, 166 42, 166 50 L 166 95" fill="#FED7AA" stroke="#0E7490" strokeWidth="2" />
-
-            {/* Folded Index Finger tucked into thumb base */}
-            <ellipse cx="98" cy="90" rx="12" ry="10" fill="#FDBA74" stroke="#0E7490" strokeWidth="2" />
-
-            {/* Thumb pressing over folded Index */}
-            <path d="M 80 120 C 85 95, 95 82, 110 82 C 120 90, 105 115, 95 122 Z" fill="#0891B2" opacity="0.85" />
-
-            <circle cx="105" cy="85" r="22" fill="url(#vayuGlowCore)" />
-            <circle cx="105" cy="85" r="5" fill="#FFFFFF" stroke="#0891B2" strokeWidth="2" />
-
-            <text x="140" y="16" fontSize="10.5" fontWeight="900" fill="#22D3EE" textAnchor="middle">
-              💨 तर्जनी अंगूठे की जड़ में दबी हुई
-            </text>
-            <text x="140" y="172" fontSize="9.5" fontWeight="bold" fill="#CFFAFE" textAnchor="middle">
-              👉 ३ उंगलियां सीधी (वात व चंचलता शमन)
-            </text>
-          </svg>
-        );
-
-      default:
-        return (
-          <div className="w-full h-full flex flex-col items-center justify-center p-4 text-center">
-            <span className="text-5xl mb-2">🤲</span>
-            <span className="text-sm font-bold text-amber-200">{mudra.name}</span>
-            <span className="text-xs text-amber-300/80 mt-1">{mudra.fingerTouch}</span>
-          </div>
-        );
-    }
+    return (
+      <div className="w-full h-full flex items-center justify-center p-2 relative">
+        <img
+          src={mudra.imageSrc || '/images/mudras/gyan_mudra.svg'}
+          alt={mudra.name}
+          className="max-h-full max-w-full object-contain drop-shadow-xl rounded-2xl transition-transform duration-300 hover:scale-105"
+        />
+      </div>
+    );
   };
 
   return (
@@ -943,6 +800,15 @@ export const KarMalaMudraGuide: React.FC<KarMalaMudraGuideProps> = ({
                 const asan = asanasList[selectedAsan] || asanasList[0];
                 return (
                   <div className="p-4 rounded-3xl bg-[#20103A] border border-amber-500/25 space-y-3">
+                    {/* Authentic Asan Sitting Posture Visual */}
+                    <div className="h-44 w-full bg-gradient-to-b from-[#1E0E35] to-[#120722] rounded-2xl border border-amber-500/30 p-2 flex items-center justify-center relative overflow-hidden shadow-inner">
+                      <img
+                        src={asan.imageSrc || '/images/aasans/padmasana.svg'}
+                        alt={asan.name}
+                        className="max-h-full max-w-full object-contain drop-shadow-xl rounded-xl transition-transform duration-300 hover:scale-105"
+                      />
+                    </div>
+
                     <div className="flex items-center gap-3">
                       <div className="w-12 h-12 rounded-2xl bg-amber-500/20 border border-amber-400/30 flex items-center justify-center text-2xl">
                         {asan.icon}

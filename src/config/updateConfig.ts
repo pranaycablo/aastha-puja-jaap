@@ -52,10 +52,3 @@ export const DEFAULT_ONLINE_MANIFEST: AppVersionManifest = {
   apkDownloadUrl: 'https://github.com/pranaycablo/aastha-puja-jaap/releases/download/v2.6.0/Aastha-Puja-Jaap-v2.6-FINAL-GOLDEN.apk',
   playStoreUrl: 'https://play.google.com/store/apps/details?id=com.divyajaap.app'
 };
-    'Kar-Mala Hand Finger Joints 108 Counting Illustrated Guide',
-    '4 Sacred Sitting Asanas & 8 Classical Hasta Mudras with visual diagrams',
-    'Divine Sound Science: Soft chanting, temple bell on every bead, conch blast'
-  ],
-  apkDownloadUrl: 'https://github.com/hindu-zaap/divya-jaap/releases/latest/download/Divya-Jaap-v2.0-RELEASE.apk',
-  playStoreUrl: 'https://play.google.com/store/apps/details?id=com.divyajaap.app'
-};

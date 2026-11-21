@@ -1,0 +1,78 @@
+{
+  "chapterIndex": 1,
+  "chapterTitleHi": "वल्ली १ व २: श्रेय और प्रेय का विवेक",
+  "chapterTitleEn": "Vallis 1 & 2: The Choice between Good and Pleasant",
+  "totalVersesText": "१० मन्त्र",
+  "sections": [
+    {
+      "sectionIndex": 1,
+      "verseRange": "श्लोक 1 - 10",
+      "sectionTitleHi": "श्रेय (कल्याणकारी) बनाम प्रेय (क्षणिक सुख)",
+      "sectionTitleEn": "Section 1: The Discerning Choice: Shreyas vs Preyas",
+      "tattvaBodhaHi": "अन्यच्छ्रेयोऽन्यदुतैव प्रेयस्ते उभे नानार्थे पुरुषं सिनीतः। तयोः श्रेय आददानस्य साधु भवति हीयतेऽर्थाद्य उ प्रेयो वृणीते॥",
+      "tattvaBodhaEn": "The good is one thing, the pleasant another; these two bind man to different goals. Well is it with him who embraces the good; he fails of his purpose who chooses the pleasant.",
+      "verses": [
+        {
+          "shlokaNum": 1,
+          "sanskrit": "येयं प्रेते विचिकित्सा मनुष्येऽस्तीत्येके नायमस्तीति चैके ।\nएतद्विद्यामनुशिष्टस्त्वयाऽहं वराणामेष वरस्तृतीयः ॥ १ ॥",
+          "hindi": "नचिकेता ने कहा: मनुष्य के मरने के बाद यह जो संशय होता है—कोई कहते हैं आत्मा रहती है, कोई कहते हैं नहीं रहती—आपके द्वारा उपदेश पाकर मैं यह जानना चाहता हूँ। यही मेरा तीसरा वर है।",
+          "english": "Nachiketa said: There is that doubt when a man dies—some say he exists, others that he exists not. Taught by thee, I would know this. This is the third of my boons."
+        },
+        {
+          "shlokaNum": 2,
+          "sanskrit": "अन्यच्छ्रेयोऽन्यदुतैव प्रेयस्ते उभे नानार्थे पुरुषं सिनीतः ।\nतयोः श्रेय आददानस्य साधु भवति हीयतेऽर्थाद्य उ प्रेयो वृणीते ॥ २ ॥",
+          "hindi": "यमराज ने कहा: श्रेय (आध्यात्मिक कल्याण) अलग है और प्रेय (क्षणिक सांसारिक सुख) अलग है। दोनों मनुष्य को अलग-अलग बांधते हैं। जो श्रेय को चुनता है उसका कल्याण होता है, और जो प्रेय को चुनता है वह लक्ष्य से भटक जाता है।",
+          "english": "Yama said: The good is one thing, the pleasant quite another; these two shackle man to different goals. Blessed is he who chooses the good; he misses the true goal who chooses the pleasant."
+        },
+        {
+          "shlokaNum": 3,
+          "sanskrit": "श्रेयश्च प्रेयश्च मनुष्यमेतस्तौ संपरीत्य विविनक्ति धीरः ।\nश्रेयो हि धीरोऽभि प्रेयसो वृणीते प्रेयो मन्दो योगक्षेमाद्वृणीते ॥ ३ ॥",
+          "hindi": "श्रेय और प्रेय दोनों मनुष्य के सामने आते हैं। धीर पुरुष उन दोनों की भली-भांति परीक्षा करके विवेक से निर्णय करता है। वह प्रेय की तुलना में श्रेय को चुनता है, जबकि मूर्ख भोगों के पीछे भागता है।",
+          "english": "Both the good and the pleasant present themselves to man. The wise examines both and discriminates; he prefers the good to the pleasant, whereas the foolish chooses worldly acquisition."
+        },
+        {
+          "shlokaNum": 4,
+          "sanskrit": "विद्याभीप्सिनं नचिकेतसं मन्ये न त्वा कामा बहवोऽलोलुपन्त ॥ ४ ॥",
+          "hindi": "हे नचिकेता! मैं तुम्हें सच्चा ज्ञान-पिपासु मानता हूँ; क्योंकि अप्सराओं, धन, राज्य जैसे अनेक प्रलोभन भी तुम्हें अपने निश्चय से डिगा न सके।",
+          "english": "I consider thee, Nachiketa, a genuine seeker of wisdom; for abundant celestial pleasures could not tempt thee from the truth."
+        },
+        {
+          "shlokaNum": 5,
+          "sanskrit": "अविद्ययामन्तरे वर्तमानाः स्वयं धीराः पण्डितंमन्यमानाः ।\nदन्द्रम्यमाणाः परियन्ति मूढा अन्धेनैव नीयमाना यथान्धाः ॥ ५ ॥",
+          "hindi": "अविद्या के भीतर पड़े हुए, स्वयं को बुद्धिमान और पंडित मानने वाले अज्ञानी लोग चक्कर काटते रहते हैं; जैसे किसी अंधे के पीछे चलने वाले अन्य अंधे गड्ढे में गिरते हैं।",
+          "english": "Living in the midst of ignorance, deeming themselves wise and learned, the fools wander about stumbling, like the blind led by the blind."
+        },
+        {
+          "shlokaNum": 6,
+          "sanskrit": "न जायते म्रियते वा विपश्चिन्नायं कुतश्चिन्न बभूव कश्चित् ।\nअजो नित्यः शाश्वतोऽयं पुराणो न हन्यते हन्यमाने शरीरे ॥ ६ ॥",
+          "hindi": "यह चैतन्य आत्मा न कभी जन्म लेती है और न कभी मरती है; यह न किसी से उत्पन्न हुई है और न इससे कुछ उत्पन्न हुआ है। यह अजन्मी, नित्य, शाश्वत और पुरातन है; शरीर के नष्ट होने पर भी यह नहीं मरती।",
+          "english": "The knowing Self is never born, nor does It die. It sprang from nothing, and nothing sprang from It. Unborn, eternal, everlasting, primeval, It is not slain when the body is slain."
+        },
+        {
+          "shlokaNum": 7,
+          "sanskrit": "हन्ता चेन्मन्यते हन्तुं हतश्चेन्मन्यते हतम् ।\nउभौ तौ न विजानीतो नायं हन्ति न हन्यते ॥ ७ ॥",
+          "hindi": "यदि मारने वाला सोचता है कि मैं मारता हूँ, और मरने वाला सोचता है कि मैं मारा गया—वे दोनों ही अज्ञानी हैं; क्योंकि यह आत्मा न किसी को मारती है और न किसी के द्वारा मारी जाती है।",
+          "english": "If the slayer thinks he slays, or if the slain thinks he is slain, both of them know not the truth. This Self slays not, nor is It slain."
+        },
+        {
+          "shlokaNum": 8,
+          "sanskrit": "अणोरणीयान् महतो महीयानात्माऽस्य जन्तोर्निहितो गुहायाम् ।\nतमक्रतुः पश्यति वीतशोको धातुप्रसादान्महिमानमात्मनः ॥ ८ ॥",
+          "hindi": "यह आत्मा सूक्ष्म से भी अति सूक्ष्म और महान से भी महान है, जो इस प्राणी के हृदय रूपी गुहा में स्थित है। निष्काम और शोकरहित पुरुष ईश्वर की कृपा से इस आत्म-महिमा का साक्षात्कार करता है।",
+          "english": "Subtler than the subtlest, vaster than the vastest, the Self is seated in the heart-cave of living beings. The desireless man, freed from grief, beholds Its majesty through purity of spirit."
+        },
+        {
+          "shlokaNum": 9,
+          "sanskrit": "आत्मानं रथिनं विद्धि शरीरं रथमेव तु ।\nबुद्धिं तु सारथिं विद्धि मनः प्रग्रहमेव च ॥ ९ ॥",
+          "hindi": "इस जीवात्मा को रथ का स्वामी (रथी) जानो, और शरीर को रथ समझो। बुद्धि को सारथी जानो और मन को लगाम समझो।",
+          "english": "Know the Self as the lord of the chariot, and the physical body as the chariot. Know the intellect as the charioteer, and the mind as the reins."
+        },
+        {
+          "shlokaNum": 10,
+          "sanskrit": "उत्तिष्ठत जाग्रत प्राप्य वरान्निबोधत ।\nक्षुरस्य धारा निशिता दुरत्यया दुर्गं पथस्तत्कवयो वदन्ति ॥ १० ॥",
+          "hindi": "उठो! जागो! और श्रेष्ठ महापुरुषों की संगति पाकर इस आत्मज्ञान को जानो। ज्ञानी कहते हैं कि यह मार्ग उस्तरे की तीक्ष्ण धार के समान अत्यंत कठिन और दुर्गम है।",
+          "english": "Arise! Awake! Approach the enlightened masters and realize the Truth. Sharp as the razor's edge and difficult to cross is that path, say the sages."
+        }
+      ]
+    }
+  ]
+}

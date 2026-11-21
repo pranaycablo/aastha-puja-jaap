@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <radialGradient id="suryaSky" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" stopColor="#EA580C"/>
+      <stop offset="50%" stopColor="#9A3412"/>
+      <stop offset="100%" stopColor="#431407"/>
+    </radialGradient>
+    <radialGradient id="sunBlaze" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stopColor="#FEF08A"/>
+      <stop offset="40%" stopColor="#FDE047"/>
+      <stop offset="70%" stopColor="#F97316"/>
+      <stop offset="100%" stopColor="#EA580C" stopOpacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="500" height="500" rx="30" fill="url(#suryaSky)"/>
+  <circle cx="250" cy="200" r="160" fill="url(#sunBlaze)"/>
+
+  <!-- Face -->
+  <polygon points="250,75 210,135 290,135" fill="#FEF08A" stroke="#EA580C" stroke-width="2"/>
+  <path d="M 215 145 C 215 125 285 125 285 145 C 290 190 280 225 250 230 C 220 225 210 190 215 145 Z" fill="#FDE047"/>
+  <circle cx="250" cy="160" r="5" fill="#DC2626"/>
+
+  <ellipse cx="233" cy="175" rx="8" ry="5" fill="#FFFFFF"/>
+  <circle cx="234" cy="175" r="3" fill="#1C1917"/>
+  <ellipse cx="267" cy="175" rx="8" ry="5" fill="#FFFFFF"/>
+  <circle cx="266" cy="175" r="3" fill="#1C1917"/>
+
+  <text x="250" y="475" font-family="serif" font-size="22" font-weight="bold" fill="#FEF08A" text-anchor="middle">☀️ ॐ सूर्याय नमः • दिनकर प्रभाकर ☀️</text>
+</svg>

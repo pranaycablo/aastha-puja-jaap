@@ -1,0 +1,90 @@
+{
+  "chapterIndex": 1,
+  "chapterTitleHi": "मण्डल १: प्रथम अध्याय (अग्नि व इन्द्र सूक्त)",
+  "chapterTitleEn": "Mandala 1: Agni & Indra Suktas",
+  "totalVersesText": "१२ ऋचाएँ",
+  "sections": [
+    {
+      "sectionIndex": 1,
+      "verseRange": "श्लोक 1 - 12",
+      "sectionTitleHi": "प्रथम खण्ड: अग्नि सूक्त व गायत्री आह्वान",
+      "sectionTitleEn": "Section 1: Hymn to Agni & Universal Awakening",
+      "tattvaBodhaHi": "सृष्टि के प्रथम पुरोहित, ज्ञान-ज्योति स्वरूप अग्निदेव की वंदना से ऋग्वेद का पवित्र आरंभ होता है।",
+      "tattvaBodhaEn": "Rigveda opens with the adoration of Agni, the divine priest and illuminating intelligence.",
+      "verses": [
+        {
+          "shlokaNum": 1,
+          "sanskrit": "ॐ अग्निमीळे पुरोहितं यज्ञस्य देवमृत्विजम् ।\nहोतारं रत्नधातमम् ॥ १ ॥",
+          "hindi": "मैं यज्ञ के पुरोहित, प्रकाशमान देव, ऋत्विक तथा प्रचुर रत्नों (दिव्य गुणों) को धारण करने वाले अग्निदेव की स्तुति करता हूँ।",
+          "english": "I glorify Agni, the priest of the sacrifice, the divine minister who offers worship, and the bestower of supreme treasures."
+        },
+        {
+          "shlokaNum": 2,
+          "sanskrit": "अग्निः पूर्वेभिरृषिभिरीड्यो नूतनैरुत ।\nस देवाँ एह वक्षति ॥ २ ॥",
+          "hindi": "अग्निदेव पूर्वकाल के भृगु, अंगिरा आदि ऋषियों द्वारा पूजित रहे हैं और वर्तमान ऋषियों द्वारा भी पूजनीय हैं। वे यहाँ देवों को लाएं।",
+          "english": "Agni, praised by ancient seers as well as by modern sages, may he conduct the cosmic deities hither."
+        },
+        {
+          "shlokaNum": 3,
+          "sanskrit": "अग्निना रयिमश्नवत्पोषमेव दिवेदिवे ।\nयशसं वीरवत्तमम् ॥ ३ ॥",
+          "hindi": "मनुष्य अग्नि की कृपा से प्रतिदिन यश, आत्मबल, समृद्धि और पराक्रमी संतानों से युक्त पोषण प्राप्त करता है।",
+          "english": "Through Agni, one attains divine wealth and nourishment day after day, glorious and rich in heroic offspring."
+        },
+        {
+          "shlokaNum": 4,
+          "sanskrit": "अग्ने यं यज्ञमध्वरं विश्वतः परिभूरसि ।\nस इद्देवेषु गच्छति ॥ ४ ॥",
+          "hindi": "हे अग्नि! तुम जिस हिंसारहित यज्ञ को सब ओर से अपनी सुरक्षा में घेर लेते हो, वही यज्ञ देवों तक पहुँचता है।",
+          "english": "O Agni, the selfless sacred offering which thou encompassest on every side, that alone reaches the radiant devas."
+        },
+        {
+          "shlokaNum": 5,
+          "sanskrit": "अग्निर्होता कविक्रतुः सत्यश्चित्रश्रवस्तमः ।\nदेवो देवेभिरा गमत् ॥ ५ ॥",
+          "hindi": "अग्निदेव दिव्य होता, दूरदर्शी प्रज्ञा से संपन्न, सत्य स्वरूप और अद्भुत यश वाले हैं; वे देवों सहित पधारें।",
+          "english": "May Agni, the invoker possessed of divine wisdom, truthful and richest in fame, come with all celestial beings."
+        },
+        {
+          "shlokaNum": 6,
+          "sanskrit": "यदङ्ग दाशुषे त्वमग्ने भद्रं करिष्यसि ।\nतवेत्तत्सत्यमङ्गिरः ॥ ६ ॥",
+          "hindi": "हे अंगिरः अग्नि! तुम अपने समर्पित यजमान का जो भी कल्याण करते हो, वह तुम्हारी सत्य प्रतिज्ञा है।",
+          "english": "Whatever blessing thou bestowest upon the worshipper, O Agni Angiras, that is thy true pledge."
+        },
+        {
+          "shlokaNum": 7,
+          "sanskrit": "उप त्वाग्ने दिवेदिवे दोषावस्तर्धिया वयम् ।\nनमो भरन्त एमसि ॥ ७ ॥",
+          "hindi": "हे अग्नि! हम रात-दिन अपनी निर्मल बुद्धि द्वारा नमस्कार करते हुए तुम्हारे समीप उपस्थित होते हैं।",
+          "english": "To thee, O Agni, day by day, in darkness and light, we come with prayer, offering reverent homage."
+        },
+        {
+          "shlokaNum": 8,
+          "sanskrit": "राजन्तमध्वराणां गोपाामृतस्य दीदिविम् ।\nवर्धमानं स्वे दमे ॥ ८ ॥",
+          "hindi": "यज्ञों के अधिपति, शाश्वत ऋत (ब्रह्मांडीय सत्य) के रक्षक और अपने धाम में निरंतर देदीप्यमान अग्नि की हम शरण लेते हैं।",
+          "english": "Ruler of sacrifices, guardian of cosmic truth (Rita), radiant guardian growing in his own sanctuary."
+        },
+        {
+          "shlokaNum": 9,
+          "sanskrit": "स नः पितेव सूनवेऽग्ने सूपायनो भव ।\nसचस्वा नः स्वस्तये ॥ ९ ॥",
+          "hindi": "हे अग्नि! जैसे पिता अपने पुत्र के लिए सुलभ होता है, वैसे ही तुम हमारे लिए सुलभ होओ और हमारे कल्याण के लिए साथ रहो।",
+          "english": "Be accessible unto us, O Agni, as a father is unto his son; abide with us for our supreme wellbeing."
+        },
+        {
+          "shlokaNum": 10,
+          "sanskrit": "गायत्री त्रिष्टुब्जगत्यनुष्टुप् पङ्क्त्या सह ।\nबृहती ह्यतिच्छन्दाः समेता वेदमूर्तयः ॥ १० ॥",
+          "hindi": "गायत्री, त्रिष्टुभ, जगती, अनुष्टुभ, पंक्ति और बृहती—ये समस्त पावन वैदिक छंद ज्ञान के प्रकाशक हैं।",
+          "english": "Gayatri, Trishtubh, Jagati, Anushtubh, Pankti, and Brihati—all divine Vedic meters embody celestial wisdom."
+        },
+        {
+          "shlokaNum": 11,
+          "sanskrit": "इन्द्रं मित्रं वरुणमग्निमाहुरथो दिव्यः स सुपर्णो गरुत्मान् ।\nएकं सद्विप्रा बहुधा वदन्त्यग्निं यमं मातरिश्वानमाहुः ॥ ११ ॥",
+          "hindi": "सत्य एक ही है, जिसे ज्ञानी ऋषि इन्द्र, मित्र, वरुण, अग्नि, यम और मातरिश्वा जैसे अनेक नामों से पुकारते हैं।",
+          "english": "Truth is One; sages call It by many names—Indra, Mitra, Varuna, Agni, Yama, and Matarishvan."
+        },
+        {
+          "shlokaNum": 12,
+          "sanskrit": "सं गच्छध्वं सं वदध्वं सं वो मनांसि जानताम् ।\nदेवा भागं यथा पूर्वे संजानाना उपासते ॥ १२ ॥",
+          "hindi": "तुम सब साथ चलो, एक स्वर में बोलो, तुम्हारे मन एक समान हों, जैसे प्राचीन देवगण एकमत होकर अपना कर्तव्य करते थे।",
+          "english": "Walk together, speak together, let your minds comprehend alike, as the ancient enlightened ones served in harmony."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <radialGradient id="vayuBg" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stopColor="#164E63"/>
+      <stop offset="60%" stopColor="#0E7490"/>
+      <stop offset="100%" stopColor="#083344"/>
+    </radialGradient>
+  </defs>
+  <rect width="500" height="500" rx="30" fill="url(#vayuBg)"/>
+  <text x="250" y="45" font-family="serif" font-size="22" font-weight="bold" fill="#FEF08A" text-anchor="middle">४. वायु मुद्रा (वात व चंचलता शमन)</text>
+  <!-- 3 Straight Fingers -->
+  <rect x="230" y="80" width="22" height="190" rx="11" fill="#FED7AA" stroke="#0E7490" stroke-width="2"/>
+  <rect x="260" y="100" width="22" height="170" rx="11" fill="#FED7AA" stroke="#0E7490" stroke-width="2"/>
+  <rect x="290" y="120" width="20" height="150" rx="10" fill="#FED7AA" stroke="#0E7490" stroke-width="2"/>
+  <!-- Folded Index Finger Pressed into Thumb Base -->
+  <path d="M 210 240 C 190 200 170 200 170 260 C 170 290 210 290 220 250" fill="none" stroke="#FDBA74" stroke-width="22" stroke-linecap="round"/>
+  <!-- Thumb Pressing Over Index -->
+  <path d="M 160 310 C 160 250 190 230 220 230" fill="none" stroke="#FED7AA" stroke-width="24" stroke-linecap="round"/>
+  <circle cx="210" cy="235" r="8" fill="#22D3EE"/>
+  <text x="250" y="465" font-family="serif" font-size="18" font-weight="bold" fill="#FEF08A" text-anchor="middle">तर्जनी अंगूठे की जड़ में • वात रोग व अशांति दूर करे</text>
+</svg>

@@ -1,0 +1,90 @@
+{
+  "chapterIndex": 1,
+  "chapterTitleHi": "माण्डूक्योपनिषद: ॐकार एवं चेतना के चार पाद",
+  "chapterTitleEn": "Mandukya Upanishad: Omkara & The Four States of Consciousness",
+  "totalVersesText": "१२ मन्त्र",
+  "sections": [
+    {
+      "sectionIndex": 1,
+      "verseRange": "श्लोक 1 - 12",
+      "sectionTitleHi": "सर्वं ह्येतद् ब्रह्म अयमात्मा ब्रह्म",
+      "sectionTitleEn": "Section 1: All is Brahman; This Self is Brahman",
+      "tattvaBodhaHi": "ॐ इत्येतदक्षरमिदं सर्वं तस्योपव्याख्यानम्। भूतं भवद् भविष्यदिति सर्वमोङ्कार एव॥",
+      "tattvaBodhaEn": "Om, this syllable is all this. All that is past, present, and future is verily Om; and whatever else transcends threefold time is also Om.",
+      "verses": [
+        {
+          "shlokaNum": 1,
+          "sanskrit": "ॐ इत्येतदक्षरमिदं सर्वं तस्योपव्याख्यानं भूतं भवद्भविष्यदिति सर्वमोङ्कार एव ।\nयच्चान्यत् त्रिकालातीतं तदप्योङ्कार एव ॥ १ ॥",
+          "hindi": "ॐ—यह अविनाशी अक्षर ही यह सब कुछ है। जो बीत चुका, जो वर्तमान है और जो भविष्य होगा—वह सब ॐकार ही है; तथा जो तीनों कालों से अतीत है, वह भी ॐकार ही है।",
+          "english": "Om, this imperishable syllable is all this. Past, present, and future—all is verily Om; and whatever else is beyond the three divisions of time is also Om."
+        },
+        {
+          "shlokaNum": 2,
+          "sanskrit": "सर्वं ह्येतद्ब्रह्मायमात्मा ब्रह्म सोऽयमात्मा चतुष्पात् ॥ २ ॥",
+          "hindi": "निश्चय ही यह सब कुछ ब्रह्म ही है। \"अयमात्मा ब्रह्म\" (यह आत्मा ही ब्रह्म है)। इस आत्मा के चार पाद (चार अवस्थाएं) हैं।",
+          "english": "All this is indeed Brahman. This Self is Brahman (Ayam Atma Brahma). This very Self has four quarters (states of awareness)."
+        },
+        {
+          "shlokaNum": 3,
+          "sanskrit": "जागरितस्थानो बहिष्प्रज्ञः सप्ताङ्ग एकोनविंशतिमुखः स्थूलभुग्वैश्वानरः प्रथमः पादः ॥ ३ ॥",
+          "hindi": "प्रथम पाद \"वैश्वानर\" है, जिसका स्थान जाग्रत अवस्था है। वह बाहर के विषयों को जानने वाला, सात अंगों और उन्नीस मुखों वाला तथा स्थूल भोगों को भोगने वाला है।",
+          "english": "The first quarter is Vaishvanara, whose field is the waking state, conscious of external objects, possessing seven limbs and nineteen mouths, enjoyer of gross entities."
+        },
+        {
+          "shlokaNum": 4,
+          "sanskrit": "स्वप्नस्थानोऽन्तःप्रज्ञः सप्ताङ्ग एकोनविंशतिमुखः प्रविविक्तभुक्तैजसो द्वितीयः पादः ॥ ४ ॥",
+          "hindi": "द्वितीय पाद \"तैजस\" है, जिसका स्थान स्वप्नावस्था है। वह अंतर्मुखी प्रज्ञा वाला, सूक्ष्म संस्कारों का भोग करने वाला और प्रकाशमय है।",
+          "english": "The second quarter is Taijasa, whose sphere is the dream state, conscious of internal impressions, enjoyer of subtle creations, luminous."
+        },
+        {
+          "shlokaNum": 5,
+          "sanskrit": "यत्र सुप्तो न कञ्चन कामं कामयते न कञ्चन स्वप्नं पश्यति तत् सुषुप्तम् ।\nसुषुप्तस्थान एकीभूतः प्रज्ञानघन एवानन्दमयो ह्यानन्दभुक् चेतोमुखः प्राज्ञस्तृतीयः पादः ॥ ५ ॥",
+          "hindi": "जहाँ सोया हुआ पुरुष न कोई कामना करता है और न स्वप्न देखता है, वह सुषुप्ति (गहरी नींद) है। इसका स्वामी \"प्राज्ञ\" तृतीय पाद है, जो प्रज्ञानघन और आनंदमय है।",
+          "english": "Where the sleeping person desires no object and dreams no dream, that is deep sleep (Sushupti). Its lord is Prajna, the third quarter, concentrated mass of consciousness, filled with bliss."
+        },
+        {
+          "shlokaNum": 6,
+          "sanskrit": "एष सर्वेश्वर एष सर्वज्ञ एषोऽन्तर्याम्येष योनिः सर्वस्य प्रभवाप्ययौ हि भूतानाम् ॥ ६ ॥",
+          "hindi": "यह प्राज्ञ ही सबका स्वामी, सर्वज्ञ, अंतर्यामी, तथा संपूर्ण प्राणियों की उत्पत्ति और प्रलय का मूल कारण है।",
+          "english": "This is the Lord of all; this is the Omniscient; this is the inner Controller; this is the womb of all, the origin and dissolution of beings."
+        },
+        {
+          "shlokaNum": 7,
+          "sanskrit": "नान्तःप्रज्ञं न बहिष्प्रज्ञं नोभयतःप्रज्ञं न प्रज्ञानघनं न प्रज्ञं नाप्रज्ञम् ।\nअदृष्टमव्यवहार्यमग्राह्यमलक्षणमचिन्त्यमव्यपदेश्यमेकात्मप्रत्ययसारं प्रपञ्चोपशमं शान्तं शिवमद्वैतं चतुर्थं मन्यन्ते स आत्मा स विज्ञेयः ॥ ७ ॥",
+          "hindi": "जो न अंतःप्रज्ञ है न बहिष्प्रज्ञ, न अदृश्य है न ग्राह्य, जो शांत, शिव, अद्वैत और समस्त प्रपंचों से परे है—उसे ज्ञानी \"तुरीय\" (चौथा पाद) मानते हैं; वही जानने योग्य वास्तविक आत्मा है।",
+          "english": "Not inwardly conscious, nor outwardly conscious; invisible, transcendent, ungraspable, serene, auspicious, non-dual—such they deem the Fourth (Turiya). That is the Self, to be realized."
+        },
+        {
+          "shlokaNum": 8,
+          "sanskrit": "सोऽयमात्माध्यक्षरमोङ्कारोऽधिमात्रं पादा मात्रा मात्राश्च पादा अकार उकारो मकार इति ॥ ८ ॥",
+          "hindi": "यह आत्मा अक्षरों की दृष्टि से ॐकार है। इसके पाद ही इसकी मात्राएं हैं: अ-कार, उ-कार और म-कार।",
+          "english": "This very Self is further revealed as the syllable Om; Its quarters are the phonetic elements (Matras): A, U, and M."
+        },
+        {
+          "shlokaNum": 9,
+          "sanskrit": "जागरितस्थानो वैश्वानरोऽकारः प्रथमा मात्रा ॥ ९ ॥",
+          "hindi": "जाग्रत अवस्था वाला वैश्वानर प्रथम मात्रा \"अ\" है, क्योंकि वह सर्वव्यापक और आदि है।",
+          "english": "Vaishvanara of the waking state is the first sound \"A\", by reason of all-pervasiveness and primacy."
+        },
+        {
+          "shlokaNum": 10,
+          "sanskrit": "स्वप्नस्थानस्तैजस उकारो द्वितीया मात्रा ॥ १० ॥",
+          "hindi": "स्वप्नावस्था वाला तैजस द्वितीय मात्रा \"उ\" है, जो उत्कर्ष और मध्यवर्ती भाव को प्रकट करती है।",
+          "english": "Taijasa of the dream state is the second sound \"U\", signifying elevation and intermediacy."
+        },
+        {
+          "shlokaNum": 11,
+          "sanskrit": "सुषुप्तस्थानः प्राज्ञो मकारस्तृतीया मात्रा ॥ ११ ॥",
+          "hindi": "गहरी नींद वाला प्राज्ञ तृतीय मात्रा \"म\" है, जिसमें सब कुछ विलीन और लीन हो जाता है।",
+          "english": "Prajna of deep sleep is the third sound \"M\", signifying dissolution and measurement."
+        },
+        {
+          "shlokaNum": 12,
+          "sanskrit": "अमात्रश्चतुर्थोऽव्यवहार्यः प्रपञ्चोपशमः शिवोऽद्वैत एवमोङ्कार आत्मैव संविशत्यात्मनाऽऽत्मानं य एवं वेद ॥ १२ ॥",
+          "hindi": "मात्रा-रहित, अनिर्वचनीय, अद्वैत, परम कल्याणकारी तुरीय ही ॐकार का शांत नाद है। जो ऐसा जानता है, वह अपनी आत्मा द्वारा साक्षात् परब्रह्म में प्रविष्ट हो जाता है।",
+          "english": "The soundless Fourth (Turiya) is beyond expression, tranquil, non-dual, auspicious. Thus Om is the Self indeed. He who knows this merges his soul into the Supreme Self!"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "chapterIndex": 1,
+  "chapterTitleHi": "प्रथम अध्याय: नादब्रह्म व सप्त स्वर",
+  "chapterTitleEn": "Chapter 1: Nada Brahman & The Seven Notes",
+  "totalVersesText": "१० श्लोक",
+  "sections": [
+    {
+      "sectionIndex": 1,
+      "verseRange": "श्लोक 1 - 10",
+      "sectionTitleHi": "नादब्रह्म की महिमा एवं सप्त स्वर उत्पत्ति",
+      "sectionTitleEn": "Section 1: Glory of Cosmic Sound & Origin of Swaras",
+      "tattvaBodhaHi": "नादब्रह्म के ध्यान से ब्रह्मा, विष्णु और महेश तीनों की एक साथ उपासना हो जाती है।",
+      "tattvaBodhaEn": "In meditating upon Nada Brahman (divine sound), Brahma, Vishnu, and Shiva are worshipped simultaneously.",
+      "verses": [
+        {
+          "shlokaNum": 1,
+          "sanskrit": "नादरूपः स्मृतो ब्रह्मा नादरूपो जनार्दनः ।\nनादरूपः परो देवो नादरूपा सरस्वती ॥ १ ॥",
+          "hindi": "ब्रह्मा नाद स्वरूप हैं, भगवान विष्णु नाद स्वरूप हैं, देवाधिदेव महादेव नाद स्वरूप हैं और भगवती सरस्वती भी नाद स्वरूप हैं।",
+          "english": "Brahma is the embodiment of sacred sound, Vishnu is sound, Supreme Lord Shiva is sound, and Goddess Saraswati is divine melody."
+        },
+        {
+          "shlokaNum": 2,
+          "sanskrit": "नादोपासनया देवा ब्रह्मविष्णुमहेश्वराः ।\nभवन्त्युपासिता नूनं यस्मादेते तदात्मकाः ॥ २ ॥",
+          "hindi": "नाद की उपासना करने से ब्रह्मा, विष्णु और महेश तीनों की निश्चित ही उपासना हो जाती है, क्योंकि वे तीनों नादब्रह्म स्वरूप ही हैं।",
+          "english": "By meditating upon sound, the Trinity—Brahma, Vishnu, and Shiva—is worshipped indeed, for sound is their very essence."
+        },
+        {
+          "shlokaNum": 3,
+          "sanskrit": "षड्जश्च ऋषभश्चैव गान्धारो मध्यमस्तथा ।\nपञ्चमो धैवतश्चैव निषादः सप्तमः स्वरः ॥ ३ ॥",
+          "hindi": "षड्ज (सा), ऋषभ (रे), गांधार (ग), मध्यम (म), पंचम (प), धैवत (ध) और निषाद (नि)—ये सात मुख्य स्वर संगीत के आधार हैं।",
+          "english": "Shadja (Sa), Rishabha (Re), Gandhara (Ga), Madhyama (Ma), Panchama (Pa), Dhaivata (Dha), and Nishada (Ni)—these seven are the fundamental notes."
+        },
+        {
+          "shlokaNum": 4,
+          "sanskrit": "मयूर-चातक-च्छाग-क्रौञ्च-कोकिल-दर्दुराः ।\nहस्तिनश्चैव कुर्वन्ति स्वरानेतान् यथाक्रमम् ॥ ४ ॥",
+          "hindi": "मोर (सा), चातक (रे), बकरा (ग), क्रौंच पक्षी (म), कोयल (प), मेंढक (ध) और हाथी (नि)—प्रकृति के ये जीव इन सात स्वरों का उच्चारण करते हैं।",
+          "english": "Peacock, skylark, goat, heron, cuckoo, frog, and elephant—these creatures of nature vocalize these seven tones respectively."
+        },
+        {
+          "shlokaNum": 5,
+          "sanskrit": "विभावानुभावव्यभिचारिसंयोगाद्रसनिष्पत्तिः ॥ ५ ॥",
+          "hindi": "विभाव (कारण), अनुभाव (शारीरिक चेष्टा) और व्यभिचारी (संचारी) भावों के परस्पर संयोग से ही रस की अलौकिक निष्पत्ति (अनुभूति) होती है।",
+          "english": "Aesthetic relish (Rasa) is born from the harmonious convergence of primary stimulants, external reactions, and transient emotions."
+        },
+        {
+          "shlokaNum": 6,
+          "sanskrit": "शृङ्गार-हास्य-करुणा-रौद्र-वीर-भयानकाः ।\nबीभत्साद्भुतशान्ताश्च नव नाट्ये रसाः स्मृताः ॥ ६ ॥",
+          "hindi": "शृंगार, हास्य, करुण, रौद्र, वीर, भयानक, बीभत्स, अद्भुत और शांत—ये नौ रस संगीत और नाट्य के प्राण हैं।",
+          "english": "Love, mirth, pathos, fury, heroism, terror, disgust, wonder, and serene peace—these nine rasas embody artistic consciousness."
+        },
+        {
+          "shlokaNum": 7,
+          "sanskrit": "गीतं वाद्यं तथा नृत्यं त्रयं सङ्गीतमुच्यते ।\nतत्र वाद्यं समाश्रित्य नृत्तं गीतानुरोधि च ॥ ७ ॥",
+          "hindi": "गायन, वादन और नृत्य—इन तीनों के सुंदर समन्वय को \"संगीत\" कहा जाता है। इसमें वादन और नृत्य गायन का अनुसरण करते हैं।",
+          "english": "Vocal singing, instrumental playing, and expressive dance together are called Sangita, harmonizing heart and soul."
+        },
+        {
+          "shlokaNum": 8,
+          "sanskrit": "अक्षरं परमं ब्रह्म नाद एव प्रतिष्ठितम् ।\nतस्मात् सङ्गीतविज्ञानान्मुक्तिं यान्ति मनीषिणः ॥ ८ ॥",
+          "hindi": "परम अविनाशी ब्रह्म नाद में ही प्रतिष्ठित है; इसलिए संगीत के सूक्ष्म विज्ञान को जानकर मनीषी मोक्ष प्राप्त कर लेते हैं।",
+          "english": "The supreme imperishable Brahman is rooted in transcendental sound; by deep realization of music, sages attain liberation."
+        },
+        {
+          "shlokaNum": 9,
+          "sanskrit": "न विद्या संगीतात् परा । न सुखं संगीतात् परम् ॥ ९ ॥",
+          "hindi": "संगीत से बढ़कर कोई विद्या नहीं है, और संगीत से बढ़कर कोई परम सुख नहीं है। यह आत्मा को प्रभु से जोड़ता है।",
+          "english": "There is no science higher than music; there is no joy beyond music; it unites the soul with the divine."
+        },
+        {
+          "shlokaNum": 10,
+          "sanskrit": "आनन्दं ब्रह्मणो रूपं तच्च गेये प्रतिष्ठितम् ।\nयः शृणोति स मुच्येत सर्वपापैर्न संशयः ॥ १० ॥",
+          "hindi": "परब्रह्म का वास्तविक स्वरूप \"आनंद\" है, और वह आनंद भक्ति-संगीत में प्रतिष्ठित है। जो इसे सुनता और गाता है, वह पापमुक्त हो जाता है।",
+          "english": "Bliss is the very nature of Brahman, and that bliss is anchored in divine song. Whoever listens with devotion is cleansed of all impurities."
+        }
+      ]
+    }
+  ]
+}

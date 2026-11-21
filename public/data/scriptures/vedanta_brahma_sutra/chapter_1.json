@@ -1,0 +1,78 @@
+{
+  "chapterIndex": 1,
+  "chapterTitleHi": "समन्वयाध्याय: चतुःसूत्री (ब्रह्म लक्षण व समन्वय)",
+  "chapterTitleEn": "Samanvaya Adhyaya: The Four Foundational Sutras",
+  "totalVersesText": "१० सूत्र",
+  "sections": [
+    {
+      "sectionIndex": 1,
+      "verseRange": "श्लोक 1 - 10",
+      "sectionTitleHi": "अथातो ब्रह्मजिज्ञासा — ब्रह्म का स्वरूप व समन्वय",
+      "sectionTitleEn": "Section 1: The Inquiry into Brahman & Origin of Cosmos",
+      "tattvaBodhaHi": "अथातो ब्रह्मजिज्ञासा। जन्माद्यस्य यतः। शास्त्रयोनित्वात्। तत्तु समन्वयात्॥",
+      "tattvaBodhaEn": "Now, therefore, the inquiry into Brahman. From whom the origin, sustenance, and dissolution of this universe proceed. Because Scripture is the source of knowledge about Him. But that Brahman is known from the concordant synthesis of all Vedanta.",
+      "verses": [
+        {
+          "shlokaNum": 1,
+          "sanskrit": "ॐ अथातो ब्रह्मजिज्ञासा ॥ १ ॥",
+          "hindi": "अब, इसलिए (संसार की नश्वरता को देखकर और चित्त की शुद्धि के पश्चात) परब्रह्म परमात्मा को जानने की जिज्ञासा करनी चाहिए।",
+          "english": "Now, therefore, after acquiring spiritual prerequisites, let there be an earnest inquiry into Brahman (the Absolute Truth)."
+        },
+        {
+          "shlokaNum": 2,
+          "sanskrit": "जन्माद्यस्य यतः ॥ २ ॥",
+          "hindi": "जिस परब्रह्म से इस संपूर्ण विश्व की उत्पत्ति, स्थिति (पालन) और प्रलय होता है, वही ब्रह्म है।",
+          "english": "Brahman is That from which the origin, sustenance, and dissolution of this universe proceed."
+        },
+        {
+          "shlokaNum": 3,
+          "sanskrit": "शास्त्रयोनित्वात् ॥ ३ ॥",
+          "hindi": "क्योंकि समस्त वेदों और ज्ञान-शास्त्रों का मूल उद्गम (योनि) वही परब्रह्म है, और शास्त्रों के प्रमाण द्वारा ही वह जाना जाता है।",
+          "english": "Because Scripture (Veda) has Brahman as its source, and Scripture alone is the valid authority for knowing Brahman."
+        },
+        {
+          "shlokaNum": 4,
+          "sanskrit": "तत्तु समन्वयात् ॥ ४ ॥",
+          "hindi": "किंतु वह ब्रह्म समस्त उपनिषदों और वेदों के सम्यक् समन्वय (तात्पर्य) से ही जाना जाता है, क्योंकि सभी शास्त्रों का अंतिम लक्ष्य वही एक है।",
+          "english": "That Brahman is known from the harmonious consensus of all Upanishadic revelations, as their unified purport."
+        },
+        {
+          "shlokaNum": 5,
+          "sanskrit": "ईक्षतेर्नाशब्दम् ॥ ५ ॥",
+          "hindi": "प्रधान (अचेतन प्रकृति) जगत का मूल कारण नहीं हो सकता; क्योंकि उपनिषदों में सृष्टि के पूर्व \"ईक्षण\" (देखने/संकल्प करने) का उल्लेख है, जो केवल चेतन ब्रह्म ही कर सकता है।",
+          "english": "Insentient nature cannot be the primal cause of the world, because the scriptures speak of \"seeing\" (conscious resolve) prior to creation."
+        },
+        {
+          "shlokaNum": 6,
+          "sanskrit": "गौणश्चेन्नात्मशब्दात् ॥ ६ ॥",
+          "hindi": "यदि कहें कि प्रकृति में चेतना का व्यवहार गौण (लाक्षणिक) है, तो ऐसा नहीं हो सकता; क्योंकि उपनिषद उस मूल कारण को साक्षात् \"आत्मा\" कहते हैं।",
+          "english": "If it be argued that consciousness is attributed metaphorically to matter, it cannot be so; for scripture explicitly terms that cause as the \"Self\"."
+        },
+        {
+          "shlokaNum": 7,
+          "sanskrit": "हेयत्वावचनाच्च ॥ ७ ॥",
+          "hindi": "और इसलिए भी कि उपनिषद कहीं भी उस आत्मतत्त्व को त्यागने योग्य (अनात्म) नहीं बताते, बल्कि उसी को जानने से मुक्ति कहते हैं।",
+          "english": "Also because there is no statement in the Vedas advising that the Self should be discarded; rather Its realization yields liberation."
+        },
+        {
+          "shlokaNum": 8,
+          "sanskrit": "स्वाप्ययात् ॥ ८ ॥",
+          "hindi": "गहरी नींद (सुषुप्ति) में जीव उस परब्रह्म में ही लीन (एकीभूत) हो जाता है, इसलिए चेतन ब्रह्म ही सबका मूल आधार है।",
+          "english": "Because in deep sleep the individual soul merges into that supreme Conscious Brahman as its true home."
+        },
+        {
+          "shlokaNum": 9,
+          "sanskrit": "गतिसामान्यात् ॥ ९ ॥",
+          "hindi": "क्योंकि समस्त वेदों और उपनिषदों का सामान्य दृष्टिकोण एक समान है कि चेतन ब्रह्म ही जगत का एकमात्र अभिन्न-निमित्तोपादान कारण है।",
+          "english": "Because of the uniformity of view across all sacred scriptures that conscious Spirit is the sole ground of creation."
+        },
+        {
+          "shlokaNum": 10,
+          "sanskrit": "श्रुतत्वाच्च ॥ १० ॥",
+          "hindi": "और स्वयं श्रुति (श्वेताश्वतरोपनिषद आदि) में स्पष्ट कहा गया है: \"स कारणं करणाधिपाधिपो न चास्य कश्चिज्जनिता न चाधिपः\" (वही सबका कारण और स्वामी है)।",
+          "english": "And because it is explicitly revealed in the sacred texts: He is the supreme Cause, Lord of all lords, having no parent nor any master."
+        }
+      ]
+    }
+  ]
+}

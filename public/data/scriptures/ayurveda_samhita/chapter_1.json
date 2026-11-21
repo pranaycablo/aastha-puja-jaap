@@ -1,0 +1,78 @@
+{
+  "chapterIndex": 1,
+  "chapterTitleHi": "सूत्रस्थान: दीर्घं जीवितम् (आरोग्य व जीवन परिभाषा)",
+  "chapterTitleEn": "Sutrasthana: Longevity & Health Principles",
+  "totalVersesText": "१० श्लोक",
+  "sections": [
+    {
+      "sectionIndex": 1,
+      "verseRange": "श्लोक 1 - 10",
+      "sectionTitleHi": "आरोग्य परिभाषा, त्रिदोष एवं दिनचर्या",
+      "sectionTitleEn": "Section 1: Definition of Radiant Health & Tridosha Harmony",
+      "tattvaBodhaHi": "समदोषः समाग्निश्च समधातुमलक्रियः। प्रसन्नात्मेन्द्रियमनाः स्वस्थ इत्यभिधीयते॥",
+      "tattvaBodhaEn": "He whose doshas, digestive fire, tissues, and waste functions are balanced, and whose soul, senses, and mind are blissful, is called healthy.",
+      "verses": [
+        {
+          "shlokaNum": 1,
+          "sanskrit": "हिताहितं सुखं दुःखमायुस्तस्य हिताहितम् ।\nमानं च तच्च यत्रोक्तमायुर्वेदः स उच्यते ॥ १ ॥",
+          "hindi": "जिस शास्त्र में हितकारी आयु, अहितकारी आयु, सुखद आयु, दुःखद आयु, तथा आयु का मान (प्रमाण) और उसका स्वरूप वर्णित है—उसे आयुर्वेद कहा जाता है।",
+          "english": "That wisdom which treats of wholesome and unwholesome life, happy and unhappy existence, and the measure of life, is named Ayurveda."
+        },
+        {
+          "shlokaNum": 2,
+          "sanskrit": "शरीरेन्द्रियसत्त्वात्मसंयोगो धारि जीवितम् ।\nनित्यगश्चानुबन्धश्च पर्यायैरायुरुच्यते ॥ २ ॥",
+          "hindi": "शरीर, इंद्रियाँ, मन और आत्मा के संयोग का नाम \"आयु\" है। इसे धारि (शरीर को गलने से रोकने वाला), जीवित, नित्यग (निरंतर गतिशील) और अनुबंध कहा जाता है।",
+          "english": "Life is the conscious union of body, senses, mind, and spirit—termed the sustainer, animated existence, continuous flow, and karmic continuum."
+        },
+        {
+          "shlokaNum": 3,
+          "sanskrit": "समदोषः समाग्निश्च समधातुमलक्रियः ।\nप्रसन्नात्मेन्द्रियमनाः स्वस्थ इत्यभिधीयते ॥ ३ ॥",
+          "hindi": "जिसके वात-पित्त-कफ सम हों, जठराग्नि संतुलित हो, सातों धातुएं और मल क्रियाएं ठीक हों, तथा जिसकी आत्मा, इंद्रियाँ और मन प्रसन्न हों—वही सच्चा स्वस्थ है।",
+          "english": "One whose doshas are in equilibrium, digestive fire steady, tissues nourished, excretions normal, and whose spirit, senses, and mind remain serene, is truly healthy."
+        },
+        {
+          "shlokaNum": 4,
+          "sanskrit": "वायुः पित्तं कफश्चोक्तः शारीरो दोषसङ्ग्रहः ।\nमानसः पुनरुद्दिष्टो रजश्च तम एव च ॥ ४ ॥",
+          "hindi": "शरीर में वात, पित्त और कफ—ये तीन शारीरिक दोष हैं; तथा मन के दो दोष हैं: रजोगुण और तमोगुण। इनका संतुलन ही पूर्ण स्वास्थ्य है।",
+          "english": "Vata, Pitta, and Kapha constitute the bodily humors; Rajas (passion) and Tamas (inertia) are the psychic disturbances. Their balance brings complete health."
+        },
+        {
+          "shlokaNum": 5,
+          "sanskrit": "प्रशाम्यत्यौषधैः पूर्वो दैवयुक्तिव्यपाश्रयैः ।\nमानसो ज्ञानविज्ञानधैर्यस्मृतिसमाधिभिः ॥ ५ ॥",
+          "hindi": "शारीरिक दोष दैवीय और युक्तिपूर्वक औषधियों से शांत होते हैं; जबकि मानसिक दोष आत्मज्ञान, विज्ञान, धैर्य, सद्विचार और समाधि (ध्यान) द्वारा शांत होते हैं।",
+          "english": "Physical imbalances are cured by natural medicine and scientific diet; psychic afflictions are dissolved by spiritual wisdom, patience, memory, and meditation."
+        },
+        {
+          "shlokaNum": 6,
+          "sanskrit": "ब्राह्मे मुहूर्ते उत्तिष्ठेत् स्वस्थो रक्षार्थमायुषः ।\nशरीरचिन्तां निर्वर्त्य कृतशौचविधिस्ततः ॥ ६ ॥",
+          "hindi": "स्वस्थ मनुष्य को अपनी दीर्घायु की रक्षा के लिए ब्रह्ममुहूर्त (सूर्योदय से पूर्व) में उठना चाहिए और शौचादि दैनिक शुद्धि संपन्न करनी चाहिए।",
+          "english": "A healthy person, to protect vitality and longevity, should awaken during the Brahma Muhurta (dawn) and attend to bodily purification."
+        },
+        {
+          "shlokaNum": 7,
+          "sanskrit": "व्यायामाल्लभते स्वास्थ्यं दीर्घायुष्यं बलं सुखम् ।\nआरोग्यं परमं भाग्यं स्वास्थ्यं सर्वार्थसाधनम् ॥ ७ ॥",
+          "hindi": "व्यायाम (योगाभ्यास) से स्वास्थ्य, दीर्घायु, शारीरिक बल और सुख प्राप्त होता है। आरोग्य ही परम भाग्य है, क्योंकि स्वास्थ्य से ही धर्म, अर्थ, काम, मोक्ष सिद्ध होते हैं।",
+          "english": "Through moderate exercise one gains endurance, longevity, vigor, and happiness. Radiant health is the greatest blessing and vehicle of all goals."
+        },
+        {
+          "shlokaNum": 8,
+          "sanskrit": "मात्राशी स्यात् । आहारमात्रा पुनरग्निबलापेक्षिणी ॥ ८ ॥",
+          "hindi": "व्यक्ति को सदा प्रमाणपूर्वक (उचित मात्रा में) भोजन करना चाहिए। भोजन की सही मात्रा मनुष्य की अपनी जठराग्नि के बल पर निर्भर करती है।",
+          "english": "One should always eat in measured moderation. The right measure of nourishment depends upon the strength of one's digestive fire."
+        },
+        {
+          "shlokaNum": 9,
+          "sanskrit": "सर्वदा सर्वभावानां सामान्यं वृद्धिकारणम् ।\nह्रासहेतुर्विशेषश्च प्रवृत्तिरुभयस्य तु ॥ ९ ॥",
+          "hindi": "समान गुण वाली वस्तुएं समान द्रव्यों की वृद्धि करती हैं, और विपरीत गुण वाली वस्तुएं उनका ह्रास (कमी) करती हैं। यही चिकित्सा का सार्वभौमिक सिद्धांत है।",
+          "english": "Like increases like, while opposites balance and decrease one another. This is the universal foundation of Ayurvedic healing."
+        },
+        {
+          "shlokaNum": 10,
+          "sanskrit": "धर्मार्थकाममोक्षाणामारोग्यं मूलमुत्तमम् ।\nरोगास्तस्यापहर्तारः श्रेयसो जीवितस्य च ॥ १० ॥",
+          "hindi": "धर्म, अर्थ, काम और मोक्ष—इन चारों पुरुषार्थों की सिद्धि का मूल आधार केवल \"आरोग्य\" ही है; रोग इन सबका और उत्तम जीवन का हरण कर लेते हैं।",
+          "english": "Radiant health is the supreme foundation for Dharma, wealth, fulfillment, and liberation; disease robs man of noble living and spiritual attainment."
+        }
+      ]
+    }
+  ]
+}

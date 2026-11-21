@@ -1,0 +1,78 @@
+{
+  "chapterIndex": 1,
+  "chapterTitleHi": "प्रथम पाद: धनुर्विद्या दीक्षा व नियम",
+  "chapterTitleEn": "Pada 1: Martial Training & Ethical Discipline",
+  "totalVersesText": "१० श्लोक",
+  "sections": [
+    {
+      "sectionIndex": 1,
+      "verseRange": "श्लोक 1 - 10",
+      "sectionTitleHi": "धनुर्विद्या का उद्देश्य व चार प्रकार के अस्त्र",
+      "sectionTitleEn": "Section 1: Noble Purpose of Martial Arts & Fourfold Weaponry",
+      "tattvaBodhaHi": "धनुर्विद्या का परम उद्देश्य निर्बलों की रक्षा, धर्म की स्थापना और राष्ट्र की अखंडता बनाए रखना है।",
+      "tattvaBodhaEn": "The sacred purpose of martial science is the protection of the innocent and preservation of righteous order.",
+      "verses": [
+        {
+          "shlokaNum": 1,
+          "sanskrit": "धनुर्वेदस्य वक्ष्यामि स्वरूपं च प्रयोजनम् ।\nदुष्टानां दमने चैव शिष्टानां परिपालने ॥ १ ॥",
+          "hindi": "मैं धनुर्वेद के स्वरूप और प्रयोजन का वर्णन करता हूँ: दुष्टों का दमन करना और सज्जनों की रक्षा करना ही इसका मुख्य लक्ष्य है।",
+          "english": "I shall expound the nature and purpose of Dhanurveda: the subjugation of the wicked and the protection of the righteous."
+        },
+        {
+          "shlokaNum": 2,
+          "sanskrit": "चातुर्विध्यं शस्त्राणां मुक्तममुक्तं च कीर्तितम् ।\nमुक्तामुक्तं यन्त्रमुक्तं चतुर्धा परिकीर्तितम् ॥ २ ॥",
+          "hindi": "शस्त्र चार प्रकार के कहे गए हैं: मुक्त (फेंके जाने वाले जैसे बाण), अमुक्त (हाथ में रहने वाले जैसे तलवार), मुक्तामुक्त (जैसे भाला), और यंत्रमुक्त (जैसे तोप/यंत्र से प्रक्षेपित)।",
+          "english": "Weapons are of four classes: released (arrows), held in hand (swords), retrievable (spears), and machine-propelled."
+        },
+        {
+          "shlokaNum": 3,
+          "sanskrit": "गुरुभक्तः सदा दक्षः सत्यवादी जितेन्द्रियः ।\nधनुर्वेदं समाप्नोति नान्यथा वीरसत्तमः ॥ ३ ॥",
+          "hindi": "जो गुरुभक्त, सदैव दक्ष, सत्यवादी और इंद्रियों को वश में रखने वाला वीर होता है, वही धनुर्वेद की पूर्ण सिद्धि प्राप्त करता है।",
+          "english": "He who is devoted to his master, ever alert, truthful, and master of his senses, alone attains mastery in martial science."
+        },
+        {
+          "shlokaNum": 4,
+          "sanskrit": "न हि हिंसार्थमेवैतच्छस्त्रं देवेन निर्मितम् ।\nरक्षणार्थं हि लोकानां धर्मसंस्थापनार्थतः ॥ ४ ॥",
+          "hindi": "परमात्मा ने शस्त्रों का निर्माण केवल हिंसा के लिए नहीं किया, अपितु संपूर्ण संसार की रक्षा और धर्म की स्थापना हेतु किया है।",
+          "english": "Weapons were not created by the divine for mere violence, but for the protection of society and establishment of righteousness."
+        },
+        {
+          "shlokaNum": 5,
+          "sanskrit": "स्थिरं पदं दृढा दृष्टिर्मनश्चैकाग्रतां गतम् ।\nतदा संलक्ष्यते वेधो नात्र कार्या विचारणा ॥ ५ ॥",
+          "hindi": "स्थिर चरण, अडिग दृष्टि और एकाग्र मन—जब ये तीनों सध जाते हैं, तब अचूक लक्ष्यवेध स्वतः सिद्ध हो जाता है।",
+          "english": "Firm stance, unblinking gaze, and a completely focused mind—when these unite, target-penetration is unfailingly achieved."
+        },
+        {
+          "shlokaNum": 6,
+          "sanskrit": "प्रणवेन तु संहत्य बाणं चापे नियोजयेत् ।\nअमोघं भवति क्षिप्रं ब्रह्मतेजःसमन्वितम् ॥ ६ ॥",
+          "hindi": "ॐकार (प्रणव) का ध्यान करते हुए बाण को धनुष पर चढ़ाएं; वह बाण ब्रह्मतेज से युक्त होकर अत्यंत शीघ्र और अमोघ हो जाता है।",
+          "english": "Focusing upon Om, mount the arrow upon the bow; infused with spiritual power, it becomes swift and invincible."
+        },
+        {
+          "shlokaNum": 7,
+          "sanskrit": "दीने च शरणापन्ने स्त्रियां बाले तथा द्विजे ।\nन प्रहर्तव्यमेवेति धनुर्वेदस्य निश्चयः ॥ ७ ॥",
+          "hindi": "दीन-दुखी, शरण में आए हुए, स्त्री, बालक और ज्ञानी पुरुष पर कभी शस्त्र प्रहार नहीं करना चाहिए—यह धनुर्वेद का अटल नियम है।",
+          "english": "Upon the helpless, the refugee, women, children, and holy seekers, a warrior must never strike—this is the eternal vow of Dhanurveda."
+        },
+        {
+          "shlokaNum": 8,
+          "sanskrit": "रणे पलायनं नैव वीरस्य लक्षणं स्मृतम् ।\nधर्मयुद्धेन यो हन्ति स याति परमां गतिम् ॥ ८ ॥",
+          "hindi": "रणभूमि से पलायन करना वीर का लक्षण नहीं है। जो धर्मयुद्ध में लड़ते हुए प्राण देता है या विजय पाता है, वह परम गति को प्राप्त होता है।",
+          "english": "Fleeing the battlefield is not the mark of a hero. He who fights in righteous battle attains supreme glory."
+        },
+        {
+          "shlokaNum": 9,
+          "sanskrit": "अभ्यासात्साध्यते सर्वं नास्त्यसाध्यं तु कर्मणि ।\nनित्यं संधानयोगेन धनुर्धरोऽग्रणीर्भवेत् ॥ ९ ॥",
+          "hindi": "निरंतर अभ्यास से सब कुछ सिद्ध होता है, संसार में कुछ भी असाध्य नहीं है। नित्य संधान अभ्यास से धनुर्धर सर्वश्रेष्ठ बन जाता है।",
+          "english": "By persistent practice everything is accomplished; nothing is impossible. Daily dedicated training makes an archer supreme."
+        },
+        {
+          "shlokaNum": 10,
+          "sanskrit": "यतो धर्मस्ततो जयः। यतः कृष्णस्ततो जयः ॥ १० ॥",
+          "hindi": "जहाँ धर्म है वहीं विजय है, और जहाँ भगवान श्रीकृष्ण हैं वहीं निश्चित विजय है।",
+          "english": "Where there is righteousness, there is victory; where there is Sri Krishna, there is triumph."
+        }
+      ]
+    }
+  ]
+}

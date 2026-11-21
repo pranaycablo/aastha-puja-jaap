@@ -1,0 +1,78 @@
+{
+  "chapterIndex": 1,
+  "chapterTitleHi": "पूर्वार्चिक: आग्नेय काण्ड (नादब्रह्म गीति)",
+  "chapterTitleEn": "Purvarchika: Cosmic Chants of Agni",
+  "totalVersesText": "१० मन्त्र",
+  "sections": [
+    {
+      "sectionIndex": 1,
+      "verseRange": "श्लोक 1 - 10",
+      "sectionTitleHi": "प्रथम खण्ड: दिव्य साम गायन व शांति",
+      "sectionTitleEn": "Section 1: Sacred Melodies of Light & Peace",
+      "tattvaBodhaHi": "सामवेद की प्रत्येक ऋचा सुर, लय और ताल से युक्त होकर साधक के हृदय को नादब्रह्म में लीन कर देती है।",
+      "tattvaBodhaEn": "Every verse of Samaveda is tuned to celestial rhythm, guiding the soul into eternal peace.",
+      "verses": [
+        {
+          "shlokaNum": 1,
+          "sanskrit": "ॐ अग्न आयाहि वीतये गृणानो हव्यदातये ।\nनि होता सत्सि बर्हिषि ॥ १ ॥",
+          "hindi": "हे अग्निदेव! हमारे स्तुति गान को सुनकर हवि स्वीकार करने हेतु पधारिए और हमारे पवित्र आसन पर विराजमान होइए।",
+          "english": "O radiant Agni, invited by our songs, come to accept our offering and sit upon this sacred seat."
+        },
+        {
+          "shlokaNum": 2,
+          "sanskrit": "त्वमग्ने यज्ञानां होता विश्वेषां हितः ।\nदेवेभिर्मानुषे जने ॥ २ ॥",
+          "hindi": "हे अग्नि! तुम समस्त यज्ञों के पावन होता हो, और देवताओं तथा मनुष्यों के बीच परम हितकारी संदेशवाहक हो।",
+          "english": "Thou, Agni, art the divine invoker of all sacrifices, beneficial to both radiant gods and mortals."
+        },
+        {
+          "shlokaNum": 3,
+          "sanskrit": "स नः पावक दीदिवा अग्ने देवां इहा वह ।\nउप यज्ञं हविश्च नः ॥ ३ ॥",
+          "hindi": "हे पावक अग्नि! अपनी पवित्र ज्वालाओं से प्रकाशित होते हुए देवों को हमारे इस यज्ञ और हवि के पास ले आइए।",
+          "english": "O purifying, radiant Agni, bring the deities hither to our sacred communion and offering."
+        },
+        {
+          "shlokaNum": 4,
+          "sanskrit": "इन्द्राग्नी आ गतं सुतं गीर्भिर्नभो वरेण्यम् ।\nअस्य पातं धियेषिता ॥ ४ ॥",
+          "hindi": "हे इन्द्र और अग्नि! हमारी पवित्र स्तुतियों से प्रसन्न होकर इस सोम रस का पान करने के लिए पधारिए।",
+          "english": "O Indra and Agni, invoked by prayers, come and partake of this purified offering for mental clarity."
+        },
+        {
+          "shlokaNum": 5,
+          "sanskrit": "तं प्रत्नथा पूर्वथा विश्वथेमथा ज्येष्ठतातिं बर्हिषदं स्वर्विदम् ।\nप्रतीचीनं वृजनं दोहसे गिरामाशुं जयन्तमनु यासु वर्धते ॥ ५ ॥",
+          "hindi": "उस सनातन, सर्वज्ञ, ज्येष्ठ और स्वर्ग के ज्ञाता प्रभु की हम प्राचीन तथा नवीन दोनों शैलियों में स्तुति करते हैं।",
+          "english": "We praise Him who is ancient, all-knowing, supreme, and finder of light, through songs of adoration."
+        },
+        {
+          "shlokaNum": 6,
+          "sanskrit": "ये त्रिशप्ताः परियन्ति विश्वा रूपाणि बिभ्रतः ।\nवाचस्पतिर्बला तेषां तन्वो अद्य दधातु मे ॥ ६ ॥",
+          "hindi": "जो इक्कीस देव शक्तियाँ समस्त रूपों को धारण करती हुई भ्रमण करती हैं, वाणी के अधिपति आज मेरे शरीर में उनका तेज स्थापित करें।",
+          "english": "May the Lord of Speech infuse into my body the vigor of all divine cosmic forces."
+        },
+        {
+          "shlokaNum": 7,
+          "sanskrit": "पुनरेहि वाचस्पते देवेन मनसा सह ।\nवसोष्पते नि रमय मय्येवास्तु मयि श्रुतम् ॥ ७ ॥",
+          "hindi": "हे वाणी के अधिपति! दिव्य मन के साथ हमारे पास पुनः आइए; जो कुछ मैंने सुना और पढ़ा है, वह मुझमें ही सुप्रतिष्ठित रहे।",
+          "english": "Return, O Lord of Sacred Speech, with enlightened mind; may all divine learning abide firmly within me."
+        },
+        {
+          "shlokaNum": 8,
+          "sanskrit": "इहैवाभि वि तनूभे आर्त्नी इव ज्यया ।\nवाचस्पतिर्नि यच्छतु मय्येवास्तु मयि श्रुतम् ॥ ८ ॥",
+          "hindi": "जैसे धनुष पर प्रत्यंचा चढ़ाई जाती है, वैसे ही ज्ञान को मुझमें दृढ़ कीजिए; मेरा अध्ययन मेरे भीतर सदा प्रकाशित रहे।",
+          "english": "Firmly string this sacred wisdom within me as a bowstring upon a bow; let my learning remain ever radiant."
+        },
+        {
+          "shlokaNum": 9,
+          "sanskrit": "उपहूतं वाक्पतिरुपास्मान् वाक्पतिर्ह्वयताम् ।\nसं श्रुतेन गमेमहि मा श्रुतेन वि राधिषि ॥ ९ ॥",
+          "hindi": "ज्ञान के अधिपति ने हमें पुकारा है, हम वेद ज्ञान से युक्त हों; हम कभी भी सत्य ज्ञान से विमुख न हों।",
+          "english": "The Lord of Speech has summoned us; may we be united with sacred wisdom and never alienated from truth."
+        },
+        {
+          "shlokaNum": 10,
+          "sanskrit": "द्यौः शान्तिरन्तरिक्षं शान्तिः पृथिवी शान्तिरापः शान्तिरोषधयः शान्तिः ।\nवनस्पतयः शान्तिर्विश्वे देवाः शान्तिर्ब्रह्म शान्तिः सर्वं शान्तिः शान्तिरेव शान्तिः सा मा शान्तिरेधि ॥ १० ॥",
+          "hindi": "द्युलोक शांत हो, अंतरिक्ष शांत हो, पृथ्वी, जल, औषधियाँ, वनस्पतियाँ, विश्वेदेव, परब्रह्म और संपूर्ण जगत शांत हो; वह परम शांति मुझे प्राप्त हो।",
+          "english": "May the heavens be peaceful, the atmosphere peaceful, the earth peaceful, waters, herbs, trees, all deities and Brahman peaceful; may that absolute peace fill my soul."
+        }
+      ]
+    }
+  ]
+}

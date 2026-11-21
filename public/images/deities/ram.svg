@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <radialGradient id="ramSky" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" stopColor="#1E1B4B"/>
+      <stop offset="40%" stopColor="#312E81"/>
+      <stop offset="100%" stopColor="#0F172A"/>
+    </radialGradient>
+    <radialGradient id="ramHalo" cx="50%" cy="35%" r="45%">
+      <stop offset="0%" stopColor="#FEF08A" stopOpacity="0.85"/>
+      <stop offset="60%" stopColor="#F59E0B" stopOpacity="0.4"/>
+      <stop offset="100%" stopColor="#D97706" stopOpacity="0"/>
+    </radialGradient>
+    <linearGradient id="bowGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#FDE047"/>
+      <stop offset="50%" stopColor="#D97706"/>
+      <stop offset="100%" stopColor="#78350F"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="500" height="500" rx="30" fill="url(#ramSky)"/>
+  <circle cx="250" cy="180" r="135" fill="url(#ramHalo)"/>
+
+  <!-- Kodanda Bow -->
+  <path d="M 120 70 C 70 200 70 320 120 440" fill="none" stroke="url(#bowGold)" stroke-width="10" stroke-linecap="round"/>
+  <line x1="120" y1="70" x2="120" y2="440" stroke="#FDE047" stroke-width="1.5" stroke-dasharray="5,2"/>
+
+  <!-- Crown -->
+  <polygon points="250,55 210,125 290,125" fill="url(#bowGold)" stroke="#FEF08A" stroke-width="2"/>
+  <circle cx="250" cy="80" r="7" fill="#DC2626"/>
+
+  <!-- Face -->
+  <path d="M 215 140 C 215 125 285 125 285 140 C 290 185 280 220 250 225 C 220 220 210 185 215 140 Z" fill="#93C5FD"/>
+  <path d="M 242 135 L 242 170 Q 250 178 258 170 L 258 135" fill="#FFFFFF"/>
+  <line x1="250" y1="135" x2="250" y2="175" stroke="#DC2626" stroke-width="2.5"/>
+
+  <ellipse cx="233" cy="160" rx="9" ry="5.5" fill="#FFFFFF"/>
+  <circle cx="234" cy="160" r="3.5" fill="#1E293B"/>
+  <ellipse cx="267" cy="160" rx="9" ry="5.5" fill="#FFFFFF"/>
+  <circle cx="266" cy="160" r="3.5" fill="#1E293B"/>
+
+  <path d="M 242 195 Q 250 200 258 195" fill="none" stroke="#1E293B" stroke-width="2" stroke-linecap="round"/>
+  <path d="M 170 230 C 160 300 180 390 250 390 C 320 390 340 300 330 230 Z" fill="#FACC15"/>
+
+  <text x="250" y="475" font-family="serif" font-size="22" font-weight="bold" fill="#FEF08A" text-anchor="middle">🏹 सियावर रामचंद्र की जय 🏹</text>
+</svg>

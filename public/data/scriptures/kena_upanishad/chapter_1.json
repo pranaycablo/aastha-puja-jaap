@@ -1,0 +1,78 @@
+{
+  "chapterIndex": 1,
+  "chapterTitleHi": "प्रथम खण्ड: केनेषितं मनः (मन व इंद्रियों का प्रेरक)",
+  "chapterTitleEn": "Section 1: The Inspirer of Mind and Senses",
+  "totalVersesText": "१० मन्त्र",
+  "sections": [
+    {
+      "sectionIndex": 1,
+      "verseRange": "श्लोक 1 - 10",
+      "sectionTitleHi": "मन और इंद्रियों का प्रेरक ब्रह्म",
+      "sectionTitleEn": "Section 1: Brahman, The Ultimate Knower behind Faculties",
+      "tattvaBodhaHi": "श्रोत्रस्य श्रोत्रं मनसो मनो यद्वाचो ह वाचं स उ प्राणस्य प्राणश्चक्षुषश्चक्षुः।",
+      "tattvaBodhaEn": "That which is the Ear of the ear, the Mind of the mind, the Speech of speech, the Life of life, and the Eye of the eye.",
+      "verses": [
+        {
+          "shlokaNum": 1,
+          "sanskrit": "ॐ केनेषितं पतति प्रेषितं मनः केन प्राणः प्रथमः प्रैति युक्तः ।\nकेनेषितां वाचमिमां वदन्ति चक्षुः श्रोत्रं क उ देवो युनक्ति ॥ १ ॥",
+          "hindi": "शिष्य ने पूछा: किसके द्वारा प्रेरित होकर मन विषयों में गिरता है? किसके द्वारा नियुक्त होकर मुख्य प्राण गति करता है? किसके द्वारा प्रेरित होकर मनुष्य वाणी बोलता है, और कौन देव चक्षु तथा श्रोत्र को प्रेरित करता है?",
+          "english": "By whom directed does the mind fly toward its object? Directed by whom does the primal life-breath move? By whom impelled do people speak, and what divine power directs sight and hearing?"
+        },
+        {
+          "shlokaNum": 2,
+          "sanskrit": "श्रोत्रस्य श्रोत्रं मनसो मनो यद्वाचो ह वाचं स उ प्राणस्य प्राणः ।\nचक्षुषश्चक्षुरतिमुच्य धीराः प्रेत्यास्माल्लोकादमृता भवन्ति ॥ २ ॥",
+          "hindi": "गुरु ने कहा: जो कानों का कान, मन का मन, वाणी की वाणी, प्राणों का प्राण और आँखों की आँख है; उस आत्मतत्त्व को पहचानकर धीर पुरुष अमर हो जाते हैं।",
+          "english": "It is the Ear of the ear, the Mind of the mind, the Speech of speech, the Breath of breath, and the Eye of the eye. Wise men, relinquishing identification with senses, become immortal."
+        },
+        {
+          "shlokaNum": 3,
+          "sanskrit": "न तत्र चक्षुर्गच्छति न वाग्गच्छति नो मनो न विद्मो न विजानीमो यथैतदनुशिष्यात् ।\nअन्यदेव तद्विदितादथो अविदितादधि ॥ ३ ॥",
+          "hindi": "वहाँ न आँखें पहुँचती हैं, न वाणी और न ही मन। हम नहीं जानते कि उसका उपदेश कैसे किया जाए; क्योंकि वह ज्ञात से भी भिन्न है और अज्ञात से भी परे है।",
+          "english": "Thither the eye goes not, speech goes not, nor the mind. We know not, we understand not how one should teach of It. It is distinct from the known, and beyond the unknown."
+        },
+        {
+          "shlokaNum": 4,
+          "sanskrit": "यद्वाचाऽनभ्युदितं येन वागभ्युद्यते ।\nतदेव ब्रह्म त्वं विद्धि नेदं यदिदमुपासते ॥ ४ ॥",
+          "hindi": "जो वाणी द्वारा प्रकट नहीं किया जा सकता, अपितु जिससे वाणी स्वयं व्यक्त होती है—उसी को तुम ब्रह्म जानो; यह नहीं जिसकी लोग यहाँ उपासना करते हैं।",
+          "english": "That which cannot be expressed by speech, but by which speech is expressed: know that alone as Brahman, not this which people worship here."
+        },
+        {
+          "shlokaNum": 5,
+          "sanskrit": "यन्मनसा न मनुते येनाहुर्मनो मतम् ।\nतदेव ब्रह्म त्वं विद्धि नेदं यदिदमुपासते ॥ ५ ॥",
+          "hindi": "जो मन से नहीं सोचा जा सकता, किंतु जिससे मन स्वयं मनन करने की शक्ति पाता है—उसी को तुम ब्रह्म जानो; सांसारिक विषय ब्रह्म नहीं हैं।",
+          "english": "That which cannot be conceived by the mind, but by which the mind is conceived: know that alone as Brahman, not this which people worship here."
+        },
+        {
+          "shlokaNum": 6,
+          "sanskrit": "यच्चक्षुषा न पश्यति येन चक्षूंषि पश्यति ।\nतदेव ब्रह्म त्वं विद्धि नेदं यदिदमुपासते ॥ ६ ॥",
+          "hindi": "जो आँखों से नहीं देखा जा सकता, बल्कि जिससे आँखें देखने की शक्ति पाती हैं—उसी को तुम ब्रह्म जानो।",
+          "english": "That which cannot be seen by the eyes, but by which the eyes see: know that alone as Brahman."
+        },
+        {
+          "shlokaNum": 7,
+          "sanskrit": "यच्छ्रोत्रेण न शृणोति येन श्रोत्रमिदं श्रुतम् ।\nतदेव ब्रह्म त्वं विद्धि नेदं यदिदमुपासते ॥ ७ ॥",
+          "hindi": "जो कानों से नहीं सुना जा सकता, किंतु जिससे कान सुनने में समर्थ होते हैं—उसी को तुम ब्रह्म जानो।",
+          "english": "That which cannot be heard by the ear, but by which hearing is perceived: know that alone as Brahman."
+        },
+        {
+          "shlokaNum": 8,
+          "sanskrit": "यत्प्राणेन न प्राणिति येन प्राणः प्रणीयते ।\nतदेव ब्रह्म त्वं विद्धि नेदं यदिदमुपासते ॥ ८ ॥",
+          "hindi": "जो श्वास द्वारा चेष्टावान नहीं होता, अपितु जिससे प्राण स्वयं संचालित होता है—उसी को तुम ब्रह्म जानो।",
+          "english": "That which does not breathe with breath, but by which life is sustained: know that alone as Brahman."
+        },
+        {
+          "shlokaNum": 9,
+          "sanskrit": "प्रतिबोधविदितं मतममृतत्वं हि विन्दते ।\nआत्मना विन्दते वीर्यं विद्यया विन्दतेऽमृतम् ॥ ९ ॥",
+          "hindi": "प्रत्येक चेतना और विचार में जो अनुभव में आता है, वही वास्तव में ज्ञात है; उसी से अमरता मिलती है। आत्मा से शक्ति और ब्रह्मविद्या से अमृतत्व प्राप्त होता है।",
+          "english": "When known through every state of consciousness, It is truly understood, for thereby one attains immortality. Through the Self one gains vigor, through wisdom immortality."
+        },
+        {
+          "shlokaNum": 10,
+          "sanskrit": "इह चेदवेदीदथ सत्यमस्ति न चेदिहावेदीन्महती विनष्टिः ।\nभूतेषु भूतेषु विचित्य धीराः प्रेत्यास्माल्लोकादमृता भवन्ति ॥ १० ॥",
+          "hindi": "यदि इस मनुष्य जन्म में उस ब्रह्म को जान लिया तो जीवन सत्य और सफल है; और यदि नहीं जाना तो महान विनाश है। धीर पुरुष सब प्राणियों में उसी को देखकर अमर हो जाते हैं।",
+          "english": "If one knows It here in this life, there is true fulfillment; if one knows It not here, great is the destruction. Sages perceiving It in all beings become immortal."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <radialGradient id="gyanBg" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stopColor="#1E1B4B"/>
+      <stop offset="60%" stopColor="#0F172A"/>
+      <stop offset="100%" stopColor="#020617"/>
+    </radialGradient>
+    <radialGradient id="touchGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stopColor="#FEF08A"/>
+      <stop offset="40%" stopColor="#F59E0B" stopOpacity="0.8"/>
+      <stop offset="100%" stopColor="#D97706" stopOpacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="500" height="500" rx="30" fill="url(#gyanBg)"/>
+  <text x="250" y="45" font-family="serif" font-size="22" font-weight="bold" fill="#FEF08A" text-anchor="middle">१. ज्ञान मुद्रा (चिन्मुद्रा)</text>
+
+  <!-- 3 Extended Fingers -->
+  <path d="M 230 300 C 270 280 370 240 430 220 C 445 215 450 235 435 245 L 260 320" fill="#FED7AA" stroke="#EA580C" stroke-width="2"/>
+  <path d="M 240 310 C 280 295 380 260 440 245 C 455 240 460 260 445 270 L 260 335" fill="#FED7AA" stroke="#EA580C" stroke-width="2"/>
+  <path d="M 245 325 C 285 315 375 285 435 275 C 450 270 455 290 440 300 L 260 350" fill="#FED7AA" stroke="#EA580C" stroke-width="2"/>
+
+  <!-- Index & Thumb Circle -->
+  <path d="M 220 290 C 210 230 200 170 250 160 C 290 150 290 200 270 225" fill="none" stroke="#FED7AA" stroke-width="24" stroke-linecap="round"/>
+  <path d="M 190 330 C 190 270 220 220 260 215" fill="none" stroke="#FED7AA" stroke-width="24" stroke-linecap="round"/>
+
+  <!-- Touch Point Sparkle -->
+  <circle cx="265" cy="220" r="28" fill="url(#touchGlow)"/>
+  <circle cx="265" cy="220" r="7" fill="#FFFFFF"/>
+  <text x="265" y="195" font-size="12" font-weight="black" fill="#FEF08A" text-anchor="middle">अग्नि + वायु मिलन</text>
+
+  <text x="250" y="465" font-family="serif" font-size="18" font-weight="bold" fill="#FEF08A" text-anchor="middle">तर्जनी व अंगूठे का स्पर्श • मन की एकाग्रता व शांति</text>
+</svg>

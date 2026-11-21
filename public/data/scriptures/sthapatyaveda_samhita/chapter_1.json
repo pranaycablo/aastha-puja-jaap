@@ -1,0 +1,78 @@
+{
+  "chapterIndex": 1,
+  "chapterTitleHi": "प्रथम अध्याय: वास्तु पुरुष मण्डल व नगर रचना",
+  "chapterTitleEn": "Chapter 1: The Vastu Purusha Grid & Civic Architecture",
+  "totalVersesText": "१० श्लोक",
+  "sections": [
+    {
+      "sectionIndex": 1,
+      "verseRange": "श्लोक 1 - 10",
+      "sectionTitleHi": "वास्तु पुरुष की स्थापना एवं दिशाओं का संतुलन",
+      "sectionTitleEn": "Section 1: Vastu Purusha Mandala & Directional Harmonies",
+      "tattvaBodhaHi": "ईशान कोण में जल और पूजा, आग्नेय में अग्नि, नैऋत्य में भारीपन और वायव्य में वायु का संतुलन गृह को स्वर्ग बनाता है।",
+      "tattvaBodhaEn": "Balancing Northeast for prayer, Southeast for fire, Southwest for stability, and Northwest for movement turns a home into heaven.",
+      "verses": [
+        {
+          "shlokaNum": 1,
+          "sanskrit": "वास्तुपुरुष नमस्तेऽस्तु भूशय्याभिरत प्रभो ।\nमद्गृहं धनधान्यादिसमृद्धं कुरु सर्वदा ॥ १ ॥",
+          "hindi": "भूमि की शय्या पर शयन करने वाले हे वास्तुपुरुष प्रभु! आपको नमस्कार है। मेरे घर को सदा धन-धान्य और शांति से परिपूर्ण कीजिए।",
+          "english": "Salutations to Thee, O Lord Vastu Purusha, resting upon the bed of earth! Prosper my home always with abundance and peace."
+        },
+        {
+          "shlokaNum": 2,
+          "sanskrit": "ईशाने देवता गेहं पूर्वस्यां स्नानमन्दिरम् ।\nआग्नेय्यां पचनागारं दक्षिणे शयनं स्मृतम् ॥ २ ॥",
+          "hindi": "ईशान कोण में देवमंदिर, पूर्व दिशा में स्नानघर, आग्नेय कोण में रसोईघर और दक्षिण दिशा में मुख्य शयनकक्ष होना चाहिए।",
+          "english": "In the Northeast locate the sanctuary, in the East the bath, in the Southeast the kitchen, and in the South the master bedroom."
+        },
+        {
+          "shlokaNum": 3,
+          "sanskrit": "नैर्ऋत्यां शस्त्रभण्डारं पश्चिमे भोजनं तथा ।\nवायव्ये धनधान्यं च उत्तरे भाण्डगारकम् ॥ ३ ॥",
+          "hindi": "नैऋत्य कोण में भारी सामान या शस्त्र, पश्चिम में भोजन कक्ष, वायव्य में अन्न-गौशाला और उत्तर दिशा में कुबेर का कोषागार शुभ होता है।",
+          "english": "In the Southwest keep heavy reserves, in the West dining, in the Northwest mobility and grains, and in the North treasury."
+        },
+        {
+          "shlokaNum": 4,
+          "sanskrit": "ब्रह्मस्थानं सदा शून्यं कर्तव्यं सर्वयत्नतः ।\nतत्र भारविनिक्षेपे गृहेशस्य विपत्तयः ॥ ४ ॥",
+          "hindi": "घर का मध्य भाग (ब्रह्मस्थान) सदा खुला और भाररहित रखना चाहिए; वहाँ भारी भार रखने से गृहस्वामी को संकटों का सामना करना पड़ता है।",
+          "english": "The central nucleus (Brahmasthana) must ever remain open and unburdened; placing heavy load there invites hardship upon the master."
+        },
+        {
+          "shlokaNum": 5,
+          "sanskrit": "सुखस्य मूलं धर्मः । धर्मस्य मूलमर्थः ।\nअर्थस्य मूलं राज्यम् । राज्यस्य मूलमिन्द्रियजयः ॥ ५ ॥",
+          "hindi": "सुख का मूल धर्म है; धर्म का मूल अर्थ (सदाचारपूर्ण संपत्ति) है; अर्थ का मूल सुव्यवस्थित राज्य है; और राज्य का मूल राजा का इंद्रिय-विजय (आत्मसंयम) है।",
+          "english": "The root of happiness is righteousness; the root of righteousness is ethical wealth; wealth depends on stable governance; governance rests upon self-mastery."
+        },
+        {
+          "shlokaNum": 6,
+          "sanskrit": "प्रजासुखे सुखं राज्ञः प्रजानां च हिते हितम् ।\nनात्मप्रियं हितं राज्ञः प्रजानां तु प्रियं हितम् ॥ ६ ॥",
+          "hindi": "प्रजा के सुख में ही राजा का सच्चा सुख है, और प्रजा के हित में ही उसका हित है। राजा के लिए वह प्रिय नहीं जो उसे भाए, बल्कि वह हितकारी है जो प्रजा को प्रिय हो।",
+          "english": "In the happiness of his subjects lies the king's happiness; in their welfare his welfare. Whatever pleases himself he shall not consider good, but whatever pleases his people."
+        },
+        {
+          "shlokaNum": 7,
+          "sanskrit": "कोषपूर्वाः सर्वारम्भाः । तस्मात्कोशं विशोधयेत् ॥ ७ ॥",
+          "hindi": "समस्त लोक-कल्याणकारी कार्य और योजनाएं राजकोष पर निर्भर करती हैं; इसलिए कोष को सदा न्यायपूर्ण और पवित्र रखना चाहिए।",
+          "english": "All national undertakings depend on the treasury; therefore, let the leader ensure a just, transparent, and flourishing treasury."
+        },
+        {
+          "shlokaNum": 8,
+          "sanskrit": "यथा ह्येकेन चक्रेण न रथस्य गतिर्भवेत् ।\nएवं पुरुषकारेण विना दैवं न सिध्यति ॥ ८ ॥",
+          "hindi": "जैसे केवल एक पहिये से रथ नहीं चल सकता, वैसे ही बिना पुरुषार्थ (कड़े परिश्रम) के केवल भाग्य के भरोसे कोई कार्य सिद्ध नहीं होता।",
+          "english": "Just as a chariot cannot move on a single wheel, so fate accomplishes nothing without noble personal endeavor."
+        },
+        {
+          "shlokaNum": 9,
+          "sanskrit": "अकृतायाः श्रियो रक्षा कृतायाश्च विवर्धनम् ।\nतीर्थेषु प्रतिपत्तिश्च राष्ट्रस्यैतानि लक्षणम् ॥ ९ ॥",
+          "hindi": "अप्राप्त संपत्ति को अर्जित करना, अर्जित संपत्ति की रक्षा करना, रक्षित का संवर्धन करना और उसका पात्रों में वितरण करना—यही आदर्श राष्ट्र के लक्षण हैं।",
+          "english": "Acquiring wealth not yet possessed, protecting what is gained, increasing what is protected, and distributing it righteously—these are the hallmarks of a great nation."
+        },
+        {
+          "shlokaNum": 10,
+          "sanskrit": "धर्मेण धार्यते लोकः । सत्येनोत्तिष्ठते यशः ॥ १० ॥",
+          "hindi": "यह संपूर्ण संसार धर्म के नियमों से ही टिका हुआ है, और सत्य के आचरण से ही अक्षय यश की प्राप्ति होती है।",
+          "english": "The world is sustained by cosmic righteousness, and lasting honor rises only upon the foundation of truth."
+        }
+      ]
+    }
+  ]
+}

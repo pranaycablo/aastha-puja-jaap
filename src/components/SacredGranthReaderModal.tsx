@@ -19,6 +19,7 @@ import { ttsEngine } from '../utils/ttsEngine';
 import { AdMobNativeCard } from './AdMobNativeCard';
 import { DivineDeityDarshanCard } from './DivineDeityDarshanCard';
 import { EbookDakshinaDownloadModal } from './EbookDakshinaDownloadModal';
+import { cloudScriptureLoader } from '../utils/cloudScriptureLoader';
 import {
   ArrowLeft,
   Volume2,
@@ -38,7 +39,8 @@ import {
   Compass,
   List,
   Download,
-  ShieldCheck
+  ShieldCheck,
+  RefreshCw
 } from 'lucide-react';
 
 export type ScriptureCategory = string;
@@ -295,7 +297,58 @@ export const SacredGranthReaderModal: React.FC<SacredGranthReaderModalProps> = (
     selectedChapterIndex,
     Math.max(0, availableChapters.length - 1)
   );
-  const currentChapter = availableChapters[safeChapterIndex] || availableChapters[0];
+
+  const [loadedChapter, setLoadedChapter] = useState<ScriptureChapter | null>(null);
+  const [isLoadingCloudChapter, setIsLoadingCloudChapter] = useState<boolean>(false);
+
+  useEffect(() => {
+    let isCancelled = false;
+    const targetChapterNum = safeChapterIndex + 1;
+    const bundledFallback = availableChapters[safeChapterIndex];
+
+    // 1. Check if already cached
+    const cached = cloudScriptureLoader.getCachedChapter(currentBook.id, targetChapterNum);
+    if (cached) {
+      setLoadedChapter(cached);
+      setIsLoadingCloudChapter(false);
+      cloudScriptureLoader.preloadNextChapter(currentBook.id, targetChapterNum + 1);
+      return;
+    }
+
+    // 2. If chapter 1, load immediately from bundled data
+    if (targetChapterNum === 1 && bundledFallback) {
+      setLoadedChapter(bundledFallback);
+      setIsLoadingCloudChapter(false);
+      cloudScriptureLoader.preloadNextChapter(currentBook.id, 2);
+      return;
+    }
+
+    // 3. Cloud fetch from GitHub raw CDN / local cache
+    setIsLoadingCloudChapter(true);
+    cloudScriptureLoader
+      .loadChapter(currentBook.id, targetChapterNum, bundledFallback)
+      .then((data) => {
+        if (!isCancelled) {
+          setLoadedChapter(data);
+          setIsLoadingCloudChapter(false);
+          cloudScriptureLoader.preloadNextChapter(currentBook.id, targetChapterNum + 1);
+        }
+      })
+      .catch((err) => {
+        if (!isCancelled) {
+          setIsLoadingCloudChapter(false);
+          if (bundledFallback) {
+            setLoadedChapter(bundledFallback);
+          }
+        }
+      });
+
+    return () => {
+      isCancelled = true;
+    };
+  }, [currentBook.id, safeChapterIndex, availableChapters]);
+
+  const currentChapter = loadedChapter || availableChapters[safeChapterIndex] || availableChapters[0];
 
   // Set Bookmark Handler: moves bookmark to this section/shloka
   const handleSetBookmark = (
@@ -703,8 +756,27 @@ export const SacredGranthReaderModal: React.FC<SacredGranthReaderModalProps> = (
           </div>
         </div>
 
-        {/* 10-12 SHLOKA SECTIONS LIST */}
-        {currentChapter.sections.map((section) => {
+        {/* 10-12 SHLOKA SECTIONS LIST OR CLOUD LOADER */}
+        {isLoadingCloudChapter ? (
+          <div className="py-16 px-6 rounded-3xl bg-amber-500/10 border-2 border-amber-500/30 flex flex-col items-center justify-center text-center space-y-4 my-6">
+            <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center text-white shadow-lg shadow-orange-950/40">
+              <RefreshCw className="w-8 h-8 animate-spin text-white" />
+            </div>
+            <div className="space-y-1.5">
+              <h3 className="text-base font-black text-amber-950">
+                {isHi
+                  ? `श्री ${currentBook.titleHi} • अध्याय ${safeChapterIndex + 1} लोड हो रहा है...`
+                  : `Loading Chapter ${safeChapterIndex + 1}...`}
+              </h3>
+              <p className="text-xs text-amber-900/80 max-w-sm">
+                {isHi
+                  ? 'दिव्य शास्त्र श्लोक GitHub क्लाउड से डाउनलोड किए जा रहे हैं।'
+                  : 'Downloading sacred shlokas from GitHub cloud repository...'}
+              </p>
+            </div>
+          </div>
+        ) : (
+          currentChapter.sections.map((section) => {
           const isSectionBookmarked =
             activeBookmark &&
             activeBookmark.bookId === currentBook.id &&
@@ -922,7 +994,8 @@ export const SacredGranthReaderModal: React.FC<SacredGranthReaderModalProps> = (
             )}
             </React.Fragment>
           );
-        })}
+        })
+        )}
 
         {/* Integrated Native Ad for monetization */}
         <div className="pt-2">

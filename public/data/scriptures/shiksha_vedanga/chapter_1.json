@@ -1,0 +1,78 @@
+{
+  "chapterIndex": 1,
+  "chapterTitleHi": "पाणिनीय शिक्षा: वर्णोच्चारण विधि",
+  "chapterTitleEn": "Paniniya Shiksha: Pure Articulation of Letters",
+  "totalVersesText": "१० श्लोक",
+  "sections": [
+    {
+      "sectionIndex": 1,
+      "verseRange": "श्लोक 1 - 10",
+      "sectionTitleHi": "वैदिक वर्णों के स्थान, प्रयत्न और दोष-रहित पाठ",
+      "sectionTitleEn": "Section 1: Vedic Phonetic Organs & Flawless Recitation",
+      "tattvaBodhaHi": "मंत्रो हीनः स्वरतो वर्णतो वा मिथ्याप्रयुक्तो न तमर्थमाह। स वाग्वज्रो यजमानं हिनस्ति यथेन्द्रशत्रुः स्वरतोऽपराधात्॥",
+      "tattvaBodhaEn": "A mantra defective in vowel pitch or consonant fails to convey its meaning; like a sonic thunderbolt, it strikes down the mispronouncer.",
+      "verses": [
+        {
+          "shlokaNum": 1,
+          "sanskrit": "अथ शिक्षां प्रवक्ष्यामि पाणिनीयान्मतं यथा ।\nशास्त्रानुपूर्व्यं तद्विद्याद्यथोक्तं लोकवेदयोः ॥ १ ॥",
+          "hindi": "अब मैं महर्षि पाणिनि के मतानुसार \"शिक्षा\" शास्त्र का वर्णन करता हूँ, जिसका ज्ञान लोक और वेद दोनों के शुद्ध उच्चारण हेतु अनिवार्य है।",
+          "english": "Now I shall expound the science of phonetics according to sage Panini, essential for flawless chanting in worldly and Vedic realms."
+        },
+        {
+          "shlokaNum": 2,
+          "sanskrit": "त्रिपष्टिः चतुःषष्टिर्वा वर्णाः शम्भुमते मताः ।\nप्राकृते संस्कृते चापि स्वयं प्रोक्ताः स्वयम्भुवा ॥ २ ॥",
+          "hindi": "भगवान शिव के मत से प्राकृत और संस्कृत में ६३ या ६४ वर्ण माने गए हैं, जो साक्षात् स्वयंभू ब्रह्मा द्वारा उच्चारित किए गए हैं।",
+          "english": "In the doctrine of Shiva, sixty-three or sixty-four basic sounds are recognized, vocalized by the self-born creator."
+        },
+        {
+          "shlokaNum": 3,
+          "sanskrit": "आत्मा बुद्ध्या समेत्यार्थान् मनो युङ्क्ते विवक्षया ।\nमनः कायाग्निमाहन्ति स प्रेरयति मारुतम् ॥ ३ ॥",
+          "hindi": "आत्मा बुद्धि के साथ मिलकर बोलने की इच्छा से मन को प्रेरित करती है; मन जठराग्नि को जगाता है और वह अग्नि प्राणवायु को ऊपर उठाती है।",
+          "english": "The soul, uniting with intellect, prompts the mind with desire to speak; the mind stirs the bodily fire, which propels the breath upward."
+        },
+        {
+          "shlokaNum": 4,
+          "sanskrit": "अष्टौ स्थानानि वर्णानामुरः कण्ठः शिरस्तथा ।\nजिह्वामूलं च दन्ताश्च नासिकौष्ठौ च तालु च ॥ ४ ॥",
+          "hindi": "वर्णों के आठ उच्चारण स्थान हैं: हृदय (उर), कंठ, मस्तक (मूर्धा), जिह्वामूल, दंत, नासिका, ओष्ठ और तालु।",
+          "english": "Eight are the phonetic stations of sounds: the chest, throat, roof of the palate (head), tongue-root, teeth, nose, lips, and palate."
+        },
+        {
+          "shlokaNum": 5,
+          "sanskrit": "उदात्तश्चानुदात्तश्च स्वरितश्च स्वरास्त्रयः ।\nह्रस्वो दीर्घः प्लुत इति कालतो नियमा अचि ॥ ५ ॥",
+          "hindi": "स्वर तीन प्रकार के हैं: उदात्त (उच्च स्वर), अनुदात्त (मंद्र स्वर) और स्वरित (मध्यम)। मात्रा काल के अनुसार वे ह्रस्व (एक मात्रा), दीर्घ (दो मात्रा) और प्लुत (तीन मात्रा) होते हैं।",
+          "english": "Tones are threefold: Udätta (raised), Anudätta (grave), and Svarita (circumflex); by duration, short, long, and protracted."
+        },
+        {
+          "shlokaNum": 6,
+          "sanskrit": "व्याघ्री यथा हरेत्पुत्रान् दंष्ट्राभ्यां न च पीडयेत् ।\nभीता पतनभेदाभ्यां तद्वद्वर्णान् प्रयोजयेत् ॥ ६ ॥",
+          "hindi": "जैसे बाघिन अपने बच्चों को दाँतों से ऐसे पकड़ती है कि न वे गिरें और न उन्हें दाँत गड़े—वैसे ही कोमलता और स्पष्टता से मंत्र के वर्णों का उच्चारण करें।",
+          "english": "As a tigress carries her cubs between her teeth without crushing them or letting them fall, so should one pronounce the sacred letters."
+        },
+        {
+          "shlokaNum": 7,
+          "sanskrit": "गीती शीघ्री शिरःकम्पी तथा लिखितपाठकः ।\nअनर्थज्ञोऽल्पकण्ठश्च षडेते पाठकाधमाः ॥ ७ ॥",
+          "hindi": "गाकर पढ़ने वाला, बहुत जल्दी-जल्दी बोलने वाला, सिर हिलाने वाला, पुस्तक देख-देखकर पढ़ने वाला, अर्थ न जानने वाला और मंद स्वर वाला—ये छह अधम पाठक हैं।",
+          "english": "Singing, rushing, nodding the head, reading from writing without memorization, ignorant of meaning, and feeble-voiced—these six are inferior reciters."
+        },
+        {
+          "shlokaNum": 8,
+          "sanskrit": "माधुर्यमक्षरव्यक्तिः पदच्छेदस्तु सुस्वरः ।\nधैर्यं लयसमर्थं च षडेते पाठका गुणाः ॥ ८ ॥",
+          "hindi": "माधुर्य, अक्षरों की स्पष्टता, पदों का उचित विच्छेद, उत्तम स्वर, धैर्य और लय का निर्वाह—ये छह उत्तम पाठक के गुण हैं।",
+          "english": "Sweetness, clarity of syllables, proper division of words, melodious tone, patience, and mastery of rhythm—these six are virtues of an ideal chanter."
+        },
+        {
+          "shlokaNum": 9,
+          "sanskrit": "मन्त्रो हीनः स्वरतो वर्णतो वा मिथ्याप्रयुक्तो न तमर्थमाह ।\nस वाग्वज्रो यजमानं हिनस्ति यथेन्द्रशत्रुः स्वरतोऽपराधात् ॥ ९ ॥",
+          "hindi": "जो मंत्र स्वर या वर्ण से हीन होता है, वह सही अर्थ नहीं देता; वह वाक्-वज्र बनकर यजमान को नष्ट कर देता है, जैसे स्वर की त्रुटि से \"इन्द्रशत्रु\" नष्ट हुआ।",
+          "english": "A mantra defective in accent or letter fails in meaning; becoming a sonic thunderbolt, it harms the invoker, as happened in the sacrifice of Vritra."
+        },
+        {
+          "shlokaNum": 10,
+          "sanskrit": "सुवर्णं पुष्पितां पृथ्वीं चिन्वन्ति पुरुषास्त्रयः ।\nशूरश्च कृतविद्यश्च यश्च जानाति सेवितुम् ॥ १० ॥",
+          "hindi": "इस रत्नगर्भा पृथ्वी के श्रेष्ठ फलों का उपभोग तीन ही पुरुष करते हैं: शूरवीर, विद्या संपन्न ज्ञानी, और सेवाभाव को जानने वाला व्यक्ति।",
+          "english": "Three types of mortals gather golden flowers from this earth: the valiant, the master of wisdom, and the servant of truth."
+        }
+      ]
+    }
+  ]
+}

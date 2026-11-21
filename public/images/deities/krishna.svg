@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <radialGradient id="krishnaSky" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" stopColor="#1E1B4B"/>
+      <stop offset="40%" stopColor="#2E1065"/>
+      <stop offset="100%" stopColor="#0B0314"/>
+    </radialGradient>
+    <radialGradient id="krishnaHalo" cx="50%" cy="35%" r="45%">
+      <stop offset="0%" stopColor="#FACC15" stopOpacity="0.85"/>
+      <stop offset="60%" stopColor="#C084FC" stopOpacity="0.4"/>
+      <stop offset="100%" stopColor="#A855F7" stopOpacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="500" height="500" rx="30" fill="url(#krishnaSky)"/>
+  <circle cx="250" cy="180" r="140" fill="url(#krishnaHalo)"/>
+
+  <!-- Peacock Feather -->
+  <ellipse cx="280" cy="70" rx="28" ry="42" fill="#047857" transform="rotate(25, 280, 70)"/>
+  <ellipse cx="280" cy="70" rx="18" ry="26" fill="#0284C7" transform="rotate(25, 280, 70)"/>
+  <circle cx="280" cy="70" r="5" fill="#FDE047"/>
+
+  <!-- Crown -->
+  <polygon points="250,90 215,140 285,140" fill="#F59E0B" stroke="#FDE047" stroke-width="2"/>
+  <circle cx="250" cy="115" r="5" fill="#EF4444"/>
+
+  <!-- Face -->
+  <path d="M 215 150 C 215 130 285 130 285 150 C 290 195 280 230 250 235 C 220 230 210 195 215 150 Z" fill="#60A5FA"/>
+  <path d="M 244 145 L 244 175 Q 250 185 256 175 L 256 145" fill="#FEF08A"/>
+  <circle cx="250" cy="180" r="2.5" fill="#EF4444"/>
+
+  <ellipse cx="233" cy="172" rx="9" ry="5.5" fill="#FFFFFF"/>
+  <circle cx="234" cy="172" r="3.5" fill="#0F172A"/>
+  <ellipse cx="267" cy="172" rx="9" ry="5.5" fill="#FFFFFF"/>
+  <circle cx="266" cy="172" r="3.5" fill="#0F172A"/>
+
+  <!-- Flute -->
+  <rect x="130" y="205" width="240" height="12" rx="6" fill="#FDE047" stroke="#B45309" stroke-width="1.5" transform="rotate(-12, 250, 210)"/>
+  <path d="M 175 250 C 165 320 180 400 250 400 C 320 400 335 320 325 250 Z" fill="#EAB308"/>
+
+  <text x="250" y="475" font-family="serif" font-size="22" font-weight="bold" fill="#FEF08A" text-anchor="middle">🪈 हरे कृष्ण हरे कृष्ण कृष्ण कृष्ण हरे हरे 🪈</text>
+</svg>

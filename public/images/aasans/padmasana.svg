@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <radialGradient id="asanBg" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stopColor="#1E1B4B"/>
+      <stop offset="60%" stopColor="#0F172A"/>
+      <stop offset="100%" stopColor="#020617"/>
+    </radialGradient>
+    <radialGradient id="chakraGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stopColor="#F59E0B" stopOpacity="0.8"/>
+      <stop offset="50%" stopColor="#D97706" stopOpacity="0.3"/>
+      <stop offset="100%" stopColor="#B45309" stopOpacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="500" height="500" rx="30" fill="url(#asanBg)"/>
+
+  <!-- Mat -->
+  <ellipse cx="250" cy="420" rx="190" ry="35" fill="#78350F" stroke="#F59E0B" stroke-width="2"/>
+  <ellipse cx="250" cy="420" rx="170" ry="25" fill="#D97706"/>
+
+  <!-- Chakras -->
+  <line x1="250" y1="120" x2="250" y2="410" stroke="#FDE047" stroke-width="3" stroke-dasharray="6,4" opacity="0.8"/>
+  <circle cx="250" cy="150" r="18" fill="url(#chakraGlow)"/>
+  <circle cx="250" cy="270" r="18" fill="url(#chakraGlow)"/>
+  <circle cx="250" cy="380" r="18" fill="url(#chakraGlow)"/>
+
+  <!-- Head -->
+  <circle cx="250" cy="140" r="32" fill="#FED7AA" stroke="#EA580C" stroke-width="2"/>
+  <circle cx="250" cy="105" r="12" fill="#78350F"/>
+  <circle cx="250" cy="138" r="3" fill="#DC2626"/>
+
+  <!-- Torso -->
+  <path d="M 190 200 C 190 270 210 320 250 320 C 290 320 310 270 310 200 Z" fill="#EA580C" stroke="#C2410C" stroke-width="2"/>
+
+  <!-- Arms with Gyan Mudra -->
+  <path d="M 190 210 C 150 250 130 320 140 370" fill="none" stroke="#FED7AA" stroke-width="20" stroke-linecap="round"/>
+  <circle cx="140" cy="370" r="9" fill="#FED7AA" stroke="#EA580C" stroke-width="2"/>
+
+  <path d="M 310 210 C 350 250 370 320 360 370" fill="none" stroke="#FED7AA" stroke-width="20" stroke-linecap="round"/>
+  <circle cx="360" cy="370" r="9" fill="#FED7AA" stroke="#EA580C" stroke-width="2"/>
+
+  <!-- Crossed Legs of Padmasana -->
+  <path d="M 220 320 C 160 330 110 360 135 390 C 170 410 230 400 280 370" fill="#EA580C" stroke="#C2410C" stroke-width="2"/>
+  <path d="M 280 320 C 340 330 390 360 365 390 C 330 410 270 400 220 370" fill="#EA580C" stroke="#C2410C" stroke-width="2"/>
+
+  <!-- Soles of Feet turned upward -->
+  <ellipse cx="215" cy="365" rx="20" ry="10" fill="#FED7AA" stroke="#EA580C" stroke-width="1.5" transform="rotate(-15, 215, 365)"/>
+  <ellipse cx="285" cy="365" rx="20" ry="10" fill="#FED7AA" stroke="#EA580C" stroke-width="1.5" transform="rotate(15, 285, 365)"/>
+
+  <text x="250" y="465" font-family="serif" font-size="20" font-weight="bold" fill="#FEF08A" text-anchor="middle">🧘 पद्मासन (कमलासन) • मेरुदण्ड सीधा</text>
+</svg>
