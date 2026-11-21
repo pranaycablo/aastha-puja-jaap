@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { X, Calendar, Clock, Flame, CheckCircle2, Award, Sparkles, TrendingUp, RefreshCw, ChevronRight } from 'lucide-react';
+import React, { useState, useEffect, useRef } from 'react';
+import { X, Calendar, Clock, Flame, CheckCircle2, Award, Sparkles, TrendingUp, RefreshCw, ChevronRight, Download, Upload, ShieldCheck, Database } from 'lucide-react';
 import { sadhanaHistoryManager, JapaHistoryEntry, ActiveSankalp } from '../utils/sadhanaHistoryManager';
 import { UserProfile, LanguageCode } from '../types';
 import { AdMobNativeCard } from './AdMobNativeCard';
@@ -20,11 +20,13 @@ export const SadhanaHistoryModal: React.FC<SadhanaHistoryModalProps> = ({
   onSelectMantraForJaap
 }) => {
   const isHi = language === 'hi';
-  const [activeTab, setActiveTab] = useState<'sessions' | 'weekly' | 'sankalp'>('sessions');
+  const [activeTab, setActiveTab] = useState<'sessions' | 'weekly' | 'sankalp' | 'backup'>('sessions');
   const [history, setHistory] = useState<JapaHistoryEntry[]>([]);
   const [activeSankalp, setActiveSankalp] = useState<ActiveSankalp | null>(null);
   const [todayStats, setTodayStats] = useState({ malas: 0, beads: 0, sessionsCount: 0 });
   const [weeklySummary, setWeeklySummary] = useState<any[]>([]);
+  const [backupStatus, setBackupStatus] = useState<string | null>(null);
+  const fileInputRef = useRef<HTMLInputElement | null>(null);
 
   useEffect(() => {
     if (isOpen) {
@@ -38,6 +40,80 @@ export const SadhanaHistoryModal: React.FC<SadhanaHistoryModalProps> = ({
     setActiveSankalp(sadhanaHistoryManager.getActiveSankalp());
     setTodayStats(sadhanaHistoryManager.getTodayTotals());
     setWeeklySummary(sadhanaHistoryManager.getWeeklySummary());
+  };
+
+  const handleExportBackup = () => {
+    try {
+      const backupData = {
+        app: 'Aastha : Puja Jaap',
+        version: '2.6.0',
+        exportedAt: new Date().toISOString(),
+        userProfile,
+        japaHistory: history,
+        activeSankalp,
+        unlockedTiers: localStorage.getItem('divya_jaap_unlocked_tiers')
+          ? JSON.parse(localStorage.getItem('divya_jaap_unlocked_tiers')!)
+          : {},
+        bookmarks: localStorage.getItem('aastha_scripture_bookmarks')
+          ? JSON.parse(localStorage.getItem('aastha_scripture_bookmarks')!)
+          : []
+      };
+
+      const dataStr = 'data:text/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(backupData, null, 2));
+      const downloadAnchor = document.createElement('a');
+      downloadAnchor.setAttribute('href', dataStr);
+      downloadAnchor.setAttribute('download', `Aastha_Sadhana_Backup_${userProfile.name || 'User'}_${new Date().toISOString().split('T')[0]}.json`);
+      document.body.appendChild(downloadAnchor);
+      downloadAnchor.click();
+      downloadAnchor.remove();
+
+      setBackupStatus(isHi ? '✓ बैकअप फाइल सफलतापूर्वक डाउनलोड हो गई!' : '✓ Backup downloaded successfully!');
+      setTimeout(() => setBackupStatus(null), 4000);
+    } catch (e) {
+      setBackupStatus(isHi ? 'बैकअप डाउनलोड में त्रुटि आई।' : 'Failed to export backup.');
+    }
+  };
+
+  const handleImportBackup = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      try {
+        const text = e.target?.result as string;
+        const parsed = JSON.parse(text);
+
+        if (!parsed.app || !parsed.userProfile) {
+          throw new Error('अमान्य बैकअप फाइल');
+        }
+
+        if (parsed.userProfile) {
+          localStorage.setItem('aastha_user_profile_v2', JSON.stringify(parsed.userProfile));
+        }
+        if (parsed.japaHistory) {
+          localStorage.setItem('aastha_japa_history_records_v1', JSON.stringify(parsed.japaHistory));
+        }
+        if (parsed.activeSankalp) {
+          localStorage.setItem('aastha_active_sankalp_plan_v1', JSON.stringify(parsed.activeSankalp));
+        }
+        if (parsed.unlockedTiers) {
+          localStorage.setItem('divya_jaap_unlocked_tiers', JSON.stringify(parsed.unlockedTiers));
+        }
+        if (parsed.bookmarks) {
+          localStorage.setItem('aastha_scripture_bookmarks', JSON.stringify(parsed.bookmarks));
+        }
+
+        loadData();
+        setBackupStatus(isHi ? '✓ समस्त साधना डेटा व इतिहास सफलतापूर्वक रिस्टोर हो गया! ऐप रीलोड हो रहा है...' : '✓ Data restored successfully! Reloading...');
+        setTimeout(() => {
+          window.location.reload();
+        }, 1200);
+      } catch (err) {
+        setBackupStatus(isHi ? 'त्रुटि: बैकअप फाइल सही नहीं है।' : 'Error: Invalid backup file.');
+      }
+    };
+    reader.readAsText(file);
   };
 
   if (!isOpen) return null;
@@ -139,6 +215,18 @@ export const SadhanaHistoryModal: React.FC<SadhanaHistoryModalProps> = ({
             <Award className="w-3.5 h-3.5" />
             {isHi ? 'सक्रिय संकल्प' : 'Sankalp'}
           </button>
+
+          <button
+            onClick={() => setActiveTab('backup')}
+            className={`flex-1 py-2 px-3 rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-1.5 ${
+              activeTab === 'backup'
+                ? 'bg-gradient-to-r from-amber-500 to-orange-600 text-slate-950 font-black shadow-md'
+                : 'bg-white/5 text-amber-200/70 hover:bg-white/10'
+            }`}
+          >
+            <Database className="w-3.5 h-3.5" />
+            {isHi ? 'बैकअप' : 'Backup'}
+          </button>
         </div>
 
         {/* Scrollable Content Body */}
@@ -215,6 +303,74 @@ export const SadhanaHistoryModal: React.FC<SadhanaHistoryModalProps> = ({
                   </div>
                 ))
               )}
+            </div>
+          )}
+
+          {/* TAB 4: DATA BACKUP & RESTORE */}
+          {activeTab === 'backup' && (
+            <div className="space-y-3">
+              <div className="p-4 rounded-2xl bg-gradient-to-br from-[#281347] to-[#190B2E] border border-amber-500/30 space-y-3 shadow-lg">
+                <div className="flex items-center gap-2.5">
+                  <span className="w-10 h-10 rounded-xl bg-amber-500/20 border border-amber-400/30 flex items-center justify-center text-xl shadow-xs">
+                    💾
+                  </span>
+                  <div>
+                    <h4 className="text-sm font-black text-amber-100">
+                      {isHi ? 'आध्यात्मिक साधना डेटा बैकअप' : 'Sadhana Data Backup'}
+                    </h4>
+                    <p className="text-[11px] text-amber-300/70">
+                      {isHi ? 'मोबाइल बदलने पर भी जाप, माला व संकल्प कभी न खोएं' : 'Preserve your chanting history and records safely'}
+                    </p>
+                  </div>
+                </div>
+
+                <div className="p-3 bg-black/40 rounded-xl border border-white/10 text-xs text-amber-200/90 space-y-1">
+                  <div className="flex items-center gap-1.5 text-emerald-300 font-bold">
+                    <ShieldCheck className="w-4 h-4 shrink-0" />
+                    <span>{isHi ? 'बैकअप में क्या सुरक्षित होगा?' : 'What gets backed up?'}</span>
+                  </div>
+                  <ul className="list-disc pl-4 space-y-0.5 text-[11px] text-amber-200/80">
+                    <li>{isHi ? 'आपकी प्रोफ़ाइल (नाम, जन्म विवरण, इष्टदेव)' : 'Your Profile and Isht Devta'}</li>
+                    <li>{isHi ? 'समस्त जाप सत्र एवं कुल माला संख्या' : 'All Chanting sessions and total malas'}</li>
+                    <li>{isHi ? 'अनलॉक कुण्डली व अंक ज्योतिष रिपोर्ट्स' : 'Unlocked Reports and Scripture Bookmarks'}</li>
+                  </ul>
+                </div>
+
+                {backupStatus && (
+                  <div className="p-2.5 rounded-xl bg-emerald-950/80 border border-emerald-500/40 text-emerald-200 text-xs font-bold text-center animate-fadeIn">
+                    {backupStatus}
+                  </div>
+                )}
+
+                <div className="grid grid-cols-2 gap-2 pt-1">
+                  {/* Export Button */}
+                  <button
+                    type="button"
+                    onClick={handleExportBackup}
+                    className="py-2.5 px-3 rounded-xl bg-gradient-to-r from-amber-500 to-orange-600 text-slate-950 font-black text-xs shadow-md hover:brightness-105 active:scale-95 transition-all flex items-center justify-center gap-1.5 cursor-pointer"
+                  >
+                    <Download className="w-4 h-4" />
+                    <span>{isHi ? 'बैकअप डाउनलोड' : 'Download Backup'}</span>
+                  </button>
+
+                  {/* Import Button */}
+                  <button
+                    type="button"
+                    onClick={() => fileInputRef.current?.click()}
+                    className="py-2.5 px-3 rounded-xl bg-white/10 hover:bg-white/20 text-amber-200 font-black text-xs border border-amber-400/40 active:scale-95 transition-all flex items-center justify-center gap-1.5 cursor-pointer"
+                  >
+                    <Upload className="w-4 h-4" />
+                    <span>{isHi ? 'रिस्टोर करें' : 'Restore Data'}</span>
+                  </button>
+                  <input
+                    ref={fileInputRef}
+                    type="file"
+                    accept=".json"
+                    onChange={handleImportBackup}
+                    className="hidden"
+                  />
+                </div>
+              </div>
             </div>
           )}
 
@@ -327,6 +483,74 @@ export const SadhanaHistoryModal: React.FC<SadhanaHistoryModalProps> = ({
                   </p>
                 </div>
               )}
+            </div>
+          )}
+
+          {/* TAB 4: DATA BACKUP & RESTORE */}
+          {activeTab === 'backup' && (
+            <div className="space-y-3">
+              <div className="p-4 rounded-2xl bg-gradient-to-br from-[#281347] to-[#190B2E] border border-amber-500/30 space-y-3 shadow-lg">
+                <div className="flex items-center gap-2.5">
+                  <span className="w-10 h-10 rounded-xl bg-amber-500/20 border border-amber-400/30 flex items-center justify-center text-xl shadow-xs">
+                    💾
+                  </span>
+                  <div>
+                    <h4 className="text-sm font-black text-amber-100">
+                      {isHi ? 'आध्यात्मिक साधना डेटा बैकअप' : 'Sadhana Data Backup'}
+                    </h4>
+                    <p className="text-[11px] text-amber-300/70">
+                      {isHi ? 'मोबाइल बदलने पर भी जाप, माला व संकल्प कभी न खोएं' : 'Preserve your chanting history and records safely'}
+                    </p>
+                  </div>
+                </div>
+
+                <div className="p-3 bg-black/40 rounded-xl border border-white/10 text-xs text-amber-200/90 space-y-1">
+                  <div className="flex items-center gap-1.5 text-emerald-300 font-bold">
+                    <ShieldCheck className="w-4 h-4 shrink-0" />
+                    <span>{isHi ? 'बैकअप में क्या सुरक्षित होगा?' : 'What gets backed up?'}</span>
+                  </div>
+                  <ul className="list-disc pl-4 space-y-0.5 text-[11px] text-amber-200/80">
+                    <li>{isHi ? 'आपकी प्रोफ़ाइल (नाम, जन्म विवरण, इष्टदेव)' : 'Your Profile and Isht Devta'}</li>
+                    <li>{isHi ? 'समस्त जाप सत्र एवं कुल माला संख्या' : 'All Chanting sessions and total malas'}</li>
+                    <li>{isHi ? 'अनलॉक कुण्डली व अंक ज्योतिष रिपोर्ट्स' : 'Unlocked Reports and Scripture Bookmarks'}</li>
+                  </ul>
+                </div>
+
+                {backupStatus && (
+                  <div className="p-2.5 rounded-xl bg-emerald-950/80 border border-emerald-500/40 text-emerald-200 text-xs font-bold text-center animate-fadeIn">
+                    {backupStatus}
+                  </div>
+                )}
+
+                <div className="grid grid-cols-2 gap-2 pt-1">
+                  {/* Export Button */}
+                  <button
+                    type="button"
+                    onClick={handleExportBackup}
+                    className="py-2.5 px-3 rounded-xl bg-gradient-to-r from-amber-500 to-orange-600 text-slate-950 font-black text-xs shadow-md hover:brightness-105 active:scale-95 transition-all flex items-center justify-center gap-1.5 cursor-pointer"
+                  >
+                    <Download className="w-4 h-4" />
+                    <span>{isHi ? 'बैकअप डाउनलोड' : 'Download Backup'}</span>
+                  </button>
+
+                  {/* Import Button */}
+                  <button
+                    type="button"
+                    onClick={() => fileInputRef.current?.click()}
+                    className="py-2.5 px-3 rounded-xl bg-white/10 hover:bg-white/20 text-amber-200 font-black text-xs border border-amber-400/40 active:scale-95 transition-all flex items-center justify-center gap-1.5 cursor-pointer"
+                  >
+                    <Upload className="w-4 h-4" />
+                    <span>{isHi ? 'रिस्टोर करें' : 'Restore Data'}</span>
+                  </button>
+                  <input
+                    ref={fileInputRef}
+                    type="file"
+                    accept=".json"
+                    onChange={handleImportBackup}
+                    className="hidden"
+                  />
+                </div>
+              </div>
             </div>
           )}
 

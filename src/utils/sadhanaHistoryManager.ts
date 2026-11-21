@@ -40,15 +40,13 @@ export interface ActiveSankalp {
 class SadhanaHistoryManager {
   /**
    * Get all recorded japa sessions sorted by most recent first
+   * Strictly real user records only - Zero dummy/demo data
    */
   getHistory(): JapaHistoryEntry[] {
     try {
       const data = localStorage.getItem(HISTORY_STORAGE_KEY);
       if (!data) {
-        // Provide initial demo entries so user sees a rich, motivating history immediately
-        const initialSeed = this.generateInitialSeed();
-        localStorage.setItem(HISTORY_STORAGE_KEY, JSON.stringify(initialSeed));
-        return initialSeed;
+        return [];
       }
       const parsed = JSON.parse(data);
       return Array.isArray(parsed) ? parsed : [];
@@ -194,52 +192,6 @@ class SadhanaHistoryManager {
       }
     }
     localStorage.setItem(ACTIVE_SANKALP_KEY, JSON.stringify(sankalp));
-  }
-
-  /**
-   * Seed data if new user opens history
-   */
-  private generateInitialSeed(): JapaHistoryEntry[] {
-    const yesterday = new Date();
-    yesterday.setDate(yesterday.getDate() - 1);
-
-    const twoDaysAgo = new Date();
-    twoDaysAgo.setDate(twoDaysAgo.getDate() - 2);
-
-    return [
-      {
-        id: 'seed_1',
-        date: yesterday.toLocaleDateString('hi-IN', { day: 'numeric', month: 'short', year: 'numeric' }),
-        isoDate: yesterday.toISOString().split('T')[0],
-        timestamp: yesterday.getTime(),
-        timeString: '06:15 AM',
-        mantraId: 'shiva-1',
-        mantraName: 'ॐ नमः शिवाय',
-        beadsCount: 108,
-        malasCount: 1,
-        targetMalas: 1,
-        completed: true,
-        durationMinutes: 12,
-        sankalpPlan: 'दैनिक नित्य नियम',
-        deityName: 'भगवान शिव'
-      },
-      {
-        id: 'seed_2',
-        date: twoDaysAgo.toLocaleDateString('hi-IN', { day: 'numeric', month: 'short', year: 'numeric' }),
-        isoDate: twoDaysAgo.toISOString().split('T')[0],
-        timestamp: twoDaysAgo.getTime(),
-        timeString: '07:00 PM',
-        mantraId: 'hanuman-1',
-        mantraName: 'ॐ हं हनुमते नमः',
-        beadsCount: 324,
-        malasCount: 3,
-        targetMalas: 3,
-        completed: true,
-        durationMinutes: 28,
-        sankalpPlan: '११ दिवसीय शांति संकल्प',
-        deityName: 'श्री हनुमान जी'
-      }
-    ];
   }
 
   clearHistory(): void {
