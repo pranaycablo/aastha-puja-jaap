@@ -822,7 +822,7 @@ export const MantraSelectionPage: React.FC<MantraSelectionPageProps> = ({
                               className="flex items-center gap-1 px-3 py-1.5 rounded-xl bg-gradient-to-r from-emerald-600 to-green-600 text-white font-black text-xs shadow-xs active:scale-95 transition-all"
                             >
                               <Play className="w-3 h-3 fill-current" />
-                              <span>{isHi ? 'जाप करें' : 'Chant Now'}</span>
+                              <span>{isHi ? (item.category === 'stotram' || item.category === 'chalisa' ? 'पाठ करें 📖' : 'जप करें 📿') : (item.category === 'stotram' || item.category === 'chalisa' ? 'Recite' : 'Chant Now')}</span>
                             </button>
                           </div>
                         ) : (
@@ -841,7 +841,7 @@ export const MantraSelectionPage: React.FC<MantraSelectionPageProps> = ({
                               className="px-3.5 py-1.5 rounded-xl bg-gradient-to-r from-orange-600 to-amber-600 text-white font-black text-xs hover:brightness-105 active:scale-95 transition-all shadow-sm flex items-center gap-1"
                             >
                               <Play className="w-3 h-3 fill-current" />
-                              <span>{isHi ? 'चुनें व जपें' : 'Select & Chant'}</span>
+                              <span>{isHi ? (item.category === 'stotram' || item.category === 'chalisa' ? 'पाठ करें 📖' : 'चुनें व जपें 📿') : (item.category === 'stotram' || item.category === 'chalisa' ? 'Select & Recite' : 'Select & Chant')}</span>
                             </button>
                           </div>
                         )}

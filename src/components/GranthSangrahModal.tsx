@@ -297,7 +297,17 @@ export const GranthSangrahModal: React.FC<GranthSangrahModalProps> = ({
             className="px-4 py-2 rounded-xl bg-gradient-to-r from-orange-600 to-amber-600 text-white font-black text-xs shadow-md hover:brightness-105 active:scale-95 flex items-center gap-1.5"
           >
             <Play className="w-3.5 h-3.5 fill-current" />
-            <span>{isHi ? 'माला काउंटर पर जपें 📿' : 'Chant on Mala'}</span>
+            <span>
+              {isHi
+                ? activeTab === 'stotram'
+                  ? 'नित्य स्तोत्र पाठ करें 📖'
+                  : activeTab === 'sundarkand'
+                  ? 'सुंदरकांड पाठ करें 📖'
+                  : activeTab === 'gita'
+                  ? 'गीता स्वाध्याय करें 📖'
+                  : 'साधना काउंटर पर जपें 📿'
+                : 'Recite Paath 📖'}
+            </span>
           </button>
         </div>
       </div>

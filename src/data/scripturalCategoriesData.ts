@@ -19,7 +19,7 @@ export const SCRIPTURAL_MASTER_CATEGORIES: ScripturalMasterCategory[] = [
     id: 'nitya_prarthana',
     nameHi: 'नित्य दैनिक प्रार्थना',
     nameEn: 'Daily Prayers & Shlokas',
-    badge: '२२ पावन श्लोक • दैनिक मंगलाचरण',
+    badge: 'दैनिक मंगलाचरण व नित्य जप',
     icon: '🙏',
     colorGradient: 'from-emerald-500/20 via-teal-500/15 to-green-500/20',
     borderColor: 'border-emerald-400',
