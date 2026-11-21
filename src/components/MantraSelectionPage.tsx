@@ -46,6 +46,7 @@ interface MantraSelectionPageProps {
 
 type MasterCategoryKey =
   | 'all'
+  | 'nitya_prarthana'
   | 'chalisa'
   | 'aarti'
   | 'naam_jaap'
@@ -145,7 +146,8 @@ export const MantraSelectionPage: React.FC<MantraSelectionPageProps> = ({
     const counts: Record<string, number> = {};
     allMantras.forEach((m) => {
       let key: MasterCategoryKey = 'all';
-      if (m.category === 'chalisa') key = 'chalisa';
+      if (m.category === 'nitya_prarthana') key = 'nitya_prarthana';
+      else if (m.category === 'chalisa') key = 'chalisa';
       else if (m.category === 'aarti') key = 'aarti';
       else if (m.category === 'naam_jaap' || m.category === 'sadhu') key = 'naam_jaap';
       else if (m.category === 'siddhi_mantra' || m.category === 'dhan_siddhi' || m.category === 'manokamna') key = 'siddhi_mantra';
@@ -181,7 +183,9 @@ export const MantraSelectionPage: React.FC<MantraSelectionPageProps> = ({
 
       // 2. Master Category Filter (Inclusive of relevant subcategories)
       let matchCategory = true;
-      if (masterCategory === 'chalisa') {
+      if (masterCategory === 'nitya_prarthana') {
+        matchCategory = m.category === 'nitya_prarthana';
+      } else if (masterCategory === 'chalisa') {
         matchCategory = m.category === 'chalisa';
       } else if (masterCategory === 'aarti') {
         matchCategory = m.category === 'aarti';

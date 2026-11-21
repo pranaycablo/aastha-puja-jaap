@@ -11,6 +11,7 @@ import { NAAM_JAAP_MANTRAS } from './naamJaapData';
 import { SCRIPTURAL_MANTRAS } from './scripturalCategoriesData';
 import { AARTI_MANTRAS } from './aartiData';
 import { CANONICAL_MAHAKOSH_MANTRAS } from './canonicalMantraMahakoshData';
+import { NITYA_PRACHALIT_MANTRAS } from './nityaPrachalitMantraData';
 
 export const DEITY_CONFIG: Record<DeityType, { label: string; icon: string; title: string }> = {
   shiva: { label: 'भगवान शिव (महादेव)', icon: '🔱', title: 'कल्याणकारी व मोक्ष प्रदाता' },
@@ -30,6 +31,11 @@ export const DEITY_CONFIG: Record<DeityType, { label: string; icon: string; titl
 };
 
 export const CATEGORY_INFO: Record<MantraCategory, { label: string; badgeColor: string; description: string }> = {
+  nitya_prarthana: {
+    label: 'नित्य दैनिक प्रार्थना व मंगलाचरण',
+    badgeColor: 'bg-emerald-700 text-emerald-50 border-emerald-800',
+    description: 'कृष्णाय वासुदेवाय, मङ्गलं भगवान् विष्णुः, कर्पूरगौरं, प्रातः कर-दर्शन, दीप दर्शन व शांति पाठ'
+  },
   chalisa: {
     label: 'चालीसा संग्रह',
     badgeColor: 'bg-red-700 text-red-50 border-red-800',
@@ -170,6 +176,11 @@ export const DEITY_CONFIG_EN: Record<DeityType, { label: string; icon: string; t
 };
 
 export const CATEGORY_INFO_EN: Record<MantraCategory, { label: string; badgeColor: string; description: string }> = {
+  nitya_prarthana: {
+    label: 'Daily Prayers & Mangalacharan',
+    badgeColor: 'bg-emerald-700 text-emerald-50 border-emerald-800',
+    description: 'Essential daily shlokas including Krishnay Vasudevay, Mangalam Bhagwan Vishnu, Karpura Gauram'
+  },
   chalisa: {
     label: 'Chalisa Sangrah',
     badgeColor: 'bg-red-700 text-red-50 border-red-800',
@@ -293,6 +304,10 @@ export const CATEGORY_INFO_EN: Record<MantraCategory, { label: string; badgeColo
 };
 
 const RAW_PRELOADED_MANTRAS: MantraItem[] = [
+  // ==========================================
+  // नित्य दैनिक प्रचलित प्रार्थना व मंगलाचरण (DAILY ESSENTIAL PRAYERS)
+  // ==========================================
+  ...NITYA_PRACHALIT_MANTRAS,
   // ==========================================
   // CANONICAL MANTRA MAHAKOSH (9 Master Categories)
   // ==========================================

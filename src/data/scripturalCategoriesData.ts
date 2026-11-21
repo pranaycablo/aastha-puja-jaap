@@ -16,6 +16,19 @@ export interface ScripturalMasterCategory {
 
 export const SCRIPTURAL_MASTER_CATEGORIES: ScripturalMasterCategory[] = [
   {
+    id: 'nitya_prarthana',
+    nameHi: 'नित्य दैनिक प्रार्थना',
+    nameEn: 'Daily Prayers & Shlokas',
+    badge: '२२ पावन श्लोक • दैनिक मंगलाचरण',
+    icon: '🙏',
+    colorGradient: 'from-emerald-500/20 via-teal-500/15 to-green-500/20',
+    borderColor: 'border-emerald-400',
+    textColor: 'text-emerald-950',
+    shastraPraman: 'सकल सनातन नित्य कर्म, श्रीमद्भागवत, विष्णु पुराण एवं स्मृति साहित्य',
+    descriptionHi: 'कृष्णाय वासुदेवाय, मङ्गलं भगवान् विष्णुः, कर्पूरगौरं, कर-दर्शन, दीप दर्शन, भोजन मंत्र, समर्पण व शांति पाठ।',
+    descriptionEn: 'Essential daily shlokas including Krishnay Vasudevay, Mangalam Bhagwan Vishnu, Karpura Gauram and Shanti Path.'
+  },
+  {
     id: 'chalisa',
     nameHi: 'चालीसा संग्रह',
     nameEn: 'Chalisa Sangrah',

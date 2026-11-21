@@ -15,6 +15,7 @@ export type DeityType =
   | 'custom';
 
 export type MantraCategory =
+  | 'nitya_prarthana'
   | 'chalisa'
   | 'aarti'
   | 'naam_jaap'
