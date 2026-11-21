@@ -273,28 +273,30 @@ export const MainLandingPage: React.FC<MainLandingPageProps> = ({
         {/* Auspicious Color, Lucky Number & Daily Guidance Badges */}
         <div className="space-y-2.5 relative z-10">
           <div className="flex flex-wrap items-center gap-2">
-            <div className="flex items-center gap-1.5 bg-black/25 border border-white/20 px-2.5 py-1 rounded-xl text-xs font-bold text-white shadow-2xs">
-              <span
-                className="w-3.5 h-3.5 rounded-full border border-white shadow-2xs shrink-0"
-                style={{ backgroundColor: guidance.auspiciousColorHex }}
-              />
-              <span>{isHi ? `शुभ रंग: ${guidance.auspiciousColorNameHi.split('(')[0].trim()}` : guidance.auspiciousColorNameHi}</span>
-            </div>
-
-            <div className="flex items-center gap-1 bg-black/25 border border-white/20 px-2.5 py-1 rounded-xl text-xs font-bold text-white shadow-2xs">
-              <span>🔢</span>
-              <span>{isHi ? `शुभ अंक: ${guidance.luckyNumber}` : `Lucky #${guidance.luckyNumber}`}</span>
-            </div>
-
             {hasUserDetailsForKundali ? (
-              <div className="flex items-center gap-1 bg-gradient-to-r from-yellow-400 to-amber-500 text-stone-950 px-2.5 py-1 rounded-xl text-xs font-black shadow-xs">
-                <span>✨</span>
-                <span>{isHi ? `मूलांक ${calculateMoolank(userProfile.dob)}` : `Root ${calculateMoolank(userProfile.dob)}`}</span>
-              </div>
+              <>
+                <div className="flex items-center gap-1.5 bg-black/25 border border-white/20 px-2.5 py-1 rounded-xl text-xs font-bold text-white shadow-2xs">
+                  <span
+                    className="w-3.5 h-3.5 rounded-full border border-white shadow-2xs shrink-0"
+                    style={{ backgroundColor: guidance.auspiciousColorHex }}
+                  />
+                  <span>{isHi ? `शुभ रंग: ${guidance.auspiciousColorNameHi.split('(')[0].trim()}` : guidance.auspiciousColorNameHi}</span>
+                </div>
+
+                <div className="flex items-center gap-1 bg-black/25 border border-white/20 px-2.5 py-1 rounded-xl text-xs font-bold text-white shadow-2xs">
+                  <span>🔢</span>
+                  <span>{isHi ? `शुभ अंक: ${guidance.luckyNumber}` : `Lucky #${guidance.luckyNumber}`}</span>
+                </div>
+
+                <div className="flex items-center gap-1 bg-gradient-to-r from-yellow-400 to-amber-500 text-stone-950 px-2.5 py-1 rounded-xl text-xs font-black shadow-xs">
+                  <span>✨</span>
+                  <span>{isHi ? `मूलांक ${calculateMoolank(userProfile.dob)}` : `Root ${calculateMoolank(userProfile.dob)}`}</span>
+                </div>
+              </>
             ) : (
-              <div className="flex items-center gap-1 bg-gradient-to-r from-yellow-300 to-amber-400 text-stone-950 px-2.5 py-1 rounded-xl text-xs font-black shadow-xs">
+              <div className="flex items-center gap-1.5 bg-black/35 border border-amber-300/40 px-3 py-1.5 rounded-xl text-xs font-bold text-amber-200 shadow-2xs">
                 <span>🔒</span>
-                <span>{isHi ? 'जन्म विवरण दर्ज करें' : 'Add Birth Details'}</span>
+                <span>{isHi ? 'शुभ रंग व शुभ अंक हेतु जन्म विवरण दर्ज करें' : 'Enter Details for Lucky Color & Number'}</span>
               </div>
             )}
           </div>
@@ -303,10 +305,10 @@ export const MainLandingPage: React.FC<MainLandingPageProps> = ({
             <span className="line-clamp-1 font-medium opacity-95">
               {hasUserDetailsForKundali
                 ? (isHi ? `श्री ${userProfile.name} जी, आज ${guidance.auspiciousColorNameHi.split('(')[0].trim()} रंग धारण करना अति शुभ रहेगा` : 'Auspicious cloth color & personalized guide')
-                : (isHi ? '🔒 जन्म विवरण दर्ज कर व्यक्तिगत राशिफल, मूलांक व शुभ मुहूर्त अनलॉक करें' : 'Tap to complete profile for personalized guidance')}
+                : (isHi ? '🔒 जन्म विवरण दर्ज कर व्यक्तिगत शुभ रंग, शुभ अंक व मूलांक अनलॉक करें' : 'Tap to complete profile for personalized guidance')}
             </span>
             <span className="font-black text-amber-300 shrink-0 ml-2 group-hover:translate-x-1 transition-transform">
-              {hasUserDetailsForKundali ? (isHi ? 'विस्तार से ➔' : 'View ➔') : (isHi ? 'अनलॉक करें ➔' : 'Unlock ➔')}
+              {hasUserDetailsForKundali ? (isHi ? 'विस्तार से ➔' : 'अनलॉक करें ➔') : (isHi ? 'अनलॉक करें ➔' : 'Unlock ➔')}
             </span>
           </div>
         </div>

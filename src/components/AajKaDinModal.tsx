@@ -149,60 +149,95 @@ export const AajKaDinModal: React.FC<AajKaDinModalProps> = ({
               </h3>
             </div>
             <div className="flex items-center gap-1.5 text-xs font-black">
-              <span className="px-2.5 py-1 rounded-xl bg-orange-600 text-white shadow-2xs">
-                {isHi ? `शुभ अंक: ${guidance.luckyNumber}` : `Lucky #${guidance.luckyNumber}`}
-              </span>
+              {hasRealDetails ? (
+                <span className="px-2.5 py-1 rounded-xl bg-orange-600 text-white shadow-2xs">
+                  {isHi ? `शुभ अंक: ${guidance.luckyNumber}` : `Lucky #${guidance.luckyNumber}`}
+                </span>
+              ) : (
+                <span className="px-2.5 py-1 rounded-xl bg-amber-200/90 text-amber-950 shadow-2xs text-[11px] font-bold">
+                  {isHi ? '🔒 जन्म विवरण प्रतीक्षित' : '🔒 Profile Required'}
+                </span>
+              )}
             </div>
           </div>
 
-              {/* 1. KEY HIGHLIGHTS: COLOR & LUCKY NUMBER */}
-              <div className="grid grid-cols-2 gap-2.5">
-            {/* Lucky Cloth Color */}
-            <div className="bg-gradient-to-br from-amber-50 to-orange-50 border-2 border-amber-300 rounded-2xl p-3 shadow-2xs flex flex-col justify-between">
-              <div>
-                <span className="text-[10px] font-black uppercase tracking-wider text-orange-900 block mb-1">
-                  👔 {isHi ? 'आज का शुभ वस्त्र रंग:' : 'Lucky Cloth Color:'}
-                </span>
-                <div className="flex items-center gap-2 mb-1.5">
-                  <span
-                    className="w-5 h-5 rounded-full border-2 border-white shadow-xs shrink-0"
-                    style={{ backgroundColor: guidance.auspiciousColorHex }}
-                  />
-                  <h3 className="text-xs sm:text-sm font-black text-orange-950 leading-tight">
-                    {guidance.auspiciousColorNameHi}
-                  </h3>
-                </div>
-              </div>
-              <p className="text-[10px] text-gray-600 leading-relaxed">
-                {guidance.auspiciousColorDescHi}
-              </p>
-            </div>
-
-            {/* Lucky Numbers */}
-            <div className="bg-gradient-to-br from-orange-50 to-amber-50 border-2 border-orange-300 rounded-2xl p-3 shadow-2xs flex flex-col justify-between">
-              <div>
-                <span className="text-[10px] font-black uppercase tracking-wider text-orange-900 block mb-1">
-                  ✨ {isHi ? 'आज का शुभ अंक:' : 'Lucky Number:'}
-                </span>
-                <div className="flex items-center gap-2 my-1">
-                  <span className="w-10 h-10 rounded-2xl bg-orange-600 text-white font-black text-xl flex items-center justify-center shadow">
-                    {guidance.luckyNumber}
+          {/* 1. KEY HIGHLIGHTS: COLOR & LUCKY NUMBER - ONLY AFTER USER DETAILS */}
+          {hasRealDetails ? (
+            <div className="grid grid-cols-2 gap-2.5">
+              {/* Lucky Cloth Color */}
+              <div className="bg-gradient-to-br from-amber-50 to-orange-50 border-2 border-amber-300 rounded-2xl p-3 shadow-2xs flex flex-col justify-between">
+                <div>
+                  <span className="text-[10px] font-black uppercase tracking-wider text-orange-900 block mb-1">
+                    👔 {isHi ? 'आज का शुभ वस्त्र रंग:' : 'Lucky Cloth Color:'}
                   </span>
-                  <div>
-                    <span className="text-[11px] font-bold text-orange-950 block">
-                      {isHi ? 'मुख्य शुभ अंक' : 'Primary'}
-                    </span>
-                    <span className="text-[10px] text-gray-500">
-                      {isHi ? `सहायक अंक: ${guidance.secondaryLuckyNumber}` : `Secondary: ${guidance.secondaryLuckyNumber}`}
-                    </span>
+                  <div className="flex items-center gap-2 mb-1.5">
+                    <span
+                      className="w-5 h-5 rounded-full border-2 border-white shadow-xs shrink-0"
+                      style={{ backgroundColor: guidance.auspiciousColorHex }}
+                    />
+                    <h3 className="text-xs sm:text-sm font-black text-orange-950 leading-tight">
+                      {guidance.auspiciousColorNameHi}
+                    </h3>
                   </div>
                 </div>
+                <p className="text-[10px] text-gray-600 leading-relaxed">
+                  {guidance.auspiciousColorDescHi}
+                </p>
               </div>
-              <span className="text-[9.5px] text-emerald-800 font-bold bg-emerald-100/80 px-1.5 py-0.5 rounded">
-                ✓ {isHi ? 'निर्णय व कार्यों में प्रयुक्त करें' : 'Auspicious for actions'}
-              </span>
+
+              {/* Lucky Numbers */}
+              <div className="bg-gradient-to-br from-orange-50 to-amber-50 border-2 border-orange-300 rounded-2xl p-3 shadow-2xs flex flex-col justify-between">
+                <div>
+                  <span className="text-[10px] font-black uppercase tracking-wider text-orange-900 block mb-1">
+                    ✨ {isHi ? 'आज का शुभ अंक:' : 'Lucky Number:'}
+                  </span>
+                  <div className="flex items-center gap-2 my-1">
+                    <span className="w-10 h-10 rounded-2xl bg-orange-600 text-white font-black text-xl flex items-center justify-center shadow">
+                      {guidance.luckyNumber}
+                    </span>
+                    <div>
+                      <span className="text-[11px] font-bold text-orange-950 block">
+                        {isHi ? 'मुख्य शुभ अंक' : 'Primary'}
+                      </span>
+                      <span className="text-[10px] text-gray-500">
+                        {isHi ? `सहायक अंक: ${guidance.secondaryLuckyNumber}` : `Secondary: ${guidance.secondaryLuckyNumber}`}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <span className="text-[9.5px] text-emerald-800 font-bold bg-emerald-100/80 px-1.5 py-0.5 rounded">
+                  ✓ {isHi ? 'निर्णय व कार्यों में प्रयुक्त करें' : 'Auspicious for actions'}
+                </span>
+              </div>
             </div>
-          </div>
+          ) : (
+            <div className="bg-gradient-to-br from-amber-50 to-orange-50 border-2 border-dashed border-amber-300 rounded-2xl p-4 text-center space-y-2 shadow-2xs">
+              <div className="w-10 h-10 rounded-2xl bg-amber-200/80 text-amber-900 flex items-center justify-center mx-auto text-xl shadow-xs">
+                🔒
+              </div>
+              <h4 className="text-xs sm:text-sm font-black text-amber-950">
+                {isHi ? 'व्यक्तिगत शुभ रंग व शुभ अंक सुरक्षित हैं' : 'Personal Lucky Color & Number Locked'}
+              </h4>
+              <p className="text-[11px] text-stone-700 font-medium leading-relaxed max-w-sm mx-auto">
+                {isHi
+                  ? 'सनातन शास्त्रानुसार सटीक शुभ रंग व शुभ अंक व्यक्ति के शुभ नाम और जन्म तिथि (मूलांक व भाग्यांक) के आधार पर ही फलीभूत होते हैं। कृपया अपना विवरण दर्ज करें।'
+                  : 'Accurate lucky color and lucky number are personalized based on your name and birth date.'}
+              </p>
+              {onOpenProfileSetup && (
+                <button
+                  type="button"
+                  onClick={() => {
+                    onClose();
+                    onOpenProfileSetup();
+                  }}
+                  className="px-4 py-2 rounded-xl bg-gradient-to-r from-orange-500 to-amber-600 text-white font-black text-xs shadow-md active:scale-95 transition-all cursor-pointer inline-flex items-center gap-1.5 mt-1"
+                >
+                  <span>📝</span>
+                  <span>{isHi ? 'जन्म विवरण दर्ज करें व अनलॉक करें ❯' : 'Enter Details to Unlock ❯'}</span>
+                </button>
+              )}
+            </div>
+          )}
 
           {/* 2. DAILY PREDICTION (आज का दिन कैसा रहेगा) */}
           <div className="bg-white border-2 border-orange-200 rounded-2xl p-3.5 shadow-2xs space-y-2">
